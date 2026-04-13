@@ -9,6 +9,7 @@ body, html {
 #map {
     height: 100vh;
     width: 100vw;
+    filter: grayscale(100%) contrast(110%);
 }
 
 /* Custom styles for popups */
