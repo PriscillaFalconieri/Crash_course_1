@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Floods in Italy</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #f4f4f4; }
+        #map { height: calc(100vh - 60px); width: 100%; }
+        header { 
+            height: 60px; 
+            background: #b91c1c; 
+            color: white; 
+            display: flex; 
+            align-items: center; 
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+        .info-panel {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 250px;
+            font-size: 0.9em;
+        }
+        .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
+        .dot { height: 12px; width: 12px; border-radius: 50%; margin-right: 8px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="margin:0;">🇮🇹 Italy Flood Archive</h2>
+        <div>
+            <a href="floods.html" style="color:white; margin-right: 15px;">Global Map</a>
+            <a href="index.html" style="color:white;">Bordeaux Map</a>
+        </div>
+    </header>
+    
+    <div id="map"></div>
+    
+    <div class="info-panel">
+        <strong>Map Legend</strong><br>
+        <div class="legend-item"><span class="dot" style="background: #ef4444; width: 16px; height: 16px;"></span> High Severity</div>
+        <div class="legend-item"><span class="dot" style="background: #ef4444; width: 8px; height: 8px;"></span> Low Severity</div>
+        <p><i>Data filtered from Global Flood Archive (DARTMOUTH).</i></p>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize map centered on Italy
+        const map = L.map('map').setView([41.8719, 12.5674], 6);
+
+        // Add a clean, light-colored tile layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+        }).addTo(map);
+
+        // Load and display Italy's flood data
+        fetch('italy_floods.geojson')
+            .then(res => res.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    pointToLayer: (feature, latlng) => {
+                        // Visual choice: Scaling by severity
+                        const severity = parseFloat(feature.properties.Severity) || 1;
+                        const radius = severity * 4 + 2;
+                        
+                        return L.circleMarker(latlng, {
+                            radius: radius,
+                            fillColor: "#ef4444", // Strong red for high contrast
+                            color: "#991b1b",
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 0.7
+                        });
+                    },
+                    onEachFeature: (feature, layer) => {
+                        const p = feature.properties;
+                        layer.bindPopup(`
+                            <div style="min-width: 180px;">
+                                <h4 style="margin:0 0 5px; color: #b91c1c;">Italy Flood Event</h4>
+                                <b>ID:</b> ${p.ID}<br>
+                                <b>Dates:</b> ${p.Began} to ${p.Ended}<br>
+                                <b>Cause:</b> ${p.MainCause}<br>
+                                <b>Deaths:</b> ${p.Dead || 0}<br>
+                                <b>Displaced:</b> ${p.Displaced || 0}<br>
+                                <b>Severity Score:</b> ${p.Severity}
+                            </div>
+                        `);
+                    }
+                }).addTo(map);
+            });
+    </script>
+</body>
+</html>

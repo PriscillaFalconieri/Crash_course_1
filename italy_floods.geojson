@@ -1,0 +1,1071 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.9383,
+          45.7794
+        ]
+      },
+      "properties": {
+        "ID": "141",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "9.9383",
+        "lat": "45.7794",
+        "Area": "4687.42",
+        "Began": "1987-07-12 00:00:00",
+        "Ended": "1987-07-21 00:00:00",
+        "Validation": "News",
+        "Dead": "20",
+        "Displaced": "300",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0174,
+          37.4429
+        ]
+      },
+      "properties": {
+        "ID": "595",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "14.0174",
+        "lat": "37.4429",
+        "Area": "52843.96",
+        "Began": "1991-10-13 00:00:00",
+        "Ended": "1991-10-15 00:00:00",
+        "Validation": "News",
+        "Dead": "17",
+        "Displaced": "0",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.5657,
+          45.3963
+        ]
+      },
+      "properties": {
+        "ID": "641",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "10.5657",
+        "lat": "45.3963",
+        "Area": "7026.51",
+        "Began": "1992-04-03 00:00:00",
+        "Ended": "1992-04-05 00:00:00",
+        "Validation": "News",
+        "Dead": "32",
+        "Displaced": "0",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.93857,
+          44.5004
+        ]
+      },
+      "properties": {
+        "ID": "703",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "8.93857",
+        "lat": "44.5004",
+        "Area": "4076.56",
+        "Began": "1992-09-28 00:00:00",
+        "Ended": "1992-09-28 00:00:00",
+        "Validation": "News",
+        "Dead": "2",
+        "Displaced": "0",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.14,
+          43.6735
+        ]
+      },
+      "properties": {
+        "ID": "711",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "11.14",
+        "lat": "43.6735",
+        "Area": "3332.49",
+        "Began": "1992-10-31 00:00:00",
+        "Ended": "1992-10-31 00:00:00",
+        "Validation": "News",
+        "Dead": "0",
+        "Displaced": "1000",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8528,
+          43.7041
+        ]
+      },
+      "properties": {
+        "ID": "896",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "10.8528",
+        "lat": "43.7041",
+        "Area": "30590.88",
+        "Began": "1994-09-02 00:00:00",
+        "Ended": "1994-09-03 00:00:00",
+        "Validation": "News",
+        "Dead": "3",
+        "Displaced": "0",
+        "MainCause": "Torrential rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2403,
+          45.2087
+        ]
+      },
+      "properties": {
+        "ID": "912",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "10.2403",
+        "lat": "45.2087",
+        "Area": "90174.15",
+        "Began": "1994-11-01 00:00:00",
+        "Ended": "1994-11-10 00:00:00",
+        "Validation": "News",
+        "Dead": "83",
+        "Displaced": "10308",
+        "MainCause": "Heavy rain",
+        "Severity": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.32512,
+          44.9518
+        ]
+      },
+      "properties": {
+        "ID": "946",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "7.32512",
+        "lat": "44.9518",
+        "Area": "24761.82",
+        "Began": "1995-04-24 00:00:00",
+        "Ended": "1995-04-30 00:00:00",
+        "Validation": "News",
+        "Dead": "3",
+        "Displaced": "0",
+        "MainCause": "Rain and snowmelt",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8096,
+          44.2003
+        ]
+      },
+      "properties": {
+        "ID": "1079",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "10.8096",
+        "lat": "44.2003",
+        "Area": "66764.81",
+        "Began": "1996-06-19 00:00:00",
+        "Ended": "1996-06-23 00:00:00",
+        "Validation": "News",
+        "Dead": "17",
+        "Displaced": "300",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.0135,
+          45.9922
+        ]
+      },
+      "properties": {
+        "ID": "1231",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "10.0135",
+        "lat": "45.9922",
+        "Area": "17109.34",
+        "Began": "1997-06-26 00:00:00",
+        "Ended": "1997-06-29 00:00:00",
+        "Validation": "News",
+        "Dead": "2",
+        "Displaced": "700",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.982,
+          41.6911
+        ]
+      },
+      "properties": {
+        "ID": "1352",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "12.982",
+        "lat": "41.6911",
+        "Area": "17721.98",
+        "Began": "1998-05-01 00:00:00",
+        "Ended": "1998-05-07 00:00:00",
+        "Validation": "News",
+        "Dead": "148",
+        "Displaced": "3463",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1524,
+          42.6196
+        ]
+      },
+      "properties": {
+        "ID": "1577",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "14.1524",
+        "lat": "42.6196",
+        "Area": "30829.03",
+        "Began": "1999-12-15 00:00:00",
+        "Ended": "1999-12-16 00:00:00",
+        "Validation": "News",
+        "Dead": "5",
+        "Displaced": "300",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.74789,
+          45.5709
+        ]
+      },
+      "properties": {
+        "ID": "1650",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "8.74789",
+        "lat": "45.5709",
+        "Area": "44552.5",
+        "Began": "2000-10-14 00:00:00",
+        "Ended": "2000-10-22 00:00:00",
+        "Validation": "News",
+        "Dead": "37",
+        "Displaced": "43000",
+        "MainCause": "Brief torrential rain",
+        "Severity": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.74033,
+          44.8503
+        ]
+      },
+      "properties": {
+        "ID": "1662",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "7.74033",
+        "lat": "44.8503",
+        "Area": "23851.47",
+        "Began": "2000-11-05 00:00:00",
+        "Ended": "2000-11-07 00:00:00",
+        "Validation": "News",
+        "Dead": "3",
+        "Displaced": "30",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2544,
+          40.8829
+        ]
+      },
+      "properties": {
+        "ID": "1794",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "14.2544",
+        "lat": "40.8829",
+        "Area": "69.4003",
+        "Began": "2001-09-14 00:00:00",
+        "Ended": "2001-09-15 00:00:00",
+        "Validation": "News",
+        "Dead": "2",
+        "Displaced": "0",
+        "MainCause": "Brief torrential rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.4002,
+          42.8283
+        ]
+      },
+      "properties": {
+        "ID": "2050",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "10.4002",
+        "lat": "42.8283",
+        "Area": "90.1132",
+        "Began": "2002-09-04 00:00:00",
+        "Ended": "2002-09-06 00:00:00",
+        "Validation": "News",
+        "Dead": "0",
+        "Displaced": "1200",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.9205,
+          41.3473
+        ]
+      },
+      "properties": {
+        "ID": "2140",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "15.9205",
+        "lat": "41.3473",
+        "Area": "28756",
+        "Began": "2003-01-25 00:00:00",
+        "Ended": "2003-01-27 00:00:00",
+        "Validation": "News",
+        "Dead": "1",
+        "Displaced": "1000",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2272,
+          46.0812
+        ]
+      },
+      "properties": {
+        "ID": "2340",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "13.2272",
+        "lat": "46.0812",
+        "Area": "1114.78",
+        "Began": "2003-08-29 00:00:00",
+        "Ended": "2003-08-30 00:00:00",
+        "Validation": "News",
+        "Dead": "2",
+        "Displaced": "300",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3811,
+          43.9155
+        ]
+      },
+      "properties": {
+        "ID": "2360",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "10.3811",
+        "lat": "43.9155",
+        "Area": "1854.41",
+        "Began": "2003-09-23 00:00:00",
+        "Ended": "2003-09-24 00:00:00",
+        "Validation": "News",
+        "Dead": "1",
+        "Displaced": "30",
+        "MainCause": "Brief torrential rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.6179,
+          40.776
+        ]
+      },
+      "properties": {
+        "ID": "2605",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "14.6179",
+        "lat": "40.776",
+        "Area": "215.291",
+        "Began": "2004-12-25 00:00:00",
+        "Ended": "2004-12-28 00:00:00",
+        "Validation": "News",
+        "Dead": "0",
+        "Displaced": "0",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.8435,
+          41.0532
+        ]
+      },
+      "properties": {
+        "ID": "2755",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "16.8435",
+        "lat": "41.0532",
+        "Area": "1199.3",
+        "Began": "2005-10-23 00:00:00",
+        "Ended": "2005-10-24 00:00:00",
+        "Validation": "News",
+        "Dead": "6",
+        "Displaced": "0",
+        "MainCause": "Heavy rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.188,
+          45.0242
+        ]
+      },
+      "properties": {
+        "ID": "3414",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "12.188",
+        "lat": "45.0242",
+        "Area": "2219.9",
+        "Began": "2008-11-26 00:00:00",
+        "Ended": "2008-11-28 00:00:00",
+        "Validation": "News",
+        "Dead": "7",
+        "Displaced": "46000",
+        "MainCause": "Heavy Rain",
+        "Severity": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1575,
+          41.8299
+        ]
+      },
+      "properties": {
+        "ID": "3418",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "13.1575",
+        "lat": "41.8299",
+        "Area": "5423.64",
+        "Began": "2008-12-01 00:00:00",
+        "Ended": "2008-12-08 00:00:00",
+        "Validation": "News",
+        "Dead": "0",
+        "Displaced": "2000",
+        "MainCause": "Heavy Rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.733,
+          38.114
+        ]
+      },
+      "properties": {
+        "ID": "3550",
+        "GlideNumber": "FL-2009-000216-ITA",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "15.733",
+        "lat": "38.114",
+        "Area": "1227.06",
+        "Began": "2009-10-01 00:00:00",
+        "Ended": "2009-10-02 00:00:00",
+        "Validation": "0",
+        "Dead": "22",
+        "Displaced": "0",
+        "MainCause": "Torrential Rain",
+        "Severity": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.7554,
+          42.7931
+        ]
+      },
+      "properties": {
+        "ID": "3587",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "12.7554",
+        "lat": "42.7931",
+        "Area": "40932.75",
+        "Began": "2009-12-21 00:00:00",
+        "Ended": "2009-12-27 00:00:00",
+        "Validation": "0",
+        "Dead": "0",
+        "Displaced": "500",
+        "MainCause": "Torrential Rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1382,
+          45.1256
+        ]
+      },
+      "properties": {
+        "ID": "3746",
+        "GlideNumber": "0",
+        "Country": "Italy",
+        "OtherCountry": "0",
+        "long": "11.1382",
+        "lat": "45.1256",
+        "Area": "18725.85",
+        "Began": "2010-11-08 00:00:00",
+        "Ended": "2010-11-11 00:00:00",
+        "Validation": "News",
+        "Dead": "0",
+        "Displaced": "300",
+        "MainCause": "Heavy Rain",
+        "Severity": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.33422,
+          44.4216
+        ]
+      },
+      "properties": {
+        "ID": "3873",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "9.33422",
+        "lat": "44.4216",
+        "Area": "4696.07",
+        "Began": "2011-10-26 00:00:00",
+        "Ended": "2011-11-01 00:00:00",
+        "Validation": "News",
+        "Dead": "7",
+        "Displaced": "0",
+        "MainCause": "Torrential Rain",
+        "Severity": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4131,
+          43.1605
+        ]
+      },
+      "properties": {
+        "ID": "4004",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "12.4131",
+        "lat": "43.1605",
+        "Area": "66842.9",
+        "Began": "2012-11-11 00:00:00",
+        "Ended": "2012-11-18 00:00:00",
+        "Validation": "News",
+        "Dead": "4",
+        "Displaced": "500",
+        "MainCause": "Torrential Rain, Hgh Tides",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.00455,
+          40.3008
+        ]
+      },
+      "properties": {
+        "ID": "4102",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "9.00455",
+        "lat": "40.3008",
+        "Area": "15699.75",
+        "Began": "2013-11-18 00:00:00",
+        "Ended": "2013-11-19 00:00:00",
+        "Validation": "News",
+        "Dead": "18",
+        "Displaced": "2700",
+        "MainCause": "Torrential Rain",
+        "Severity": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.013,
+          43.3979
+        ]
+      },
+      "properties": {
+        "ID": "4141",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "13.013",
+        "lat": "43.3979",
+        "Area": "11256.33",
+        "Began": "2014-05-02 00:00:00",
+        "Ended": "2014-05-10 00:00:00",
+        "Validation": "News",
+        "Dead": "2",
+        "Displaced": "250",
+        "MainCause": "Torrential Rain",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.17775,
+          44.6146
+        ]
+      },
+      "properties": {
+        "ID": "4192",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "9.17775",
+        "lat": "44.6146",
+        "Area": "6229.19",
+        "Began": "2014-10-10 00:00:00",
+        "Ended": "2014-10-11 00:00:00",
+        "Validation": "News",
+        "Dead": "1",
+        "Displaced": "0",
+        "MainCause": "Torrential Rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.6129,
+          45.9281
+        ]
+      },
+      "properties": {
+        "ID": "4205",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "10.6129",
+        "lat": "45.9281",
+        "Area": "36733.48",
+        "Began": "2014-11-12 00:00:00",
+        "Ended": "2014-11-16 00:00:00",
+        "Validation": "News",
+        "Dead": "5",
+        "Displaced": "0",
+        "MainCause": "Torrential Rain",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7366,
+          43.0645
+        ]
+      },
+      "properties": {
+        "ID": "4521",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "10.7366",
+        "lat": "43.0645",
+        "Area": "1332.63",
+        "Began": "2017-09-10 00:00:00",
+        "Ended": "2017-09-14 00:00:00",
+        "Validation": "News",
+        "Dead": "6",
+        "Displaced": "0",
+        "MainCause": "Torrential Rain",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.5881,
+          45.457
+        ]
+      },
+      "properties": {
+        "ID": "4551",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "10.5881",
+        "lat": "45.457",
+        "Area": "27560.36",
+        "Began": "2017-12-12 00:00:00",
+        "Ended": "2017-12-13 00:00:00",
+        "Validation": "News",
+        "Dead": "0",
+        "Displaced": "1000",
+        "MainCause": "Heavy Rain",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.0233,
+          45.5062
+        ]
+      },
+      "properties": {
+        "ID": "4699",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "Slovenia",
+        "long": "12.0233",
+        "lat": "45.5062",
+        "Area": "56625.41",
+        "Began": "2018-10-27 00:00:00",
+        "Ended": "2018-11-05 00:00:00",
+        "Validation": "FloodList",
+        "Dead": "11",
+        "Displaced": "0",
+        "MainCause": "Heavy Rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0522,
+          37.4589
+        ]
+      },
+      "properties": {
+        "ID": "4701",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "14.0522",
+        "lat": "37.4589",
+        "Area": "21688.55",
+        "Began": "2018-11-03 00:00:00",
+        "Ended": "2018-11-07 00:00:00",
+        "Validation": "FloodList",
+        "Dead": "12",
+        "Displaced": "200",
+        "MainCause": "Torrential Rain",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5429,
+          43.7947
+        ]
+      },
+      "properties": {
+        "ID": "4749",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "12.5429",
+        "lat": "43.7947",
+        "Area": "22050.47",
+        "Began": "2019-05-12 00:00:00",
+        "Ended": "2019-05-14 00:00:00",
+        "Validation": "FloodList",
+        "Dead": "0",
+        "Displaced": "20",
+        "MainCause": "Heavy Rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.118,
+          45.9656
+        ]
+      },
+      "properties": {
+        "ID": "4780",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "10.118",
+        "lat": "45.9656",
+        "Area": "14811.34",
+        "Began": "2019-08-06 00:00:00",
+        "Ended": "2019-08-09 00:00:00",
+        "Validation": "FloodList",
+        "Dead": "0",
+        "Displaced": "146",
+        "MainCause": "Torrential Rain",
+        "Severity": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7677,
+          37.8936
+        ]
+      },
+      "properties": {
+        "ID": "4944",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "13.7677",
+        "lat": "37.8936",
+        "Area": "3124.91",
+        "Began": "2020-07-14 00:00:00",
+        "Ended": "2020-07-17 00:00:00",
+        "Validation": "FloodList",
+        "Dead": "0",
+        "Displaced": "0",
+        "MainCause": "Torrential Rain",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.4523,
+          38.8594
+        ]
+      },
+      "properties": {
+        "ID": "4984",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "16.4523",
+        "lat": "38.8594",
+        "Area": "17347.39",
+        "Began": "2020-11-20 00:00:00",
+        "Ended": "2020-11-23 00:00:00",
+        "Validation": "FloodList",
+        "Dead": "0",
+        "Displaced": "200",
+        "MainCause": "Torrential Rain",
+        "Severity": "1.5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.3757,
+          44.6393
+        ]
+      },
+      "properties": {
+        "ID": "5131",
+        "GlideNumber": "",
+        "Country": "Italy",
+        "OtherCountry": "",
+        "long": "9.3757",
+        "lat": "44.6393",
+        "Area": "10408.23",
+        "Began": "2021-10-04 00:00:00",
+        "Ended": "2021-10-06 00:00:00",
+        "Validation": "FloodList",
+        "Dead": "0",
+        "Displaced": "0",
+        "MainCause": "Torrential Rain",
+        "Severity": "1.5"
+      }
+    }
+  ]
+}
