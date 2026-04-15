@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2288534,
+          46.0773643
+        ]
+      },
+      "properties": {
+        "addr:city": "Udine",
+        "addr:housenumber": "1",
+        "addr:postcode": "33100",
+        "addr:street": "Piazzale Santa Maria della Misericordia",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "name": "Pronto Soccorso Udine",
+        "name:it": "Pronto Soccorso Udine",
+        "wheelchair": "yes",
+        "nearest_flood_distance_km": 0.445,
+        "at_risk": "Yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2280869,
+          46.078745
+        ]
+      },
+      "properties": {
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Ospedale Civile \"Santa Maria della Misericordia\"",
+        "nearest_flood_distance_km": 0.281,
+        "at_risk": "Yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2461721,
+          40.8805553
+        ]
+      },
+      "properties": {
+        "amenity": "hospital",
+        "building": "hospital",
+        "contact:email": "info@hermitagecapodimonte.it",
+        "contact:phone": "+39 081 7483001",
+        "contact:website": "https://www.hermitagecapodimonte.it/",
+        "name": "Hermitage Capodimonte",
+        "operator:type": "private",
+        "ref:vatin": "IT10419311211",
+        "nearest_flood_distance_km": 0.739,
+        "at_risk": "Yes"
+      }
+    }
+  ]
+}
