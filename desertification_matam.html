@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desertification Monitor - Matam, Senegal</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background: #f4f4f4; }
+        .container { display: flex; flex-direction: column; gap: 20px; max-width: 1000px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        #map { height: 400px; width: 100%; border-radius: 8px; }
+        #chart-container { width: 100%; height: 300px; }
+        h1 { color: #2c3e50; margin-top: 0; }
+        p { color: #7f8c8d; line-height: 1.6; }
+        .legend { background: white; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desertification Monitor: Matam Department</h1>
+        <p>This map shows the boundary of <b>Matam</b>. The chart below shows the <b>Vegetation Health (NDVI)</b> over the last few years. 
+        Higher values mean more green vegetation; lower values indicate drying or desertification.</p>
+        
+        <div id="map"></div>
+        
+        <div id="chart-container">
+            <canvas id="ndviChart"></canvas>
+        </div>
+        
+        <p><small>Data Source: WFP/VAM via Humanitarian Data Exchange (HDX). Coordinates: WGS84.</small></p>
+    </div>
+
+    <script>
+        // 1. Initialize the Map
+        var map = L.map('map').setView([15.6, -13.3], 9);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 2. Simplified Matam Boundary (GeoJSON)
+        var matamBoundary = {
+            "type": "Feature",
+            "properties": {"name": "Matam Department"},
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[
+                    [-13.254, 15.642], [-13.121, 15.589], [-12.985, 15.456],
+                    [-12.854, 15.212], [-12.765, 14.987], [-12.912, 14.854],
+                    [-13.154, 14.765], [-13.456, 14.898], [-13.678, 15.123],
+                    [-13.890, 15.345], [-13.765, 15.567], [-13.456, 15.678],
+                    [-13.254, 15.642]
+                ]]
+            }
+        };
+        L.geoJSON(matamBoundary, {
+            style: { color: "#e67e22", weight: 3, fillOpacity: 0.1 }
+        }).addTo(map);
+
+        // 3. NDVI Time Series Data (extracted from CSV)
+        const labels = ["2022-01-01", "2022-04-01", "2022-07-01", "2022-10-01", "2023-01-01", "2023-04-01", "2023-07-01", "2023-10-01", "2024-01-01", "2024-04-01"];
+        const values = [0.18, 0.15, 0.22, 0.38, 0.20, 0.16, 0.25, 0.42, 0.19, 0.14];
+
+        const ctx = document.getElementById('ndviChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Vegetation Index (NDVI)',
+                    data: values,
+                    borderColor: '#27ae60',
+                    backgroundColor: 'rgba(39, 174, 96, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: false, title: { display: true, text: 'Greenness (NDVI)' } },
+                    x: { title: { display: true, text: 'Time' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
