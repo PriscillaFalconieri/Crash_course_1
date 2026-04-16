@@ -3,18 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bordeaux Map - Hospitals & Landmarks</title>
+    <title>Global Impact Map</title>
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0f1419;
+            color: #e7e9ea;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: #16202a;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid #2f3b47;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1001;
+        }
+        h1 { font-size: 1.25rem; font-weight: 600; color: #f5a623; }
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2f3b47;
+            color: #e7e9ea;
+            border: 1px solid #3d4f5f;
+        }
+        .btn:hover { background: #3d4f5f; }
+        #map { flex: 1; width: 100%; filter: grayscale(100%) contrast(110%) invert(100%) hue-rotate(180deg); }
+        
+        /* Custom styles for popups to match dark theme */
+        .leaflet-popup-content-wrapper { background: #16202a; color: #e7e9ea; border-radius: 8px; border: 1px solid #2f3b47; }
+        .leaflet-popup-tip { background: #16202a; }
+        .leaflet-popup-content h3 { color: #f5a623; }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Global Impact Map</h1>
+        <a href="index.html" class="btn">&#127968; Back to Home</a>
+    </header>
     <div id="map"></div>
-    <div style="position: absolute; top: 10px; right: 10px; z-index: 1000; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-        <a href="analysis.html" style="text-decoration: none; color: #2c3e50; font-weight: bold; font-family: sans-serif;">📊 View Flood Analysis</a>
-    </div>
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,147 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Italy: Floods & Health Infrastructure Risk</title>
+    <title>Italy: Floods & Infrastructure Risk</title>
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #f4f4f4; }
-        #map { height: calc(100vh - 60px); width: 100%; }
-        header { 
-            height: 60px; 
-            background: #1e293b; 
-            color: white; 
-            display: flex; 
-            align-items: center; 
-            padding: 0 20px;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0f1419;
+            color: #e7e9ea;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: #16202a;
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid #2f3b47;
+            display: flex;
             justify-content: space-between;
+            align-items: center;
+            z-index: 1001;
         }
-        .info-panel {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            z-index: 1000;
-            background: white;
-            padding: 15px;
+        h1 { font-size: 1.25rem; font-weight: 600; color: #f5a623; }
+        .btn {
+            padding: 0.5rem 1rem;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 280px;
-            font-size: 0.85em;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2f3b47;
+            color: #e7e9ea;
+            border: 1px solid #3d4f5f;
         }
-        .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
-        .dot { height: 12px; width: 12px; border-radius: 50%; margin-right: 8px; display: inline-block; }
-        .risk-glow {
-            box-shadow: 0 0 10px #f97316;
-            border: 2px solid white;
-        }
+        .btn:hover { background: #3d4f5f; }
+        #map { flex: 1; width: 100%; filter: grayscale(100%) contrast(110%) invert(100%) hue-rotate(180deg); }
+        
+        .leaflet-popup-content-wrapper { background: #16202a; color: #e7e9ea; border-radius: 8px; border: 1px solid #2f3b47; }
+        .leaflet-popup-tip { background: #16202a; }
+        .leaflet-popup-content h3 { color: #f5a623; }
     </style>
 </head>
 <body>
     <header>
-        <h2 style="margin:0;">🏥 Italy Health Risk Analysis</h2>
-        <div>
-            <a href="floods.html" style="color:white; margin-right: 15px;">Global Map</a>
-            <a href="index.html" style="color:white;">Bordeaux Map</a>
-        </div>
+        <h1>Italy Risk Analysis</h1>
+        <a href="index.html" class="btn">&#127968; Back to Home</a>
     </header>
-    
     <div id="map"></div>
-    
-    <div class="info-panel">
-        <strong>Map Legend</strong><br>
-        <div class="legend-item"><span class="dot" style="background: #ef4444;"></span> Historical Flood Events</div>
-        <div class="legend-item"><span class="dot" style="background: #22c55e;"></span> All Health Sites</div>
-        <div class="legend-item"><span class="dot" style="background: #f97316; border: 2px solid #fff; box-shadow: 0 0 5px #f97316;"></span> <strong>At-Risk Sites (within 1km)</strong></div>
-        <hr>
-        <p>Use the <b>Layer Control</b> in the top-right to filter the data.</p>
-    </div>
-
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script>
-        // Initialize map centered on Italy
-        const map = L.map('map').setView([41.8719, 12.5674], 6);
-
-        // Add a clean, light-colored tile layer
-        const baseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
-        }).addTo(map);
-
-        // Create Layer Groups for filtering
-        const floodLayer = L.layerGroup().addTo(map);
-        const allHospitalsLayer = L.layerGroup().addTo(map);
-        const atRiskLayer = L.layerGroup().addTo(map);
-
-        // Define icons and styles
-        function createPopup(title, props, color) {
-            return `
-                <div style="min-width: 200px;">
-                    <h4 style="margin:0 0 5px; color: ${color};">${title}</h4>
-                    ${props.name ? `<b>Name:</b> ${props.name}<br>` : ''}
-                    <b>Location:</b> ${props.Country || 'Italy'}<br>
-                    ${props.nearest_flood_distance_km ? `<b style="color:#f97316;">⚠️ Risk: ${props.nearest_flood_distance_km} km from flood</b><br>` : ''}
-                    <b>Details:</b> ${props.MainCause || props.amenity || 'Health Facility'}
-                </div>
-            `;
-        }
-
-        // 1. Load Flood Data (Red)
-        fetch('italy_floods.geojson')
-            .then(res => res.json())
-            .then(data => {
-                L.geoJSON(data, {
-                    pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
-                        radius: 5,
-                        fillColor: "#ef4444",
-                        color: "#991b1b",
-                        weight: 1,
-                        fillOpacity: 0.6
-                    }),
-                    onEachFeature: (f, l) => l.bindPopup(createPopup('Flood Event', f.properties, '#b91c1c'))
-                }).addTo(floodLayer);
-            });
-
-        // 2. Load ALL Hospitals (Green)
-        fetch('italy_hospitals.geojson')
-            .then(res => res.json())
-            .then(data => {
-                L.geoJSON(data, {
-                    pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
-                        radius: 4,
-                        fillColor: "#22c55e",
-                        color: "#166534",
-                        weight: 1,
-                        fillOpacity: 0.5
-                    }),
-                    onEachFeature: (f, l) => l.bindPopup(createPopup('Health Facility', f.properties, '#166534'))
-                }).addTo(allHospitalsLayer);
-            });
-
-        // 3. Load AT-RISK Hospitals (Orange)
-        fetch('at_risk_hospitals.geojson')
-            .then(res => res.json())
-            .then(data => {
-                L.geoJSON(data, {
-                    pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
-                        radius: 8,
-                        fillColor: "#f97316",
-                        color: "#fff",
-                        weight: 2,
-                        fillOpacity: 0.9
-                    }),
-                    onEachFeature: (f, l) => l.bindPopup(createPopup('🚨 AT-RISK SITE', f.properties, '#f97316'))
-                }).addTo(atRiskLayer);
-            });
-
-        // Add the Filter Control (Top-Right)
-        const overlayMaps = {
-            "🌊 Historical Floods": floodLayer,
-            "🏥 All Health Sites": allHospitalsLayer,
-            "🚨 Only At-Risk Sites": atRiskLayer
-        };
-
-        L.control.layers(null, overlayMaps, { collapsed: false }).addTo(map);
-
-    </script>
+    <script src="js/floods.js"></script>
 </body>
 </html>
