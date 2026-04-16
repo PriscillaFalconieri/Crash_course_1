@@ -3,18 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bordeaux Map - Hospitals & Landmarks</title>
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Global Flood & Environmental Analysis Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <style>
+        body {
+            padding-top: 80px;
+            background-color: #f4f7f6;
+        }
+        .navbar {
+            background-color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            margin-left: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            color: #3498db;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .hero p {
+            font-size: 1.8rem;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .metadata-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .metadata-table th, .metadata-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #eee;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-    <div id="map"></div>
-    <div style="position: absolute; top: 10px; right: 10px; z-index: 1000; background: white; padding: 10px; border-radius: 5px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-        <a href="analysis.html" style="text-decoration: none; color: #2c3e50; font-weight: bold; font-family: sans-serif;">📊 View Flood Analysis</a>
+    <nav class="navbar">
+        <div class="container">
+            <strong>FloodAnalysis</strong>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="map.html">Interactive Map</a>
+                <a href="analysis.html">Charts & Data</a>
+                <a href="floods.html">CSV Upload App</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Global Flood & Environmental Analysis</h1>
+            <p>An interactive platform to visualize flood impacts, environmental changes, and regional risk factors using historical archive data and geospatial layers.</p>
+        </section>
+
+        <section id="datasets" class="card">
+            <h3>Project Datasets & Metadata</h3>
+            <p>The following datasets are used to power the visualizations on this site.</p>
+            <table class="metadata-table">
+                <thead>
+                    <tr>
+                        <th>Dataset Name</th>
+                        <th>Source</th>
+                        <th>Format</th>
+                        <th>Date Retrieved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Cleaned Flood Archive</strong></td>
+                        <td>Dartmouth Flood Observatory / Cedric</td>
+                        <td><span class="badge">CSV</span></td>
+                        <td>April 16, 2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Italy Flood Events</strong></td>
+                        <td>Regional Authorities</td>
+                        <td><span class="badge">GeoJSON</span></td>
+                        <td>April 16, 2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>At-Risk Hospitals</strong></td>
+                        <td>Public Health GIS</td>
+                        <td><span class="badge">GeoJSON</span></td>
+                        <td>April 16, 2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Matam NDVI Data</strong></td>
+                        <td>Satellite Imagery (NDVI)</td>
+                        <td><span class="badge">CSV</span></td>
+                        <td>April 16, 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="row">
+            <div class="column column-50">
+                <div class="card">
+                    <h3>Interactive Geospatial Map</h3>
+                    <p>Explore high-risk zones, hospital locations, and flood impact areas on an interactive map using Leaflet.js.</p>
+                    <a href="map.html" class="button">Go to Map</a>
+                </div>
+            </div>
+            <div class="column column-50">
+                <div class="card">
+                    <h3>Data Visualizations</h3>
+                    <p>Deep dive into the numbers with charts showing flood trends by country, year, and severity levels.</p>
+                    <a href="analysis.html" class="button button-outline">View Charts</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="js/script.js"></script>
 </body>
 </html>
