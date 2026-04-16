@@ -1,49 +1,42 @@
-// Initialize the map globally
-const map = L.map('map').setView([20, 0], 2); // Center on the world
+// Initialize the map centered on the world
+const map = L.map('map').setView([20, 0], 2);
 
-// Add tile layer (OpenStreetMap)
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// Add Dark Matter tile layer
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
 }).addTo(map);
 
-// Load the GeoJSON data
-fetch('flood_events.geojson')
+// Load the Global GeoJSON data from the data/ directory
+fetch('data/flood_events.geojson')
     .then(response => response.json())
     .then(data => {
-        // Create a GeoJSON layer with circle markers
         L.geoJSON(data, {
             pointToLayer: function (feature, latlng) {
-                // Style based on severity if available
                 const severity = feature.properties.Severity || 1;
-                const radius = severity * 3 + 2; 
+                const radius = severity * 2 + 2; 
                 
                 return L.circleMarker(latlng, {
                     radius: radius,
-                    fillColor: "#0078ff",
-                    color: "#000",
-                    weight: 1,
+                    fillColor: "#3498db",
+                    color: "#fff",
+                    weight: 0.5,
                     opacity: 1,
                     fillOpacity: 0.6
                 });
             },
             onEachFeature: function (feature, layer) {
-                // Add a popup with details from the properties
                 const props = feature.properties;
-                const popupContent = `
-                    <div style="font-family: sans-serif; min-width: 200px;">
-                        <h3 style="margin-top:0; color: #0078ff;">Flood Event</h3>
+                layer.bindPopup(`
+                    <div style="color: #e7e9ea; background: #16202a; padding: 5px;">
+                        <h3 style="color: #3498db; margin: 0 0 5px 0;">Flood Event</h3>
                         <b>Country:</b> ${props.Country}<br>
                         <b>Began:</b> ${props.Began}<br>
-                        <b>Ended:</b> ${props.Ended}<br>
                         <b>Main Cause:</b> ${props.MainCause}<br>
-                        <b>Severity:</b> ${props.Severity}<br>
-                        <b>Dead:</b> ${props.Dead || 0}<br>
-                        <b>Displaced:</b> ${props.Displaced || 0}
+                        <b>Severity:</b> ${props.Severity}
                     </div>
-                `;
-                layer.bindPopup(popupContent);
+                `);
             }
         }).addTo(map);
     })
-    .catch(error => console.error('Error loading GeoJSON:', error));
+    .catch(error => console.error('Error loading Global GeoJSON:', error));
