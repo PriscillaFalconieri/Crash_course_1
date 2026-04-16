@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flood Archive Analysis</title>
+    <!-- We're using a simple CSS framework called Milligram for basic styling, 
+         plus some custom styles for our cards -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f4f7f6;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            height: 400px;
+        }
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        canvas {
+            width: 100% !important;
+            height: 300px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Flood Archive Analysis</h1>
+            <p>Visualizing cleaned flood data from 1985 to present.</p>
+            <a href="index.html" class="button button-outline">Back to Map</a>
+        </div>
+
+        <div class="row">
+            <div class="column column-50">
+                <div class="card">
+                    <h3>Top 20 Countries by Events</h3>
+                    <canvas id="countryChart"></canvas>
+                </div>
+            </div>
+            <div class="column column-50">
+                <div class="card">
+                    <h3>Events per Year</h3>
+                    <canvas id="yearChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column column-50">
+                <div class="card">
+                    <h3>Events by Category</h3>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+            </div>
+            <div class="column column-50">
+                <div class="card">
+                    <h3>Displaced by Severity</h3>
+                    <canvas id="severityChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- PapaParse library to read CSV files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <!-- Our custom script -->
+    <script src="js/analysis.js"></script>
+</body>
+</html>
