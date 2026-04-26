@@ -3,263 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Flood & Environmental Analysis Dashboard</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <title>DRC Conflict Map - Civilian Incidents</title>
+    <!-- Leaflet CSS for the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: #0f1419;
-            color: #e7e9ea;
-            min-height: 100vh;
-            padding-top: 80px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .navbar {
-            background-color: #16202a;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+        #map { height: 100vh; width: 100vw; }
+        .info-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             z-index: 1000;
-            border-bottom: 1px solid #2f3b47;
-        }
-        .navbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .navbar .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #f5a623;
-            text-decoration: none;
-        }
-        .navbar nav a {
-            margin-left: 20px;
-            font-weight: 500;
-            color: #8b98a5;
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
-        .navbar nav a:hover {
-            color: #f5a623;
-        }
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #16202a, #0f1419);
-            color: white;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            border: 1px solid #2f3b47;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #f5a623;
-        }
-        .hero p {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #8b98a5;
-        }
-        .card {
-            background: #16202a;
-            border-radius: 12px;
-            border: 1px solid #2f3b47;
-            padding: 25px;
-            margin-bottom: 30px;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #f5a623;
-        }
-        .card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #f5a623;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #2f3b47;
-        }
-        .metadata-table {
-            width: 100%;
-            border-collapse: collapse;
-            color: #e7e9ea;
-        }
-        .metadata-table th, .metadata-table td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid #2f3b47;
-        }
-        .metadata-table th {
-            color: #8b98a5;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-        }
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            background: #2f3b47;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            color: #f5a623;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
+            background: white;
+            padding: 15px;
             border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: none;
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            max-width: 300px;
         }
-        .btn-primary {
-            background: #f5a623;
-            color: #0f1419;
-        }
-        .btn-primary:hover {
-            background: #f5b84d;
-        }
-        .btn-secondary {
-            background: #2f3b47;
-            color: #e7e9ea;
-            border: 1px solid #3d4f5f;
-        }
-        .btn-secondary:hover {
-            background: #3d4f5f;
-        }
-        .row {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .column {
-            flex: 1;
-        }
-        @media (max-width: 768px) {
-            .row { flex-direction: column; }
-        }
+        h1 { margin: 0 0 10px 0; font-size: 1.2em; color: #c0392b; }
+        p { margin: 5px 0; font-size: 0.9em; }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">FloodAnalysis</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="map.html">Global Map</a>
-                <a href="italy_floods.html">Italy Risk</a>
-                <a href="analysis.html">Charts</a>
-                <a href="geoviz.html">GeoViz</a>
-                <a href="floods.html">Upload</a>
-            </nav>
-        </div>
-    </nav>
 
-    <div class="container">
-        <section class="hero">
-            <h1>Global Flood & Environmental Analysis</h1>
-            <p>An interactive platform to visualize flood impacts, environmental changes, and regional risk factors using historical archive data and geospatial layers.</p>
-        </section>
+<div class="info-box">
+    <h1>DRC Civilian Conflict Map</h1>
+    <p>This map shows incidents of violence against civilians since 2015.</p>
+    <p><strong>Circle Size:</strong> Represents the number of fatalities.</p>
+    <p><small>Click on a circle for details.</small></p>
+</div>
 
-        <section id="datasets" class="card">
-            <h3>Project Datasets & Metadata</h3>
-            <table class="metadata-table">
-                <thead>
-                    <tr>
-                        <th>Dataset Name</th>
-                        <th>Source</th>
-                        <th>Format</th>
-                        <th>Date Retrieved</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Cleaned Flood Archive</strong></td>
-                        <td>Dartmouth Flood Observatory / Cedric</td>
-                        <td><span class="badge">CSV</span></td>
-                        <td>April 16, 2026</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Italy Flood Events</strong></td>
-                        <td>Regional Authorities</td>
-                        <td><span class="badge">GeoJSON</span></td>
-                        <td>April 16, 2026</td>
-                    </tr>
-                    <tr>
-                        <td><strong>At-Risk Hospitals</strong></td>
-                        <td>Public Health GIS</td>
-                        <td><span class="badge">GeoJSON</span></td>
-                        <td>April 16, 2026</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Matam NDVI Data</strong></td>
-                        <td>Satellite Imagery (NDVI)</td>
-                        <td><span class="badge">CSV</span></td>
-                        <td>April 16, 2026</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+<div id="map"></div>
 
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h3>Global Impact Map</h3>
-                    <p style="color: #8b98a5; margin-bottom: 20px;">Interactive overview of flood events worldwide with historical context.</p>
-                    <a href="map.html" class="btn btn-primary">View Global Map</a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h3>Italy Risk Analysis</h3>
-                    <p style="color: #8b98a5; margin-bottom: 20px;">Detailed view of flood events in Italy and impact on health infrastructure.</p>
-                    <a href="italy_floods.html" class="btn btn-primary">View Italy Map</a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h3>Data Visualizations</h3>
-                    <p style="color: #8b98a5; margin-bottom: 20px;">Statistical charts showing flood trends by country, year, and severity.</p>
-                    <a href="analysis.html" class="btn btn-secondary">View Charts</a>
-                </div>
-            </div>
-        </div>
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h3>GeoViz Dataset Visualizer</h3>
-                    <p style="color: #8b98a5; margin-bottom: 20px;">A specialized tool to upload and map any dataset dynamically with advanced spatial tools.</p>
-                    <a href="geoviz.html" class="btn btn-primary">Open GeoViz</a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h3>CSV Upload Web App</h3>
-                    <p style="color: #8b98a5; margin-bottom: 20px;">Upload your own flood data CSV files to process and visualize them within the platform.</p>
-                    <a href="floods.html" class="btn btn-secondary">Open Upload App</a>
-                </div>
-            </div>
-        </div>
-    </div>
+<script>
+    // 1. Initialize the map centered on the DRC
+    const map = L.map('map').setView([-2.5, 23.5], 6);
+
+    // 2. Add a background layer (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // 3. Load the incident data
+    async function loadMapData() {
+        try {
+            const response = await fetch('data/map_data.json');
+            const incidents = await response.json();
+
+            incidents.forEach(incident => {
+                // Determine circle size (Scale fatalities)
+                const radius = Math.sqrt(incident.deaths) * 5000; 
+
+                // Create a circle for each incident
+                const circle = L.circle([incident.lat, incident.lng], {
+                    color: '#e74c3c',
+                    fillColor: '#c0392b',
+                    fillOpacity: 0.5,
+                    radius: radius
+                }).addTo(map);
+
+                // Add a popup with the details
+                circle.bindPopup(`
+                    <div style="font-family: sans-serif;">
+                        <h3 style="margin:0; color:#c0392b;">${incident.prov}</h3>
+                        <hr>
+                        <p><strong>Date:</strong> ${incident.date}</p>
+                        <p><strong>People Killed:</strong> ${incident.deaths}</p>
+                        <p><strong>Number of Events:</strong> ${incident.events}</p>
+                    </div>
+                `);
+            });
+        } catch (error) {
+            console.error('Error loading map data:', error);
+        }
+    }
+
+    loadMapData();
+</script>
+
 </body>
 </html>
