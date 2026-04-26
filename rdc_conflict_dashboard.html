@@ -100,8 +100,7 @@
 <script>
     async function loadData() {
         try {
-            const response = await fetch('data/rdc_dashboard_summary.json');
-            const data = await response.json();
+            const data = {"total": 28916, "provinces": {"Nord-Kivu": 13756, "Ituri": 8747, "Sud-Kivu": 2385, "Kasai": 742, "Kasai-Central": 709, "Mai-Ndombe": 633, "Kinshasa": 547, "Tanganyika": 385, "Tshopo": 131, "Kongo-Central": 108, "Haut-Katanga": 101, "Haut-Uele": 95, "Kwilu": 92, "Bas-Uele": 79, "Maniema": 75, "Tshuapa": 69, "Kwango": 57, "Haut-Lomami": 55, "Lualaba": 45, "Mongala": 23, "Kasai-Oriental": 21, "Lomami": 17, "Sud-Ubangi": 14, "Sankuru": 13, "Equateur": 11, "Nord-Ubangi": 6}, "years": {"2015": 948, "2016": 699, "2017": 1671, "2018": 1398, "2019": 1979, "2020": 2948, "2021": 3446, "2022": 4339, "2023": 3578, "2024": 3459, "2025": 3861, "2026": 590}};
 
             // Update Total
             document.getElementById('total-fatalities').innerText = data.total.toLocaleString();
