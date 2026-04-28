@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRC Conflict Map - Civilian Incidents</title>
+    <title>DRC Conflict Map - Civilian Incidents & Schools</title>
     <!-- Leaflet CSS for the map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
@@ -11,10 +11,10 @@
         #map { height: 100vh; width: 100vw; }
         .info-box {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            bottom: 20px;
+            left: 10px;
             z-index: 1000;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -27,10 +27,11 @@
 <body>
 
 <div class="info-box">
-    <h1>DRC Civilian Conflict Map</h1>
-    <p>This map shows incidents of violence against civilians since 2015.</p>
-    <p><strong>Circle Size:</strong> Represents the number of fatalities.</p>
-    <p><small>Click on a circle for details.</small></p>
+    <h1>DRC Civilian Conflict & Schools</h1>
+    <p>This map shows incidents of violence against civilians since 2015 and schools in Kinshasa.</p>
+    <p><strong>Conflict:</strong> Transparent circles with red borders (size = fatalities).</p>
+    <p><strong>Schools:</strong> Blue map pins in Kinshasa.</p>
+    <p><small>Use the selector in the top-right to toggle layers.</small></p>
 </div>
 
 <div id="map"></div>
@@ -47,8 +48,12 @@
         attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
+    // Create layer groups
+    const incidentLayer = L.layerGroup().addTo(map);
+    const schoolLayer = L.layerGroup().addTo(map);
+
     // 3. Load the incident data
-    async function loadMapData() {
+    async function loadIncidentData() {
         try {
             const response = await fetch('data/map_data.json');
             const incidents = await response.json();
@@ -57,13 +62,13 @@
                 // Determine circle size (Scale fatalities)
                 const radius = Math.sqrt(incident.deaths) * 5000; 
 
-                // Create a circle for each incident
+                // Create a transparent circle with red border for each incident
                 const circle = L.circle([incident.lat, incident.lng], {
-                    color: '#e74c3c',
-                    fillColor: '#c0392b',
-                    fillOpacity: 0.5,
+                    color: '#e74c3c',      // Red border
+                    weight: 2,             // Border thickness
+                    fillOpacity: 0,        // Transparent fill
                     radius: radius
-                }).addTo(map);
+                });
 
                 // Add a popup with the details
                 circle.bindPopup(`
@@ -75,13 +80,56 @@
                         <p><strong>Number of Events:</strong> ${incident.events}</p>
                     </div>
                 `);
+                
+                circle.addTo(incidentLayer);
             });
         } catch (error) {
-            console.error('Error loading map data:', error);
+            console.error('Error loading incident data:', error);
         }
     }
 
-    loadMapData();
+    // 4. Load the school data
+    async function loadSchoolData() {
+        try {
+            const response = await fetch('data/kinshasa_schools_cleaned.json');
+            const schools = await response.json();
+
+            schools.forEach(school => {
+                if (school.Latitude && school.Longitude) {
+                    const marker = L.marker([school.Latitude, school.Longitude]);
+                    
+                    marker.bindPopup(`
+                        <div style="font-family: sans-serif;">
+                            <h3 style="margin:0; color:#2980b9;">${school.Name || 'Unnamed School'}</h3>
+                            <hr>
+                            <p><strong>Type:</strong> School</p>
+                            <p><strong>Location:</strong> Kinshasa</p>
+                        </div>
+                    `);
+                    
+                    marker.addTo(schoolLayer);
+                }
+            });
+        } catch (error) {
+            console.error('Error loading school data:', error);
+        }
+    }
+
+    // Initialize data loading
+    loadIncidentData();
+    loadSchoolData();
+
+    // 5. Add Layer Control (Legend/Selector)
+    const overlayMaps = {
+        "Conflict Incidents": incidentLayer,
+        "Kinshasa Schools": schoolLayer
+    };
+
+    L.control.layers(null, overlayMaps, {
+        collapsed: false,
+        position: 'topright'
+    }).addTo(map);
+
 </script>
 
 </body>
