@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.315,
+          -4.329722
+        ]
+      },
+      "properties": {
+        "id": 626541,
+        "relid": "DRC-2026-3-934-7",
+        "year": 2026,
+        "active_year": false,
+        "code_status": "Clear",
+        "type_of_violence": 3,
+        "conflict_dset_id": 89,
+        "conflict_new_id": 467,
+        "conflict_name": "Government of DR Congo (Zaire) - Civilians",
+        "dyad_dset_id": 89,
+        "dyad_new_id": 934,
+        "dyad_name": "Government of DR Congo (Zaire) - Civilians",
+        "side_a_dset_id": 89,
+        "side_a_new_id": 89,
+        "side_a": "Government of DR Congo (Zaire)",
+        "side_b_dset_id": 9999,
+        "side_b_new_id": 1,
+        "side_b": "Civilians",
+        "number_of_sources": 1,
+        "source_article": "\"Actualite.cd,2026-03-11,Insecurity in Kinshasa: a judicial defender shot dead in Kisenso\"",
+        "source_office": "Actualite.cd",
+        "source_date": "2026-03-11T00:00:00",
+        "source_headline": "Insecurity in Kinshasa: a judicial defender shot dead in Kisenso",
+        "source_original": "Victim's relatives, witness",
+        "where_prec": 1,
+        "where_coordinates": "Kinshasa city",
+        "where_description": "in the Revolution district, in the commune of Kisenso, southwest of the city of Kinshasa",
+        "adm_1": "Kinshasa province",
+        "adm_2": "",
+        "latitude": -4.329722,
+        "longitude": 15.315,
+        "geom_wkt": "POINT (15.315 -4.329722)",
+        "priogrid_gid": 123511,
+        "country": "DR Congo (Zaire)",
+        "country_id": 490,
+        "region": "Africa",
+        "event_clarity": 1,
+        "date_prec": 1,
+        "date_start": "2026-03-10T00:00:00",
+        "date_end": "2026-03-10T00:00:00",
+        "deaths_a": 0,
+        "deaths_b": 0,
+        "deaths_civilians": 1,
+        "deaths_unknown": 0,
+        "best": 1,
+        "high": 1,
+        "low": 1,
+        "gwnoa": 490.0,
+        "gwnob": ""
+      }
+    }
+  ]
+}

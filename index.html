@@ -28,9 +28,9 @@
 
 <div class="info-box">
     <h1>DRC Civilian Conflict & Schools</h1>
-    <p>This map shows incidents of violence against civilians since 2015 and schools in Kinshasa.</p>
-    <p><strong>Conflict:</strong> Transparent circles with red borders (size = fatalities).</p>
-    <p><strong>Schools:</strong> Blue map pins in Kinshasa.</p>
+    <p>This map shows recent one-sided violence (2025-2026) and schools in Kinshasa.</p>
+    <p><strong>Violence 2025-26 (UCDP):</strong> Purple markers.</p>
+    <p><strong>Schools:</strong> Small blue circles.</p>
     <p><small>Use the selector in the top-right to toggle layers.</small></p>
 </div>
 
@@ -40,8 +40,8 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    // 1. Initialize the map centered on the DRC
-    const map = L.map('map').setView([-2.5, 23.5], 6);
+    // 1. Initialize the map centered on Kinshasa for a better initial view
+    const map = L.map('map').setView([-4.35, 15.3], 12);
 
     // 2. Add a background layer (OpenStreetMap)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -49,42 +49,43 @@
     }).addTo(map);
 
     // Create layer groups
-    const incidentLayer = L.layerGroup().addTo(map);
     const schoolLayer = L.layerGroup().addTo(map);
+    const ucdpLayer = L.layerGroup().addTo(map);
 
-    // 3. Load the incident data
-    async function loadIncidentData() {
+    // Load UCDP One-sided Violence Data (2025-2026)
+    async function loadUcdpData() {
         try {
-            const response = await fetch('data/map_data.json');
-            const incidents = await response.json();
+            const response = await fetch('data/kinshasa_one_sided_violence_2025_2026.geojson');
+            const data = await response.json();
 
-            incidents.forEach(incident => {
-                // Determine circle size (Scale fatalities)
-                const radius = Math.sqrt(incident.deaths) * 5000; 
-
-                // Create a transparent circle with red border for each incident
-                const circle = L.circle([incident.lat, incident.lng], {
-                    color: '#e74c3c',      // Red border
-                    weight: 2,             // Border thickness
-                    fillOpacity: 0,        // Transparent fill
-                    radius: radius
-                });
-
-                // Add a popup with the details
-                circle.bindPopup(`
-                    <div style="font-family: sans-serif;">
-                        <h3 style="margin:0; color:#c0392b;">${incident.prov}</h3>
-                        <hr>
-                        <p><strong>Date:</strong> ${incident.date}</p>
-                        <p><strong>People Killed:</strong> ${incident.deaths}</p>
-                        <p><strong>Number of Events:</strong> ${incident.events}</p>
-                    </div>
-                `);
-                
-                circle.addTo(incidentLayer);
-            });
+            L.geoJSON(data, {
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+                        radius: 8,
+                        fillColor: "#8e44ad",
+                        color: "#fff",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    });
+                },
+                onEachFeature: function (feature, layer) {
+                    const props = feature.properties;
+                    layer.bindPopup(`
+                        <div style="font-family: sans-serif;">
+                            <h3 style="margin:0; color:#8e44ad;">One-Sided Violence (UCDP)</h3>
+                            <hr>
+                            <p><strong>Date:</strong> ${props.date_start}</p>
+                            <p><strong>Target Side:</strong> ${props.side_b}</p>
+                            <p><strong>Civilian Deaths:</strong> ${props.deaths_civilians}</p>
+                            <p><strong>Location:</strong> ${props.where_coordinates}</p>
+                            <p><small>Source: ${props.source_office || 'UCDP'}</small></p>
+                        </div>
+                    `);
+                }
+            }).addTo(ucdpLayer);
         } catch (error) {
-            console.error('Error loading incident data:', error);
+            console.error('Error loading UCDP data:', error);
         }
     }
 
@@ -96,7 +97,15 @@
 
             schools.forEach(school => {
                 if (school.Latitude && school.Longitude) {
-                    const marker = L.marker([school.Latitude, school.Longitude]);
+                    // Using small circle markers instead of map pins for a cleaner look
+                    const marker = L.circleMarker([school.Latitude, school.Longitude], {
+                        radius: 3,
+                        fillColor: "#2980b9",
+                        color: "#2980b9",
+                        weight: 1,
+                        opacity: 0.5,
+                        fillOpacity: 0.3
+                    });
                     
                     marker.bindPopup(`
                         <div style="font-family: sans-serif;">
@@ -116,12 +125,12 @@
     }
 
     // Initialize data loading
-    loadIncidentData();
+    loadUcdpData();
     loadSchoolData();
 
     // 5. Add Layer Control (Legend/Selector)
     const overlayMaps = {
-        "Conflict Incidents": incidentLayer,
+        "Violence 2025-26 (UCDP)": ucdpLayer,
         "Kinshasa Schools": schoolLayer
     };
 
