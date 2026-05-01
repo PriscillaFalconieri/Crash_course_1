@@ -213,84 +213,116 @@
     }
 
     async function loadViolenceData() {
-        const res = await fetch('data/kinshasa_one_sided_violence_2025_2026.geojson');
-        const geojson = await res.json();
-        
-        geojson.features.forEach(f => {
-            const coords = f.geometry.coordinates;
-            violenceEvents.push({ lat: coords[1], lon: coords[0], props: f.properties });
+        try {
+            const res = await fetch('data/kinshasa_one_sided_violence_2025_2026.geojson');
+            if (!res.ok) throw new Error('Violence data not found');
+            const geojson = await res.json();
             
-            L.circleMarker([coords[1], coords[0]], {
-                radius: 10,
-                fillColor: '#f5a623',
-                color: '#fff',
-                weight: 1,
-                fillOpacity: 0.8
-            }).bindPopup(`<b>Violence Event</b><br>${f.properties.source_headline}`).addTo(violenceLayer);
-        });
+            geojson.features.forEach(f => {
+                const coords = f.geometry.coordinates;
+                violenceEvents.push({ lat: coords[1], lon: coords[0], props: f.properties });
+                
+                L.circleMarker([coords[1], coords[0]], {
+                    radius: 10,
+                    fillColor: '#f5a623',
+                    color: '#fff',
+                    weight: 1,
+                    fillOpacity: 0.8
+                }).bindPopup(`<b>Violence Event</b><br>${f.properties.source_headline}`).addTo(violenceLayer);
+            });
+            console.log(`Loaded ${violenceEvents.length} violence events.`);
+        } catch (e) {
+            console.error('Error loading violence data:', e);
+            document.getElementById('analysisSummary').innerHTML = '<span style="color:red">Error: Could not load violence data.</span>';
+        }
     }
 
     async function loadDefaultData() {
-        const res = await fetch('data/kinshasa_schools_cleaned.json');
-        const schools = await res.json();
-        runAnalysis(schools);
+        try {
+            const res = await fetch('data/kinshasa_schools_cleaned.json');
+            if (!res.ok) throw new Error('School data not found');
+            const schools = await res.json();
+            runAnalysis(schools);
+        } catch (e) {
+            console.error('Error loading school data:', e);
+            alert('Could not load the default school dataset.');
+        }
     }
 
     function processFile(file) {
+        if (!file) return;
         Papa.parse(file, {
             header: true,
             dynamicTyping: true,
             skipEmptyLines: true,
-            complete: (results) => runAnalysis(results.data)
+            complete: (results) => runAnalysis(results.data),
+            error: (err) => alert('Error parsing CSV: ' + err)
         });
     }
 
     function runAnalysis(schools) {
-        document.getElementById('loadingOverlay').classList.remove('hidden');
+        if (!schools || !Array.isArray(schools)) {
+            alert('Invalid data format. Expected an array of schools.');
+            return;
+        }
+
+        const overlay = document.getElementById('loadingOverlay');
+        overlay.classList.remove('hidden');
         
+        // Use a slight delay to allow the UI to show the overlay before blocking the thread
         setTimeout(() => {
-            schoolsLayer.clearLayers();
-            let atRiskCount = 0;
-            let validSchools = 0;
+            try {
+                schoolsLayer.clearLayers();
+                let atRiskCount = 0;
+                let validSchools = 0;
 
-            schools.forEach(school => {
-                const sLat = parseFloat(school.Latitude || school.lat);
-                const sLon = parseFloat(school.Longitude || school.lon);
-                
-                if (isNaN(sLat) || isNaN(sLon)) return;
-                validSchools++;
+                if (violenceEvents.length === 0) {
+                    console.warn('No violence events loaded for analysis.');
+                }
 
-                let minDistance = Infinity;
-                violenceEvents.forEach(e => {
-                    const d = getDistance(sLat, sLon, e.lat, e.lon);
-                    if (d < minDistance) minDistance = d;
+                schools.forEach(school => {
+                    const sLat = parseFloat(school.Latitude || school.lat || school.latitude);
+                    const sLon = parseFloat(school.Longitude || school.lon || school.longitude);
+                    
+                    if (isNaN(sLat) || isNaN(sLon)) return;
+                    validSchools++;
+
+                    let minDistance = Infinity;
+                    violenceEvents.forEach(e => {
+                        const d = getDistance(sLat, sLon, e.lat, e.lon);
+                        if (d < minDistance) minDistance = d;
+                    });
+
+                    const isAtRisk = minDistance <= 2000;
+                    if (isAtRisk) atRiskCount++;
+
+                    L.circleMarker([sLat, sLon], {
+                        radius: 4,
+                        fillColor: isAtRisk ? '#ef4444' : '#3498db',
+                        color: isAtRisk ? '#ef4444' : '#3498db',
+                        weight: 1,
+                        fillOpacity: 0.8
+                    }).bindPopup(`
+                        <b>${school.Name || school.name || 'Unnamed School'}</b><br>
+                        Status: ${isAtRisk ? '<span style="color:red">AT RISK</span>' : 'Safe'}<br>
+                        Distance: ${minDistance === Infinity ? 'No events found' : Math.round(minDistance) + 'm'}
+                    `).addTo(schoolsLayer);
                 });
 
-                const isAtRisk = minDistance <= 2000;
-                if (isAtRisk) atRiskCount++;
-
-                L.circleMarker([sLat, sLon], {
-                    radius: 4,
-                    fillColor: isAtRisk ? '#ef4444' : '#3498db',
-                    color: isAtRisk ? '#ef4444' : '#3498db',
-                    weight: 1,
-                    fillOpacity: 0.8
-                }).bindPopup(`
-                    <b>${school.Name || 'Unnamed School'}</b><br>
-                    Status: ${isAtRisk ? '<span style="color:red">AT RISK</span>' : 'Safe'}<br>
-                    Distance: ${minDistance === Infinity ? 'N/A' : Math.round(minDistance) + 'm'}
-                `).addTo(schoolsLayer);
-            });
-
-            // Update UI
-            document.getElementById('totalSchools').textContent = validSchools;
-            document.getElementById('atRiskCount').textContent = atRiskCount;
-            document.getElementById('analysisSummary').innerHTML = `
-                Analysis complete for <b>${validSchools}</b> schools.<br>
-                <b>${atRiskCount}</b> schools are within the 2km risk perimeter.
-            `;
-            document.getElementById('loadingOverlay').classList.add('hidden');
-        }, 100);
+                // Update UI
+                document.getElementById('totalSchools').textContent = validSchools;
+                document.getElementById('atRiskCount').textContent = atRiskCount;
+                document.getElementById('analysisSummary').innerHTML = `
+                    Analysis complete for <b>${validSchools}</b> schools.<br>
+                    <b>${atRiskCount}</b> schools are within the 2km risk perimeter.
+                `;
+            } catch (error) {
+                console.error('Analysis error:', error);
+                alert('An error occurred during proximity analysis.');
+            } finally {
+                overlay.classList.add('hidden');
+            }
+        }, 50);
     }
 
     init();
