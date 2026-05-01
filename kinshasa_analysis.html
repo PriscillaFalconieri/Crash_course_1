@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinshasa Violence Analysis (2021-2026)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; }
+        p { color: #7f8c8d; text-align: center; margin-bottom: 40px; }
+        .chart-container { position: relative; height: 500px; width: 100%; }
+        .legend-box { margin-top: 20px; padding: 15px; background: #fdf2f2; border-radius: 8px; font-size: 0.9em; border-left: 5px solid #e74c3c; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Kinshasa Conflict Dynamics (2021-2026)</h1>
+    <p>Bubble Chart: Frequency of Events vs. Severity of Fatalities</p>
+    
+    <div class="chart-container">
+        <canvas id="kinshasaChart"></canvas>
+    </div>
+
+    <div class="legend-box">
+        <strong>How to read this chart:</strong><br>
+        • <strong>Horizontal Position (Time):</strong> Progresses from Jan 2021 to April 2026.<br>
+        • <strong>Vertical Height (Incidents):</strong> Higher bubbles indicate more individual events reported that month.<br>
+        • <strong>Bubble Size (Fatalities):</strong> Larger bubbles indicate a higher number of deaths in that month.
+    </div>
+</div>
+
+<script>
+    const chartData = [{"x": "January 2021", "y": 0, "r": 5, "label": "January 2021", "deaths": 0}, {"x": "February 2021", "y": 0, "r": 5, "label": "February 2021", "deaths": 0}, {"x": "March 2021", "y": 0, "r": 5, "label": "March 2021", "deaths": 0}, {"x": "April 2021", "y": 0, "r": 5, "label": "April 2021", "deaths": 0}, {"x": "May 2021", "y": 0, "r": 5, "label": "May 2021", "deaths": 0}, {"x": "June 2021", "y": 1, "r": 5, "label": "June 2021", "deaths": 0}, {"x": "July 2021", "y": 0, "r": 5, "label": "July 2021", "deaths": 0}, {"x": "August 2021", "y": 0, "r": 5, "label": "August 2021", "deaths": 0}, {"x": "September 2021", "y": 1, "r": 10, "label": "September 2021", "deaths": 1}, {"x": "October 2021", "y": 2, "r": 5, "label": "October 2021", "deaths": 0}, {"x": "November 2021", "y": 1, "r": 5, "label": "November 2021", "deaths": 0}, {"x": "December 2021", "y": 0, "r": 5, "label": "December 2021", "deaths": 0}, {"x": "January 2022", "y": 2, "r": 15, "label": "January 2022", "deaths": 2}, {"x": "February 2022", "y": 2, "r": 5, "label": "February 2022", "deaths": 0}, {"x": "March 2022", "y": 1, "r": 5, "label": "March 2022", "deaths": 0}, {"x": "April 2022", "y": 0, "r": 5, "label": "April 2022", "deaths": 0}, {"x": "May 2022", "y": 0, "r": 5, "label": "May 2022", "deaths": 0}, {"x": "June 2022", "y": 0, "r": 5, "label": "June 2022", "deaths": 0}, {"x": "July 2022", "y": 3, "r": 25, "label": "July 2022", "deaths": 4}, {"x": "August 2022", "y": 2, "r": 5, "label": "August 2022", "deaths": 0}, {"x": "September 2022", "y": 1, "r": 5, "label": "September 2022", "deaths": 0}, {"x": "October 2022", "y": 1, "r": 5, "label": "October 2022", "deaths": 0}, {"x": "November 2022", "y": 0, "r": 5, "label": "November 2022", "deaths": 0}, {"x": "December 2022", "y": 1, "r": 65, "label": "December 2022", "deaths": 12}, {"x": "January 2023", "y": 0, "r": 5, "label": "January 2023", "deaths": 0}, {"x": "February 2023", "y": 1, "r": 10, "label": "February 2023", "deaths": 1}, {"x": "March 2023", "y": 1, "r": 5, "label": "March 2023", "deaths": 0}, {"x": "April 2023", "y": 0, "r": 5, "label": "April 2023", "deaths": 0}, {"x": "May 2023", "y": 4, "r": 30, "label": "May 2023", "deaths": 5}, {"x": "June 2023", "y": 6, "r": 105, "label": "June 2023", "deaths": 20}, {"x": "July 2023", "y": 5, "r": 20, "label": "July 2023", "deaths": 3}, {"x": "August 2023", "y": 0, "r": 5, "label": "August 2023", "deaths": 0}, {"x": "September 2023", "y": 1, "r": 5, "label": "September 2023", "deaths": 0}, {"x": "October 2023", "y": 0, "r": 5, "label": "October 2023", "deaths": 0}, {"x": "November 2023", "y": 1, "r": 50, "label": "November 2023", "deaths": 9}, {"x": "December 2023", "y": 3, "r": 10, "label": "December 2023", "deaths": 1}, {"x": "January 2024", "y": 0, "r": 5, "label": "January 2024", "deaths": 0}, {"x": "February 2024", "y": 0, "r": 5, "label": "February 2024", "deaths": 0}, {"x": "March 2024", "y": 0, "r": 5, "label": "March 2024", "deaths": 0}, {"x": "April 2024", "y": 1, "r": 10, "label": "April 2024", "deaths": 1}, {"x": "May 2024", "y": 2, "r": 25, "label": "May 2024", "deaths": 4}, {"x": "June 2024", "y": 0, "r": 5, "label": "June 2024", "deaths": 0}, {"x": "July 2024", "y": 3, "r": 15, "label": "July 2024", "deaths": 2}, {"x": "August 2024", "y": 2, "r": 20, "label": "August 2024", "deaths": 3}, {"x": "September 2024", "y": 2, "r": 10, "label": "September 2024", "deaths": 1}, {"x": "October 2024", "y": 0, "r": 5, "label": "October 2024", "deaths": 0}, {"x": "November 2024", "y": 1, "r": 10, "label": "November 2024", "deaths": 1}, {"x": "December 2024", "y": 0, "r": 5, "label": "December 2024", "deaths": 0}, {"x": "January 2025", "y": 1, "r": 5, "label": "January 2025", "deaths": 0}, {"x": "February 2025", "y": 3, "r": 20, "label": "February 2025", "deaths": 3}, {"x": "March 2025", "y": 3, "r": 10, "label": "March 2025", "deaths": 1}, {"x": "April 2025", "y": 1, "r": 10, "label": "April 2025", "deaths": 1}, {"x": "May 2025", "y": 1, "r": 10, "label": "May 2025", "deaths": 1}, {"x": "June 2025", "y": 4, "r": 25, "label": "June 2025", "deaths": 4}, {"x": "July 2025", "y": 5, "r": 20, "label": "July 2025", "deaths": 3}, {"x": "August 2025", "y": 2, "r": 10, "label": "August 2025", "deaths": 1}, {"x": "September 2025", "y": 3, "r": 15, "label": "September 2025", "deaths": 2}, {"x": "October 2025", "y": 1, "r": 5, "label": "October 2025", "deaths": 0}, {"x": "November 2025", "y": 1, "r": 5, "label": "November 2025", "deaths": 0}, {"x": "December 2025", "y": 2, "r": 15, "label": "December 2025", "deaths": 2}, {"x": "January 2026", "y": 6, "r": 30, "label": "January 2026", "deaths": 5}, {"x": "February 2026", "y": 2, "r": 10, "label": "February 2026", "deaths": 1}, {"x": "March 2026", "y": 2, "r": 10, "label": "March 2026", "deaths": 1}, {"x": "April 2026", "y": 2, "r": 15, "label": "April 2026", "deaths": 2}];
+
+    const ctx = document.getElementById('kinshasaChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'Monthly Incidents & Fatalities',
+                data: chartData,
+                backgroundColor: 'rgba(231, 76, 60, 0.6)',
+                borderColor: '#e74c3c',
+                hoverBackgroundColor: 'rgba(231, 76, 60, 0.8)'
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    type: 'category',
+                    labels: chartData.map(d => d.x),
+                    title: { display: true, text: 'Timeline (2021 - 2026)' }
+                },
+                y: {
+                    beginAtZero: true,
+                    title: { display: true, text: 'Number of Incidents (Events)' }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            const d = context.raw;
+                            return ` ${d.label}: ${d.y} Events, ${d.deaths} Fatalities`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
