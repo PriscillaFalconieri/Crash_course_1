@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinshasa Violence Dashboard (2016-2026)</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 1100px; margin: auto; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #1a1a1a; margin-bottom: 10px; }
+        .dashboard-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+        @media (min-width: 900px) {
+            .dashboard-grid { grid-template-columns: 1fr 1fr; }
+            .full-width { grid-column: span 2; }
+        }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { font-size: 1.1em; color: #444; margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .chart-wrapper { position: relative; height: 350px; width: 100%; margin-top: 20px; }
+        .explanation { font-size: 0.9em; color: #666; margin-top: 15px; line-height: 1.5; background: #f8f9fa; padding: 10px; border-radius: 6px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Kinshasa Violence Dashboard</h1>
+        <p>Analyzing incidents and fatalities in Kinshasa Province (2016 - 2026)</p>
+    </header>
+
+    <div class="dashboard-grid">
+        <!-- 1. Bubble Chart (Full Width) -->
+        <div class="card full-width">
+            <h2>Frequency vs. Severity (Monthly Analysis)</h2>
+            <div class="chart-wrapper">
+                <canvas id="bubbleChart"></canvas>
+            </div>
+            <div class="explanation">
+                <strong>How to read:</strong> Each bubble is a month. The <strong>higher</strong> the bubble, the more incidents happened. The <strong>larger</strong> the bubble, the more fatal those incidents were.
+            </div>
+        </div>
+
+        <!-- 2. Line Chart -->
+        <div class="card">
+            <h2>Annual Incident Trend</h2>
+            <div class="chart-wrapper">
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="explanation">
+                <strong>How to read:</strong> This line shows if violence is increasing or decreasing year-by-year. A rising line means more events were reported.
+            </div>
+        </div>
+
+        <!-- 3. Bar Chart -->
+        <div class="card">
+            <h2>Annual Fatalities</h2>
+            <div class="chart-wrapper">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="explanation">
+                <strong>How to read:</strong> Each bar represents the total number of people killed in Kinshasa that year. Higher bars mean deadlier years.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const data = {"bubble": [{"x": "January 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "March 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "April 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2016", "y": 1, "r": 5, "deaths": 0}, {"x": "June 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "July 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "August 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "September 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "October 2016", "y": 1, "r": 5, "deaths": 0}, {"x": "November 2016", "y": 2, "r": 5, "deaths": 0}, {"x": "December 2016", "y": 0, "r": 5, "deaths": 0}, {"x": "January 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2017", "y": 1, "r": 5, "deaths": 0}, {"x": "March 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "April 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "June 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "July 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "August 2017", "y": 1, "r": 5, "deaths": 0}, {"x": "September 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "October 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "November 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "December 2017", "y": 0, "r": 5, "deaths": 0}, {"x": "January 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "March 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "April 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2018", "y": 2, "r": 30, "deaths": 5}, {"x": "June 2018", "y": 7, "r": 90, "deaths": 17}, {"x": "July 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "August 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "September 2018", "y": 1, "r": 30, "deaths": 5}, {"x": "October 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "November 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "December 2018", "y": 0, "r": 5, "deaths": 0}, {"x": "January 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "March 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "April 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "June 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "July 2019", "y": 1, "r": 15, "deaths": 2}, {"x": "August 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "September 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "October 2019", "y": 1, "r": 10, "deaths": 1}, {"x": "November 2019", "y": 1, "r": 5, "deaths": 0}, {"x": "December 2019", "y": 0, "r": 5, "deaths": 0}, {"x": "January 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "March 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "April 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "June 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "July 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "August 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "September 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "October 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "November 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "December 2020", "y": 0, "r": 5, "deaths": 0}, {"x": "January 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "March 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "April 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "June 2021", "y": 1, "r": 5, "deaths": 0}, {"x": "July 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "August 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "September 2021", "y": 1, "r": 10, "deaths": 1}, {"x": "October 2021", "y": 2, "r": 5, "deaths": 0}, {"x": "November 2021", "y": 1, "r": 5, "deaths": 0}, {"x": "December 2021", "y": 0, "r": 5, "deaths": 0}, {"x": "January 2022", "y": 2, "r": 15, "deaths": 2}, {"x": "February 2022", "y": 2, "r": 5, "deaths": 0}, {"x": "March 2022", "y": 1, "r": 5, "deaths": 0}, {"x": "April 2022", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2022", "y": 0, "r": 5, "deaths": 0}, {"x": "June 2022", "y": 0, "r": 5, "deaths": 0}, {"x": "July 2022", "y": 3, "r": 25, "deaths": 4}, {"x": "August 2022", "y": 2, "r": 5, "deaths": 0}, {"x": "September 2022", "y": 1, "r": 5, "deaths": 0}, {"x": "October 2022", "y": 1, "r": 5, "deaths": 0}, {"x": "November 2022", "y": 0, "r": 5, "deaths": 0}, {"x": "December 2022", "y": 1, "r": 65, "deaths": 12}, {"x": "January 2023", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2023", "y": 1, "r": 10, "deaths": 1}, {"x": "March 2023", "y": 1, "r": 5, "deaths": 0}, {"x": "April 2023", "y": 0, "r": 5, "deaths": 0}, {"x": "May 2023", "y": 4, "r": 30, "deaths": 5}, {"x": "June 2023", "y": 6, "r": 105, "deaths": 20}, {"x": "July 2023", "y": 5, "r": 20, "deaths": 3}, {"x": "August 2023", "y": 0, "r": 5, "deaths": 0}, {"x": "September 2023", "y": 1, "r": 5, "deaths": 0}, {"x": "October 2023", "y": 0, "r": 5, "deaths": 0}, {"x": "November 2023", "y": 1, "r": 50, "deaths": 9}, {"x": "December 2023", "y": 3, "r": 10, "deaths": 1}, {"x": "January 2024", "y": 0, "r": 5, "deaths": 0}, {"x": "February 2024", "y": 0, "r": 5, "deaths": 0}, {"x": "March 2024", "y": 0, "r": 5, "deaths": 0}, {"x": "April 2024", "y": 1, "r": 10, "deaths": 1}, {"x": "May 2024", "y": 2, "r": 25, "deaths": 4}, {"x": "June 2024", "y": 0, "r": 5, "deaths": 0}, {"x": "July 2024", "y": 3, "r": 15, "deaths": 2}, {"x": "August 2024", "y": 2, "r": 20, "deaths": 3}, {"x": "September 2024", "y": 2, "r": 10, "deaths": 1}, {"x": "October 2024", "y": 0, "r": 5, "deaths": 0}, {"x": "November 2024", "y": 1, "r": 10, "deaths": 1}, {"x": "December 2024", "y": 0, "r": 5, "deaths": 0}, {"x": "January 2025", "y": 1, "r": 5, "deaths": 0}, {"x": "February 2025", "y": 3, "r": 20, "deaths": 3}, {"x": "March 2025", "y": 3, "r": 10, "deaths": 1}, {"x": "April 2025", "y": 1, "r": 10, "deaths": 1}, {"x": "May 2025", "y": 1, "r": 10, "deaths": 1}, {"x": "June 2025", "y": 4, "r": 25, "deaths": 4}, {"x": "July 2025", "y": 5, "r": 20, "deaths": 3}, {"x": "August 2025", "y": 2, "r": 10, "deaths": 1}, {"x": "September 2025", "y": 3, "r": 15, "deaths": 2}, {"x": "October 2025", "y": 1, "r": 5, "deaths": 0}, {"x": "November 2025", "y": 1, "r": 5, "deaths": 0}, {"x": "December 2025", "y": 2, "r": 15, "deaths": 2}, {"x": "January 2026", "y": 6, "r": 30, "deaths": 5}, {"x": "February 2026", "y": 2, "r": 10, "deaths": 1}, {"x": "March 2026", "y": 2, "r": 10, "deaths": 1}, {"x": "April 2026", "y": 2, "r": 15, "deaths": 2}], "line": {"labels": ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"], "values": [4, 2, 10, 3, 0, 5, 13, 22, 11, 27, 12]}, "bar": {"labels": ["2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"], "values": [0, 0, 27, 3, 0, 1, 18, 39, 12, 18, 9]}};
+
+    // 1. Bubble Chart
+    new Chart(document.getElementById('bubbleChart'), {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'Monthly Severity',
+                data: data.bubble,
+                backgroundColor: 'rgba(231, 76, 60, 0.6)',
+                borderColor: '#e74c3c'
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                x: { type: 'category', labels: data.bubble.map(d => d.x), title: { display: true, text: 'Timeline' } },
+                y: { beginAtZero: true, title: { display: true, text: 'Monthly Events' } }
+            },
+            plugins: {
+                tooltip: { callbacks: { label: d => `${d.raw.x}: ${d.raw.y} Events, ${d.raw.deaths} Fatalities` } }
+            }
+        }
+    });
+
+    // 2. Line Chart
+    new Chart(document.getElementById('lineChart'), {
+        type: 'line',
+        data: {
+            labels: data.line.labels,
+            datasets: [{
+                label: 'Number of Events',
+                data: data.line.values,
+                borderColor: '#3498db',
+                backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                fill: true,
+                tension: 0.3
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+
+    // 3. Bar Chart
+    new Chart(document.getElementById('barChart'), {
+        type: 'bar',
+        data: {
+            labels: data.bar.labels,
+            datasets: [{
+                label: 'Total Fatalities',
+                data: data.bar.values,
+                backgroundColor: '#e67e22'
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+</script>
+
+</body>
+</html>
