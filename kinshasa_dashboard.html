@@ -74,16 +74,38 @@
         data: {
             datasets: [{
                 label: 'Monthly Severity',
-                data: data.bubble,
-                backgroundColor: 'rgba(231, 76, 60, 0.6)',
-                borderColor: '#e74c3c'
+                data: data.bubble.map(d => ({
+                    ...d,
+                    // New scaling: Square root for more balanced sizes
+                    r: Math.sqrt(d.deaths) * 8 + 4 
+                })),
+                backgroundColor: 'rgba(231, 76, 60, 0.5)',
+                borderColor: '#e74c3c',
+                borderWidth: 1
             }]
         },
         options: {
             maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    top: 30,
+                    right: 30,
+                    bottom: 10,
+                    left: 10
+                }
+            },
             scales: {
-                x: { type: 'category', labels: data.bubble.map(d => d.x), title: { display: true, text: 'Timeline' } },
-                y: { beginAtZero: true, title: { display: true, text: 'Monthly Events' } }
+                x: { 
+                    type: 'category', 
+                    labels: data.bubble.map(d => d.x), 
+                    title: { display: true, text: 'Timeline' },
+                    grid: { display: false }
+                },
+                y: { 
+                    beginAtZero: true, 
+                    title: { display: true, text: 'Monthly Events' },
+                    suggestedMax: 8 // Add extra space at the top
+                }
             },
             plugins: {
                 tooltip: { callbacks: { label: d => `${d.raw.x}: ${d.raw.y} Events, ${d.raw.deaths} Fatalities` } }
