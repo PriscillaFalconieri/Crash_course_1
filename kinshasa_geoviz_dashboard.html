@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinshasa GeoViz Dashboard - Interactive Conflict Analysis</title>
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        :root {
+            --bg-main: #0f1419;
+            --bg-sidebar: #16202a;
+            --border: #2f3b47;
+            --accent: #f5a623;
+            --text-main: #e7e9ea;
+            --text-muted: #8b98a5;
+            --card-bg: #1c2732;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-main); color: var(--text-main); height: 100vh; overflow: hidden; }
+
+        .app-container { display: flex; height: 100vh; }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 450px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            padding: 20px;
+            z-index: 1001;
+        }
+
+        .sidebar-header { margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .sidebar-header h1 { font-size: 1.4em; color: var(--accent); }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .card h2 { font-size: 0.9em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+
+        /* Dropzone */
+        .dropzone {
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-bottom: 15px;
+        }
+        .dropzone:hover { border-color: var(--accent); background: rgba(245, 166, 35, 0.05); }
+
+        /* Map Area */
+        .map-area { flex: 1; position: relative; }
+        #map { width: 100%; height: 100%; background: var(--bg-main); }
+
+        /* Chart Wrappers */
+        .chart-wrapper { position: relative; height: 200px; width: 100%; }
+
+        /* Explanation Box */
+        .explanation { font-size: 0.8em; color: var(--text-muted); margin-top: 10px; line-height: 1.4; }
+
+        /* Buttons */
+        .btn {
+            background: var(--accent);
+            color: var(--bg-main);
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:hover { background: #e0961f; }
+        
+        .home-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: inline-block;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar">
+        <a href="index.html" class="home-btn">← Back to Home</a>
+        <div class="sidebar-header">
+            <h1>GeoViz Dashboard</h1>
+            <p style="font-size: 0.8em; color: var(--text-muted);">Interactive Conflict Analysis Tool</p>
+        </div>
+
+        <div class="card">
+            <h2>Data Ingestion</h2>
+            <div class="dropzone" id="dropzone">
+                <span style="font-size: 2em;">📁</span><br>
+                Drag & Drop Conflict CSV
+            </div>
+            <input type="file" id="fileInput" hidden accept=".csv">
+            <button class="btn" onclick="loadInternalData()">Load Kinshasa Example</button>
+        </div>
+
+        <div id="dashboardContent" class="hidden">
+            <!-- Bubble Chart Card -->
+            <div class="card">
+                <h2>Frequency vs. Severity (Monthly)</h2>
+                <div class="chart-wrapper"><canvas id="bubbleChart"></canvas></div>
+                <p class="explanation">Size = Fatalities, Height = Events. Analyzes the last 5 years of data.</p>
+            </div>
+
+            <!-- Line Chart Card -->
+            <div class="card">
+                <h2>Annual Incident Trend</h2>
+                <div class="chart-wrapper"><canvas id="lineChart"></canvas></div>
+                <p class="explanation">Shows the total number of events reported per year.</p>
+            </div>
+
+            <!-- Bar Chart Card -->
+            <div class="card">
+                <h2>Annual Fatalities</h2>
+                <div class="chart-wrapper"><canvas id="barChart"></canvas></div>
+                <p class="explanation">Total people killed each year according to the dataset.</p>
+            </div>
+        </div>
+
+        <div id="emptyState" style="text-align: center; color: var(--text-muted); padding-top: 50px;">
+            <p>Upload a CSV file to see the interactive analysis.</p>
+        </div>
+    </aside>
+
+    <main class="map-area">
+        <div id="map"></div>
+    </main>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    let map, bubbleChart, lineChart, barChart;
+    let markers = L.layerGroup();
+
+    // Initialize the app
+    function init() {
+        // Map init
+        map = L.map('map').setView([-4.35, 15.3], 6);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+        markers.addTo(map);
+
+        // Dropzone events
+        const dz = document.getElementById('dropzone');
+        dz.onclick = () => document.getElementById('fileInput').click();
+        dz.ondragover = (e) => { e.preventDefault(); dz.style.borderColor = '#f5a623'; };
+        dz.ondragleave = () => { dz.style.borderColor = '#2f3b47'; };
+        dz.ondrop = (e) => {
+            e.preventDefault();
+            const file = e.dataTransfer.files[0];
+            processFile(file);
+        };
+        document.getElementById('fileInput').onchange = (e) => processFile(e.target.files[0]);
+    }
+
+    function processFile(file) {
+        Papa.parse(file, {
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true,
+            complete: (results) => updateDashboard(results.data)
+        });
+    }
+
+    async function loadInternalData() {
+        const response = await fetch('data/rdc_civilian_incidents_from_2015.csv');
+        const text = await response.text();
+        Papa.parse(text, {
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true,
+            complete: (results) => {
+                // For this specific example, filter for Kinshasa
+                const kin = results.data.filter(r => r.Admin1 === 'Kinshasa');
+                updateDashboard(kin);
+            }
+        });
+    }
+
+    function updateDashboard(rows) {
+        document.getElementById('emptyState').classList.add('hidden');
+        document.getElementById('dashboardContent').classList.remove('hidden');
+
+        // 1. Update Map Markers
+        markers.clearLayers();
+        let bounds = [];
+        rows.forEach(r => {
+            const lat = r.latitude || r.lat || r.Latitude;
+            const lon = r.longitude || r.lng || r.lon || r.Longitude;
+            if (lat && lon) {
+                const m = L.circleMarker([lat, lon], {
+                    radius: Math.sqrt(r.Fatalities || 1) * 4 + 3,
+                    fillColor: '#f5a623',
+                    color: '#fff',
+                    weight: 1,
+                    fillOpacity: 0.6
+                }).bindPopup(`<b>${r.side_a || 'Event'}</b><br>Fatalities: ${r.Fatalities || r.deaths_civilians || 0}`);
+                m.addTo(markers);
+                bounds.push([lat, lon]);
+            }
+        });
+        if (bounds.length > 0) map.fitBounds(bounds, { padding: [50, 50] });
+
+        // 2. Aggregate Data for Charts
+        const yearly = {};
+        const monthly = {};
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        rows.forEach(r => {
+            const y = r.Year || r.year;
+            if (!yearly[y]) yearly[y] = { events: 0, deaths: 0 };
+            yearly[y].events += (r.Events || 1);
+            yearly[y].deaths += (r.Fatalities || r.deaths_civilians || 0);
+
+            if (y >= 2021) {
+                const mName = r.Month || monthNames[(new Date(r.date_start)).getMonth()];
+                const key = `${mName} ${y}`;
+                if (!monthly[key]) monthly[key] = { events: 0, deaths: 0, month: mName, year: y };
+                monthly[key].events += (r.Events || 1);
+                monthly[key].deaths += (r.Fatalities || r.deaths_civilians || 0);
+            }
+        });
+
+        const years = Object.keys(yearly).sort();
+        const eventCounts = years.map(y => yearly[y].events);
+        const deathCounts = years.map(y => yearly[y].deaths);
+
+        // 3. Create/Update Charts
+        renderLineChart(years, eventCounts);
+        renderBarChart(years, deathCounts);
+        renderBubbleChart(monthly);
+    }
+
+    function renderLineChart(labels, values) {
+        if (lineChart) lineChart.destroy();
+        const ctx = document.getElementById('lineChart').getContext('2d');
+        lineChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{ label: 'Events', data: values, borderColor: '#f5a623', tension: 0.3, fill: false }]
+            },
+            options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, grid: { color: '#2f3b47' } }, x: { grid: { color: '#2f3b47' } } } }
+        });
+    }
+
+    function renderBarChart(labels, values) {
+        if (barChart) barChart.destroy();
+        const ctx = document.getElementById('barChart').getContext('2d');
+        barChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{ label: 'Fatalities', data: values, backgroundColor: '#e74c3c' }]
+            },
+            options: { maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, grid: { color: '#2f3b47' } }, x: { grid: { color: '#2f3b47' } } } }
+        });
+    }
+
+    function renderBubbleChart(monthly) {
+        if (bubbleChart) bubbleChart.destroy();
+        const bubbleData = Object.values(monthly).map(m => ({
+            x: `${m.month} ${m.year}`,
+            y: m.events,
+            r: Math.sqrt(m.deaths) * 6 + 4,
+            deaths: m.deaths
+        }));
+
+        const ctx = document.getElementById('bubbleChart').getContext('2d');
+        bubbleChart = new Chart(ctx, {
+            type: 'bubble',
+            data: {
+                datasets: [{
+                    label: 'Severity',
+                    data: bubbleData,
+                    backgroundColor: 'rgba(245, 166, 35, 0.6)',
+                    borderColor: '#f5a623'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    x: { type: 'category', labels: bubbleData.map(d => d.x), grid: { color: '#2f3b47' } },
+                    y: { beginAtZero: true, grid: { color: '#2f3b47' } }
+                },
+                plugins: {
+                    tooltip: { callbacks: { label: d => `${d.raw.x}: ${d.raw.y} Events, ${d.raw.deaths} Deaths` } }
+                }
+            }
+        });
+    }
+
+    init();
+</script>
+</body>
+</html>
