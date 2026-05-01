@@ -107,10 +107,14 @@
 
         #loadingOverlay {
             position: absolute; top:0; left:0; width: 100%; height: 100%;
-            background: rgba(15, 20, 25, 0.8);
-            display: flex; align-items: center; justify-content: center;
+            background: rgba(15, 20, 25, 0.9);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
             z-index: 2000; color: var(--accent); font-weight: bold;
+            transition: opacity 0.3s;
         }
+        #loadingOverlay.hidden { display: none; pointer-events: none; }
+        .progress-sub { font-size: 0.8em; color: var(--text-muted); margin-top: 10px; font-weight: normal; }
+        .force-close { margin-top: 20px; font-size: 0.7em; color: var(--text-muted); cursor: pointer; text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -151,21 +155,25 @@
 
         <div class="card">
             <h2>Analysis Summary</h2>
-            <p id="analysisSummary" style="font-size: 0.85em; line-height: 1.5; color: var(--text-muted);">
+            <div id="analysisSummary" style="font-size: 0.85em; line-height: 1.5; color: var(--text-muted);">
                 Load the default dataset or upload a CSV to begin analysis.
-            </p>
+            </div>
             <button class="btn" onclick="loadDefaultData()">Load Kinshasa Defaults</button>
         </div>
     </aside>
 
     <main class="map-container">
-        <div id="loadingOverlay" class="hidden">CALCULATING PROXIMITY...</div>
+        <div id="loadingOverlay" class="hidden">
+            <div>CALCULATING PROXIMITY...</div>
+            <div id="progressText" class="progress-sub">Initializing...</div>
+            <div id="forceClose" class="force-close hidden" onclick="hideOverlay()">Click here if it stays stuck</div>
+        </div>
         <div id="map"></div>
         
         <div class="legend">
             <div class="legend-item"><span class="dot" style="background: var(--accent);"></span> Violence Event (UCDP)</div>
-            <div class="legend-item"><span class="dot" style="background: var(--risk);"></span> At-Risk School (< 2km)</div>
-            <div class="legend-item"><span class="dot" style="background: var(--safe);"></span> Safe School (> 2km)</div>
+            <div class="legend-item"><span class="dot" style="background: var(--risk);"></span> At-Risk School (&lt; 2km)</div>
+            <div class="legend-item"><span class="dot" style="background: var(--safe);"></span> Safe School (&gt; 2km)</div>
         </div>
     </main>
 </div>
@@ -173,6 +181,10 @@
 <script>
     let map, schoolsLayer, violenceLayer;
     let violenceEvents = [];
+
+    function hideOverlay() {
+        document.getElementById('loadingOverlay').classList.add('hidden');
+    }
 
     // Haversine formula for distance
     function getDistance(lat1, lon1, lat2, lon2) {
@@ -267,62 +279,69 @@
         }
 
         const overlay = document.getElementById('loadingOverlay');
-        overlay.classList.remove('hidden');
+        const progress = document.getElementById('progressText');
+        const forceClose = document.getElementById('forceClose');
         
-        // Use a slight delay to allow the UI to show the overlay before blocking the thread
-        setTimeout(() => {
-            try {
-                schoolsLayer.clearLayers();
-                let atRiskCount = 0;
-                let validSchools = 0;
+        overlay.classList.remove('hidden');
+        forceClose.classList.add('hidden');
+        progress.textContent = "Beginning analysis of " + schools.length + " schools...";
 
-                if (violenceEvents.length === 0) {
-                    console.warn('No violence events loaded for analysis.');
-                }
+        // Show force close after 3 seconds
+        const timer = setTimeout(() => forceClose.classList.remove('hidden'), 3000);
+        
+        // Use requestAnimationFrame to ensure the overlay shows before the main thread blocks
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                try {
+                    schoolsLayer.clearLayers();
+                    let atRiskCount = 0;
+                    let validSchools = 0;
 
-                schools.forEach(school => {
-                    const sLat = parseFloat(school.Latitude || school.lat || school.latitude);
-                    const sLon = parseFloat(school.Longitude || school.lon || school.longitude);
-                    
-                    if (isNaN(sLat) || isNaN(sLon)) return;
-                    validSchools++;
+                    schools.forEach((school, index) => {
+                        const sLat = parseFloat(school.Latitude || school.lat || school.latitude);
+                        const sLon = parseFloat(school.Longitude || school.lon || school.longitude);
+                        
+                        if (isNaN(sLat) || isNaN(sLon)) return;
+                        validSchools++;
 
-                    let minDistance = Infinity;
-                    violenceEvents.forEach(e => {
-                        const d = getDistance(sLat, sLon, e.lat, e.lon);
-                        if (d < minDistance) minDistance = d;
+                        let minDistance = Infinity;
+                        violenceEvents.forEach(e => {
+                            const d = getDistance(sLat, sLon, e.lat, e.lon);
+                            if (d < minDistance) minDistance = d;
+                        });
+
+                        const isAtRisk = minDistance <= 2000;
+                        if (isAtRisk) atRiskCount++;
+
+                        L.circleMarker([sLat, sLon], {
+                            radius: 4,
+                            fillColor: isAtRisk ? '#ef4444' : '#3498db',
+                            color: isAtRisk ? '#ef4444' : '#3498db',
+                            weight: 1,
+                            fillOpacity: 0.8
+                        }).bindPopup(`
+                            <b>${school.Name || school.name || 'Unnamed School'}</b><br>
+                            Status: ${isAtRisk ? '<span style="color:red">AT RISK</span>' : 'Safe'}<br>
+                            Distance: ${minDistance === Infinity ? 'No events found' : Math.round(minDistance) + 'm'}
+                        `).addTo(schoolsLayer);
                     });
 
-                    const isAtRisk = minDistance <= 2000;
-                    if (isAtRisk) atRiskCount++;
-
-                    L.circleMarker([sLat, sLon], {
-                        radius: 4,
-                        fillColor: isAtRisk ? '#ef4444' : '#3498db',
-                        color: isAtRisk ? '#ef4444' : '#3498db',
-                        weight: 1,
-                        fillOpacity: 0.8
-                    }).bindPopup(`
-                        <b>${school.Name || school.name || 'Unnamed School'}</b><br>
-                        Status: ${isAtRisk ? '<span style="color:red">AT RISK</span>' : 'Safe'}<br>
-                        Distance: ${minDistance === Infinity ? 'No events found' : Math.round(minDistance) + 'm'}
-                    `).addTo(schoolsLayer);
-                });
-
-                // Update UI
-                document.getElementById('totalSchools').textContent = validSchools;
-                document.getElementById('atRiskCount').textContent = atRiskCount;
-                document.getElementById('analysisSummary').innerHTML = `
-                    Analysis complete for <b>${validSchools}</b> schools.<br>
-                    <b>${atRiskCount}</b> schools are within the 2km risk perimeter.
-                `;
-            } catch (error) {
-                console.error('Analysis error:', error);
-                alert('An error occurred during proximity analysis.');
-            } finally {
-                overlay.classList.add('hidden');
-            }
-        }, 50);
+                    // Update UI
+                    document.getElementById('totalSchools').textContent = validSchools;
+                    document.getElementById('atRiskCount').textContent = atRiskCount;
+                    document.getElementById('analysisSummary').innerHTML = `
+                        Analysis complete for <b>${validSchools}</b> schools.<br>
+                        <b>${atRiskCount}</b> schools are within the 2km risk perimeter.
+                    `;
+                } catch (error) {
+                    console.error('Analysis error:', error);
+                    alert('An error occurred during proximity analysis.');
+                } finally {
+                    clearTimeout(timer);
+                    hideOverlay();
+                }
+            }, 50);
+        });
     }
 
     init();
