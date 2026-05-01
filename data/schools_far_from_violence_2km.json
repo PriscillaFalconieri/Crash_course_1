@@ -1,0 +1,4602 @@
+[
+  {
+    "Name": "Materdei",
+    "Latitude": "-4.4690518",
+    "Longitude": "15.2243459",
+    "lat-long_key": "-4.4690518,15.2243459",
+    "OSM_ID": "435579834",
+    "null": null
+  },
+  {
+    "Name": "Institute Georges Simenon",
+    "Latitude": "-4.3053231",
+    "Longitude": "15.3147319",
+    "lat-long_key": "-4.3053231,15.3147319",
+    "OSM_ID": "440111691",
+    "null": null
+  },
+  {
+    "Name": "Institut de Kinkole",
+    "Latitude": "-4.3216269",
+    "Longitude": "15.5163084",
+    "lat-long_key": "-4.3216269,15.5163084",
+    "OSM_ID": "583344995",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Presbyterienne",
+    "Latitude": "-4.3772481",
+    "Longitude": "15.3351266",
+    "lat-long_key": "-4.3772481,15.3351266",
+    "OSM_ID": "712894085",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Massemba",
+    "Latitude": "-4.3812127",
+    "Longitude": "15.3359821",
+    "lat-long_key": "-4.3812127,15.3359821",
+    "OSM_ID": "713203651",
+    "null": null
+  },
+  {
+    "Name": "Ecole Maternelle Massamba",
+    "Latitude": "-4.3849285",
+    "Longitude": "15.3369215",
+    "lat-long_key": "-4.3849285,15.3369215",
+    "OSM_ID": "713306937",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole St-Louis",
+    "Latitude": "-4.3457112",
+    "Longitude": "15.293557",
+    "lat-long_key": "-4.3457112,15.293557",
+    "OSM_ID": "715858834",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Officielle",
+    "Latitude": "-4.3475774",
+    "Longitude": "15.2929726",
+    "lat-long_key": "-4.3475774,15.2929726",
+    "OSM_ID": "715858837",
+    "null": null
+  },
+  {
+    "Name": "Institut Diangenda",
+    "Latitude": "-4.3531403",
+    "Longitude": "15.2903763",
+    "lat-long_key": "-4.3531403,15.2903763",
+    "OSM_ID": "715862489",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Officielle",
+    "Latitude": "-4.3605004",
+    "Longitude": "15.3014055",
+    "lat-long_key": "-4.3605004,15.3014055",
+    "OSM_ID": "715863893",
+    "null": null
+  },
+  {
+    "Name": "Ecole Technique ITIP Bumbu",
+    "Latitude": "-4.3621937",
+    "Longitude": "15.2881578",
+    "lat-long_key": "-4.3621937,15.2881578",
+    "OSM_ID": "715863894",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole catholique Sainte Christine",
+    "Latitude": "-4.3890772",
+    "Longitude": "15.3126137",
+    "lat-long_key": "-4.3890772,15.3126137",
+    "OSM_ID": "759214401",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Catholique",
+    "Latitude": "-4.3224534",
+    "Longitude": "15.5169931",
+    "lat-long_key": "-4.3224534,15.5169931",
+    "OSM_ID": "789373903",
+    "null": null
+  },
+  {
+    "Name": "Institut Wabakulu",
+    "Latitude": "-4.347404",
+    "Longitude": "15.2321757",
+    "lat-long_key": "-4.347404,15.2321757",
+    "OSM_ID": "790833373",
+    "null": null
+  },
+  {
+    "Name": "Centre Scolare Pingu II",
+    "Latitude": "-4.4298913",
+    "Longitude": "15.3716211",
+    "lat-long_key": "-4.4298913,15.3716211",
+    "OSM_ID": "803232064",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole",
+    "Latitude": "-4.4316456",
+    "Longitude": "15.3672222",
+    "lat-long_key": "-4.4316456,15.3672222",
+    "OSM_ID": "803246740",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole",
+    "Latitude": "-4.4319023",
+    "Longitude": "15.3678874",
+    "lat-long_key": "-4.4319023,15.3678874",
+    "OSM_ID": "803246748",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire M\u00e8re Theresa Tito",
+    "Latitude": "-4.4330361",
+    "Longitude": "15.3664712",
+    "lat-long_key": "-4.4330361,15.3664712",
+    "OSM_ID": "803246752",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Bualu",
+    "Latitude": "-4.4351755",
+    "Longitude": "15.3663457",
+    "lat-long_key": "-4.4351755,15.3663457",
+    "OSM_ID": "803265122",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole priv\u00e9",
+    "Latitude": "-4.3669125",
+    "Longitude": "15.3198048",
+    "lat-long_key": "-4.3669125,15.3198048",
+    "OSM_ID": "813748771",
+    "null": null
+  },
+  {
+    "Name": "Institut Kisantu",
+    "Latitude": "-4.4202186",
+    "Longitude": "15.3915973",
+    "lat-long_key": "-4.4202186,15.3915973",
+    "OSM_ID": "822140614",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Toco 2",
+    "Latitude": "-4.4197512",
+    "Longitude": "15.3904829",
+    "lat-long_key": "-4.4197512,15.3904829",
+    "OSM_ID": "822140618",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole",
+    "Latitude": "-4.3685492",
+    "Longitude": "15.318766",
+    "lat-long_key": "-4.3685492,15.318766",
+    "OSM_ID": "829315038",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole ITP Passio",
+    "Latitude": "-4.4046477",
+    "Longitude": "15.4070665",
+    "lat-long_key": "-4.4046477,15.4070665",
+    "OSM_ID": "944857352",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Biyela",
+    "Latitude": "-4.4189146",
+    "Longitude": "15.3926001",
+    "lat-long_key": "-4.4189146,15.3926001",
+    "OSM_ID": "944861514",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole primaire Lukunga",
+    "Latitude": "-4.3642222",
+    "Longitude": "15.2158611",
+    "lat-long_key": "-4.3642222,15.2158611",
+    "OSM_ID": "1234974031",
+    "null": null
+  },
+  {
+    "Name": "Ecole primaire Luozi",
+    "Latitude": "-4.3666312",
+    "Longitude": "15.2183701",
+    "lat-long_key": "-4.3666312,15.2183701",
+    "OSM_ID": "1234974040",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole primaire Bosalisani",
+    "Latitude": "-4.3685",
+    "Longitude": "15.2266944",
+    "lat-long_key": "-4.3685,15.2266944",
+    "OSM_ID": "1234974045",
+    "null": null
+  },
+  {
+    "Name": "Ecole primaire Kuvuna",
+    "Latitude": "-4.3581111",
+    "Longitude": "15.2165556",
+    "lat-long_key": "-4.3581111,15.2165556",
+    "OSM_ID": "1234974049",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole primaire Mankala",
+    "Latitude": "-4.4626667",
+    "Longitude": "15.3466111",
+    "lat-long_key": "-4.4626667,15.3466111",
+    "OSM_ID": "1234974051",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole primaire Raisa",
+    "Latitude": "-4.3763611",
+    "Longitude": "15.2244444",
+    "lat-long_key": "-4.3763611,15.2244444",
+    "OSM_ID": "1234974053",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Kilambu",
+    "Latitude": "-4.4403651",
+    "Longitude": "15.3502998",
+    "lat-long_key": "-4.4403651,15.3502998",
+    "OSM_ID": "1234974060",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole primaire St Cyrille",
+    "Latitude": "-4.4471944",
+    "Longitude": "15.1853889",
+    "lat-long_key": "-4.4471944,15.1853889",
+    "OSM_ID": "1234974067",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Primaire Bolingo",
+    "Latitude": "-4.38275",
+    "Longitude": "15.2350278",
+    "lat-long_key": "-4.38275,15.2350278",
+    "OSM_ID": "1234974092",
+    "null": null
+  },
+  {
+    "Name": "Ecole primaire Lutendele Kimbangu",
+    "Latitude": "-4.3759167",
+    "Longitude": "15.1935833",
+    "lat-long_key": "-4.3759167,15.1935833",
+    "OSM_ID": "1234974101",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole primaire Menkao",
+    "Latitude": "-4.1809331",
+    "Longitude": "15.6905367",
+    "lat-long_key": "-4.1809331,15.6905367",
+    "OSM_ID": "1234982930",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4485326",
+    "Longitude": "16.1984157",
+    "lat-long_key": "-4.4485326,16.1984157",
+    "OSM_ID": "1234982982",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole primaire Lufimi",
+    "Latitude": "-4.5412695",
+    "Longitude": "16.3151536",
+    "lat-long_key": "-4.5412695,16.3151536",
+    "OSM_ID": "1234983017",
+    "null": null
+  },
+  {
+    "Name": "Institut Dominique Ileo",
+    "Latitude": "-4.3425168",
+    "Longitude": "15.2636659",
+    "lat-long_key": "-4.3425168,15.2636659",
+    "OSM_ID": "1640267112",
+    "null": null
+  },
+  {
+    "Name": "Ecole primaire de Kintambo 1",
+    "Latitude": "-4.3404896",
+    "Longitude": "15.2626111",
+    "lat-long_key": "-4.3404896,15.2626111",
+    "OSM_ID": "1640305538",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Alingwa",
+    "Latitude": "-4.3492863",
+    "Longitude": "15.2678971",
+    "lat-long_key": "-4.3492863,15.2678971",
+    "OSM_ID": "2162744660",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire Kindobo",
+    "Latitude": "-4.2835313",
+    "Longitude": "15.5724679",
+    "lat-long_key": "-4.2835313,15.5724679",
+    "OSM_ID": "2246630298",
+    "null": null
+  },
+  {
+    "Name": "Centre Scolaire Motoba",
+    "Latitude": "-4.3223393",
+    "Longitude": "15.5139642",
+    "lat-long_key": "-4.3223393,15.5139642",
+    "OSM_ID": "2246674891",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire St Vincent",
+    "Latitude": "-4.3566188",
+    "Longitude": "15.3091004",
+    "lat-long_key": "-4.3566188,15.3091004",
+    "OSM_ID": "2273728699",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Michel",
+    "Latitude": "-4.3398453",
+    "Longitude": "15.2772631",
+    "lat-long_key": "-4.3398453,15.2772631",
+    "OSM_ID": "2299738119",
+    "null": null
+  },
+  {
+    "Name": "Ecole Publique Saint Jean Baptiste",
+    "Latitude": "-4.3406895",
+    "Longitude": "15.2757864",
+    "lat-long_key": "-4.3406895,15.2757864",
+    "OSM_ID": "2299738122",
+    "null": null
+  },
+  {
+    "Name": "Institut Salongo",
+    "Latitude": "-4.3457856",
+    "Longitude": "15.2785116",
+    "lat-long_key": "-4.3457856,15.2785116",
+    "OSM_ID": "2299738130",
+    "null": null
+  },
+  {
+    "Name": "EP1 Ngoma",
+    "Latitude": "-4.3458101",
+    "Longitude": "15.2776009",
+    "lat-long_key": "-4.3458101,15.2776009",
+    "OSM_ID": "2299738135",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3416957",
+    "Longitude": "15.2772237",
+    "lat-long_key": "-4.3416957,15.2772237",
+    "OSM_ID": "2299738186",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge saint charles luanga",
+    "Latitude": "-4.3151921",
+    "Longitude": "15.3263021",
+    "lat-long_key": "-4.3151921,15.3263021",
+    "OSM_ID": "2953314337",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Les Saphirs",
+    "Latitude": "-4.3084113",
+    "Longitude": "15.2916664",
+    "lat-long_key": "-4.3084113,15.2916664",
+    "OSM_ID": "3477493250",
+    "null": null
+  },
+  {
+    "Name": "Joyeux Lutins",
+    "Latitude": "-4.3509125",
+    "Longitude": "15.2841388",
+    "lat-long_key": "-4.3509125,15.2841388",
+    "OSM_ID": "4235751684",
+    "null": null
+  },
+  {
+    "Name": "Ma\u00ef-ndombe",
+    "Latitude": "-4.3826829",
+    "Longitude": "15.3500204",
+    "lat-long_key": "-4.3826829,15.3500204",
+    "OSM_ID": "4328067009",
+    "null": null
+  },
+  {
+    "Name": "Lyc\u00e9e bilingue Claude Mafema",
+    "Latitude": "-4.4093129",
+    "Longitude": "15.2558878",
+    "lat-long_key": "-4.4093129,15.2558878",
+    "OSM_ID": "4394576756",
+    "null": null
+  },
+  {
+    "Name": "College Kingudi",
+    "Latitude": "-4.4435781",
+    "Longitude": "15.4434097",
+    "lat-long_key": "-4.4435781,15.4434097",
+    "OSM_ID": "4442217542",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Pie X",
+    "Latitude": "-4.3581576",
+    "Longitude": "15.3005393",
+    "lat-long_key": "-4.3581576,15.3005393",
+    "OSM_ID": "4469949070",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Petit Prince",
+    "Latitude": "-4.3562828",
+    "Longitude": "15.2960158",
+    "lat-long_key": "-4.3562828,15.2960158",
+    "OSM_ID": "4483772304",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Kapita",
+    "Latitude": "-4.4346121",
+    "Longitude": "15.4226034",
+    "lat-long_key": "-4.4346121,15.4226034",
+    "OSM_ID": "4592863282",
+    "null": null
+  },
+  {
+    "Name": "College Bisengo Muembe",
+    "Latitude": "-4.4460514",
+    "Longitude": "15.4392688",
+    "lat-long_key": "-4.4460514,15.4392688",
+    "OSM_ID": "4592884135",
+    "null": null
+  },
+  {
+    "Name": "Ecole 22 Septembre",
+    "Latitude": "-4.4172434",
+    "Longitude": "15.4181394",
+    "lat-long_key": "-4.4172434,15.4181394",
+    "OSM_ID": "4592891488",
+    "null": null
+  },
+  {
+    "Name": "Ecole Meteo",
+    "Latitude": "-4.412074",
+    "Longitude": "15.4089202",
+    "lat-long_key": "-4.412074,15.4089202",
+    "OSM_ID": "4592894870",
+    "null": null
+  },
+  {
+    "Name": "Ecole Des Frere Ngwanza",
+    "Latitude": "-4.4128026",
+    "Longitude": "15.4282684",
+    "lat-long_key": "-4.4128026,15.4282684",
+    "OSM_ID": "4594260941",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Malavu",
+    "Latitude": "-4.4311806",
+    "Longitude": "15.3888889",
+    "lat-long_key": "-4.4311806,15.3888889",
+    "OSM_ID": "4594262143",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mbela",
+    "Latitude": "-4.4081753",
+    "Longitude": "15.3981289",
+    "lat-long_key": "-4.4081753,15.3981289",
+    "OSM_ID": "4594274627",
+    "null": null
+  },
+  {
+    "Name": "Djiboa Dia Ditumba",
+    "Latitude": "-4.404395",
+    "Longitude": "15.407952",
+    "lat-long_key": "-4.404395,15.407952",
+    "OSM_ID": "4598148340",
+    "null": null
+  },
+  {
+    "Name": "Ecole de Moderne Espoir",
+    "Latitude": "-4.4212498",
+    "Longitude": "15.4254716",
+    "lat-long_key": "-4.4212498,15.4254716",
+    "OSM_ID": "4598148993",
+    "null": null
+  },
+  {
+    "Name": "Ecole Bahumbu",
+    "Latitude": "-4.3763274",
+    "Longitude": "15.3719",
+    "lat-long_key": "-4.3763274,15.3719",
+    "OSM_ID": "4650134578",
+    "null": null
+  },
+  {
+    "Name": "Ecole Gerard",
+    "Latitude": "-4.3973531",
+    "Longitude": "15.3752134",
+    "lat-long_key": "-4.3973531,15.3752134",
+    "OSM_ID": "4769435737",
+    "null": null
+  },
+  {
+    "Name": "Centre Gali",
+    "Latitude": "-4.39785",
+    "Longitude": "15.373425",
+    "lat-long_key": "-4.39785,15.373425",
+    "OSM_ID": "4784531222",
+    "null": null
+  },
+  {
+    "Name": "Ecole Lulengo",
+    "Latitude": "-4.4160425",
+    "Longitude": "15.3690185",
+    "lat-long_key": "-4.4160425,15.3690185",
+    "OSM_ID": "4784535854",
+    "null": null
+  },
+  {
+    "Name": "College de l'amitie",
+    "Latitude": "-4.4524986",
+    "Longitude": "15.3959976",
+    "lat-long_key": "-4.4524986,15.3959976",
+    "OSM_ID": "4784542035",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4533536",
+    "Longitude": "15.4086235",
+    "lat-long_key": "-4.4533536,15.4086235",
+    "OSM_ID": "4784544300",
+    "null": null
+  },
+  {
+    "Name": "Ecole Pere Coudrin",
+    "Latitude": "-4.4484938",
+    "Longitude": "15.4151922",
+    "lat-long_key": "-4.4484938,15.4151922",
+    "OSM_ID": "4784548405",
+    "null": null
+  },
+  {
+    "Name": "Ecole Boyambi",
+    "Latitude": "-4.4314818",
+    "Longitude": "15.4111809",
+    "lat-long_key": "-4.4314818,15.4111809",
+    "OSM_ID": "4784579820",
+    "null": null
+  },
+  {
+    "Name": "College Bel Elan",
+    "Latitude": "-4.42811",
+    "Longitude": "15.418064",
+    "lat-long_key": "-4.42811,15.418064",
+    "OSM_ID": "4784580578",
+    "null": null
+  },
+  {
+    "Name": "College Sainte-Croix",
+    "Latitude": "-4.4256843",
+    "Longitude": "15.4252996",
+    "lat-long_key": "-4.4256843,15.4252996",
+    "OSM_ID": "4784588621",
+    "null": null
+  },
+  {
+    "Name": "Ecole de l'Elbco",
+    "Latitude": "-4.4204145",
+    "Longitude": "15.4277486",
+    "lat-long_key": "-4.4204145,15.4277486",
+    "OSM_ID": "4784612722",
+    "null": null
+  },
+  {
+    "Name": "College St-Albert",
+    "Latitude": "-4.4097375",
+    "Longitude": "15.4169778",
+    "lat-long_key": "-4.4097375,15.4169778",
+    "OSM_ID": "4784614149",
+    "null": null
+  },
+  {
+    "Name": "College Pere Enoch",
+    "Latitude": "-4.420102",
+    "Longitude": "15.415779",
+    "lat-long_key": "-4.420102,15.415779",
+    "OSM_ID": "4784616133",
+    "null": null
+  },
+  {
+    "Name": "Ecole St-Medard",
+    "Latitude": "-4.41669",
+    "Longitude": "15.414207",
+    "lat-long_key": "-4.41669,15.414207",
+    "OSM_ID": "4784616709",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ellen White",
+    "Latitude": "-4.424614",
+    "Longitude": "15.417509",
+    "lat-long_key": "-4.424614,15.417509",
+    "OSM_ID": "4784621260",
+    "null": null
+  },
+  {
+    "Name": "Ecole Sainte-Vincent de Paul",
+    "Latitude": "-4.4073206",
+    "Longitude": "15.4242345",
+    "lat-long_key": "-4.4073206,15.4242345",
+    "OSM_ID": "4784625143",
+    "null": null
+  },
+  {
+    "Name": "College St-Oscar",
+    "Latitude": "-4.4274453",
+    "Longitude": "15.4333524",
+    "lat-long_key": "-4.4274453,15.4333524",
+    "OSM_ID": "4784627013",
+    "null": null
+  },
+  {
+    "Name": "Ecole Memo",
+    "Latitude": "-4.394924",
+    "Longitude": "15.371923",
+    "lat-long_key": "-4.394924,15.371923",
+    "OSM_ID": "4792082188",
+    "null": null
+  },
+  {
+    "Name": "Complexe Omala Yaca",
+    "Latitude": "-4.4054624",
+    "Longitude": "15.3704596",
+    "lat-long_key": "-4.4054624,15.3704596",
+    "OSM_ID": "4792088871",
+    "null": null
+  },
+  {
+    "Name": "Ecole St-Benoit",
+    "Latitude": "-4.410911",
+    "Longitude": "15.3685349",
+    "lat-long_key": "-4.410911,15.3685349",
+    "OSM_ID": "4792089844",
+    "null": null
+  },
+  {
+    "Name": "Ecole Victoria",
+    "Latitude": "-4.4427776",
+    "Longitude": "15.388611",
+    "lat-long_key": "-4.4427776,15.388611",
+    "OSM_ID": "4792091422",
+    "null": null
+  },
+  {
+    "Name": "EP7 Kikimi",
+    "Latitude": "-4.4421389",
+    "Longitude": "15.4324491",
+    "lat-long_key": "-4.4421389,15.4324491",
+    "OSM_ID": "4792100250",
+    "null": null
+  },
+  {
+    "Name": "Ecole Maman Dorcas",
+    "Latitude": "-4.431381",
+    "Longitude": "15.4086124",
+    "lat-long_key": "-4.431381,15.4086124",
+    "OSM_ID": "4792102534",
+    "null": null
+  },
+  {
+    "Name": "La Trompette",
+    "Latitude": "-4.420551",
+    "Longitude": "15.41603",
+    "lat-long_key": "-4.420551,15.41603",
+    "OSM_ID": "4792105151",
+    "null": null
+  },
+  {
+    "Name": "Institut 22 Septembre",
+    "Latitude": "-4.416317",
+    "Longitude": "15.417214",
+    "lat-long_key": "-4.416317,15.417214",
+    "OSM_ID": "4792106795",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mayamba",
+    "Latitude": "-4.422232",
+    "Longitude": "15.421407",
+    "lat-long_key": "-4.422232,15.421407",
+    "OSM_ID": "4792106968",
+    "null": null
+  },
+  {
+    "Name": "Mabila de la Providence",
+    "Latitude": "-4.4137916",
+    "Longitude": "15.4157376",
+    "lat-long_key": "-4.4137916,15.4157376",
+    "OSM_ID": "4792113768",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Likasi",
+    "Latitude": "-4.4146767",
+    "Longitude": "15.3693867",
+    "lat-long_key": "-4.4146767,15.3693867",
+    "OSM_ID": "4793469049",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge des Ap\u00f4tres",
+    "Latitude": "-4.4261124",
+    "Longitude": "15.3640503",
+    "lat-long_key": "-4.4261124,15.3640503",
+    "OSM_ID": "4793475543",
+    "null": null
+  },
+  {
+    "Name": "Ecole Coco Mama",
+    "Latitude": "-4.4521383",
+    "Longitude": "15.4335804",
+    "lat-long_key": "-4.4521383,15.4335804",
+    "OSM_ID": "4793483265",
+    "null": null
+  },
+  {
+    "Name": "Ecole Lubikulu",
+    "Latitude": "-4.4294289",
+    "Longitude": "15.4247978",
+    "lat-long_key": "-4.4294289,15.4247978",
+    "OSM_ID": "4793493996",
+    "null": null
+  },
+  {
+    "Name": "Ecole primaire Mayoya",
+    "Latitude": "-4.4502566",
+    "Longitude": "15.4397133",
+    "lat-long_key": "-4.4502566,15.4397133",
+    "OSM_ID": "4793495292",
+    "null": null
+  },
+  {
+    "Name": "Lycee Mere Marie En Peine",
+    "Latitude": "-4.425962",
+    "Longitude": "15.4217",
+    "lat-long_key": "-4.425962,15.4217",
+    "OSM_ID": "4793500912",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4198897",
+    "Longitude": "15.4284625",
+    "lat-long_key": "-4.4198897,15.4284625",
+    "OSM_ID": "4793502005",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kikimi 1, 2, 6, 8",
+    "Latitude": "-4.422445",
+    "Longitude": "15.420009",
+    "lat-long_key": "-4.422445,15.420009",
+    "OSM_ID": "4793506315",
+    "null": null
+  },
+  {
+    "Name": "College Anicet",
+    "Latitude": "-4.422135",
+    "Longitude": "15.415163",
+    "lat-long_key": "-4.422135,15.415163",
+    "OSM_ID": "4793511003",
+    "null": null
+  },
+  {
+    "Name": "College La Fleur",
+    "Latitude": "-4.412405",
+    "Longitude": "15.415085",
+    "lat-long_key": "-4.412405,15.415085",
+    "OSM_ID": "4793513174",
+    "null": null
+  },
+  {
+    "Name": "College Don Bosco",
+    "Latitude": "-4.409386",
+    "Longitude": "15.413527",
+    "lat-long_key": "-4.409386,15.413527",
+    "OSM_ID": "4793516125",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mwabi",
+    "Latitude": "-4.4074105",
+    "Longitude": "15.3676931",
+    "lat-long_key": "-4.4074105,15.3676931",
+    "OSM_ID": "4795622064",
+    "null": null
+  },
+  {
+    "Name": "Coll. St-Jean Bosco",
+    "Latitude": "-4.40296",
+    "Longitude": "15.370933",
+    "lat-long_key": "-4.40296,15.370933",
+    "OSM_ID": "4795624005",
+    "null": null
+  },
+  {
+    "Name": "Ecole Eunice Mpuntu",
+    "Latitude": "-4.4533124",
+    "Longitude": "15.4082252",
+    "lat-long_key": "-4.4533124,15.4082252",
+    "OSM_ID": "4795639297",
+    "null": null
+  },
+  {
+    "Name": "Ecole Cot. / Institut Rhicam",
+    "Latitude": "-4.4384933",
+    "Longitude": "15.4363417",
+    "lat-long_key": "-4.4384933,15.4363417",
+    "OSM_ID": "4795652080",
+    "null": null
+  },
+  {
+    "Name": "Ecole St-Hilaire",
+    "Latitude": "-4.42059",
+    "Longitude": "15.414907",
+    "lat-long_key": "-4.42059,15.414907",
+    "OSM_ID": "4795656158",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mulie Institut Ikuma",
+    "Latitude": "-4.420913",
+    "Longitude": "15.4280409",
+    "lat-long_key": "-4.420913,15.4280409",
+    "OSM_ID": "4795659744",
+    "null": null
+  },
+  {
+    "Name": "Ecole St-Joseph de Benoit Larbre",
+    "Latitude": "-4.419157",
+    "Longitude": "15.4273919",
+    "lat-long_key": "-4.419157,15.4273919",
+    "OSM_ID": "4795660440",
+    "null": null
+  },
+  {
+    "Name": "College Metropole",
+    "Latitude": "-4.409606",
+    "Longitude": "15.414264",
+    "lat-long_key": "-4.409606,15.414264",
+    "OSM_ID": "4795663689",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mansga",
+    "Latitude": "-4.4081253",
+    "Longitude": "15.4266113",
+    "lat-long_key": "-4.4081253,15.4266113",
+    "OSM_ID": "4795665974",
+    "null": null
+  },
+  {
+    "Name": "CPK Ecole Publique",
+    "Latitude": "-4.4075713",
+    "Longitude": "15.4099164",
+    "lat-long_key": "-4.4075713,15.4099164",
+    "OSM_ID": "4795666051",
+    "null": null
+  },
+  {
+    "Name": "Ecole ITEC Kinshasa",
+    "Latitude": "-4.4063081",
+    "Longitude": "15.4206473",
+    "lat-long_key": "-4.4063081,15.4206473",
+    "OSM_ID": "4795667420",
+    "null": null
+  },
+  {
+    "Name": "Ecole Malako",
+    "Latitude": "-4.4108706",
+    "Longitude": "15.4103327",
+    "lat-long_key": "-4.4108706,15.4103327",
+    "OSM_ID": "4795669353",
+    "null": null
+  },
+  {
+    "Name": "Ecole M'balanda",
+    "Latitude": "-4.414371",
+    "Longitude": "15.41589",
+    "lat-long_key": "-4.414371,15.41589",
+    "OSM_ID": "4795670600",
+    "null": null
+  },
+  {
+    "Name": "College Deborah / Meteo",
+    "Latitude": "-4.412234",
+    "Longitude": "15.414882",
+    "lat-long_key": "-4.412234,15.414882",
+    "OSM_ID": "4795671355",
+    "null": null
+  },
+  {
+    "Name": "Ecole Saint-Viannet",
+    "Latitude": "-4.4174204",
+    "Longitude": "15.3691353",
+    "lat-long_key": "-4.4174204,15.3691353",
+    "OSM_ID": "4795678720",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Lalu",
+    "Latitude": "-4.4202261",
+    "Longitude": "15.3663502",
+    "lat-long_key": "-4.4202261,15.3663502",
+    "OSM_ID": "4795683751",
+    "null": null
+  },
+  {
+    "Name": "Ecole Notre-Dame de la Consolata",
+    "Latitude": "-4.4657163",
+    "Longitude": "15.4552034",
+    "lat-long_key": "-4.4657163,15.4552034",
+    "OSM_ID": "4795700264",
+    "null": null
+  },
+  {
+    "Name": "Ecole Moliambo",
+    "Latitude": "-4.44001",
+    "Longitude": "15.43234",
+    "lat-long_key": "-4.44001,15.43234",
+    "OSM_ID": "4795701111",
+    "null": null
+  },
+  {
+    "Name": "Ecole Molokai",
+    "Latitude": "-4.4522111",
+    "Longitude": "15.4186901",
+    "lat-long_key": "-4.4522111,15.4186901",
+    "OSM_ID": "4795701864",
+    "null": null
+  },
+  {
+    "Name": "Ecole Pere Charles",
+    "Latitude": "-4.4524711",
+    "Longitude": "15.4081713",
+    "lat-long_key": "-4.4524711,15.4081713",
+    "OSM_ID": "4795702037",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Sadisana",
+    "Latitude": "-4.425155",
+    "Longitude": "15.418608",
+    "lat-long_key": "-4.425155,15.418608",
+    "OSM_ID": "4795706003",
+    "null": null
+  },
+  {
+    "Name": "Ecole ITP Goge",
+    "Latitude": "-4.392015",
+    "Longitude": "15.377353",
+    "lat-long_key": "-4.392015,15.377353",
+    "OSM_ID": "4796290315",
+    "null": null
+  },
+  {
+    "Name": "Universit\u00e9 R\u00e9v\u00e9rend KIM",
+    "Latitude": "-4.3923096",
+    "Longitude": "15.3752468",
+    "lat-long_key": "-4.3923096,15.3752468",
+    "OSM_ID": "4796292422",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Rev. Jack Mus",
+    "Latitude": "-4.4141094",
+    "Longitude": "15.4342232",
+    "lat-long_key": "-4.4141094,15.4342232",
+    "OSM_ID": "4796299657",
+    "null": null
+  },
+  {
+    "Name": "College Depart",
+    "Latitude": "-4.405042",
+    "Longitude": "15.410552",
+    "lat-long_key": "-4.405042,15.410552",
+    "OSM_ID": "4796308934",
+    "null": null
+  },
+  {
+    "Name": "College Saint-Placide",
+    "Latitude": "-4.4074431",
+    "Longitude": "15.4109444",
+    "lat-long_key": "-4.4074431,15.4109444",
+    "OSM_ID": "4796309295",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mamaboka",
+    "Latitude": "-4.411578",
+    "Longitude": "15.4179753",
+    "lat-long_key": "-4.411578,15.4179753",
+    "OSM_ID": "4796358744",
+    "null": null
+  },
+  {
+    "Name": "Ecole Musenge Ex. Fatali",
+    "Latitude": "-4.417484",
+    "Longitude": "15.4199116",
+    "lat-long_key": "-4.417484,15.4199116",
+    "OSM_ID": "4796366526",
+    "null": null
+  },
+  {
+    "Name": "Institut St-Bikuku",
+    "Latitude": "-4.419932",
+    "Longitude": "15.419586",
+    "lat-long_key": "-4.419932,15.419586",
+    "OSM_ID": "4796369952",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire Saint-Eloi",
+    "Latitude": "-4.417702",
+    "Longitude": "15.415989",
+    "lat-long_key": "-4.417702,15.415989",
+    "OSM_ID": "4796371821",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire A.F.S.E.",
+    "Latitude": "-4.4138399",
+    "Longitude": "15.4302893",
+    "lat-long_key": "-4.4138399,15.4302893",
+    "OSM_ID": "4796377164",
+    "null": null
+  },
+  {
+    "Name": "College Marquis Kivuvu",
+    "Latitude": "-4.4166961",
+    "Longitude": "15.4329298",
+    "lat-long_key": "-4.4166961,15.4329298",
+    "OSM_ID": "4796380391",
+    "null": null
+  },
+  {
+    "Name": "Ecole Adventiste EPA Massina 2",
+    "Latitude": "-4.4213089",
+    "Longitude": "15.4303646",
+    "lat-long_key": "-4.4213089,15.4303646",
+    "OSM_ID": "4796384038",
+    "null": null
+  },
+  {
+    "Name": "Ecole Privee Aku",
+    "Latitude": "-4.4239753",
+    "Longitude": "15.4233312",
+    "lat-long_key": "-4.4239753,15.4233312",
+    "OSM_ID": "4796384745",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Mvundu",
+    "Latitude": "-4.4281772",
+    "Longitude": "15.4277095",
+    "lat-long_key": "-4.4281772,15.4277095",
+    "OSM_ID": "4796448359",
+    "null": null
+  },
+  {
+    "Name": "Ecole Bikala",
+    "Latitude": "-4.4247784",
+    "Longitude": "15.4295014",
+    "lat-long_key": "-4.4247784,15.4295014",
+    "OSM_ID": "4796450462",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Ste-Marie Minkoto",
+    "Latitude": "-4.4266819",
+    "Longitude": "15.4275389",
+    "lat-long_key": "-4.4266819,15.4275389",
+    "OSM_ID": "4796452676",
+    "null": null
+  },
+  {
+    "Name": "Ecole EP6 Kikimi",
+    "Latitude": "-4.4285753",
+    "Longitude": "15.4309979",
+    "lat-long_key": "-4.4285753,15.4309979",
+    "OSM_ID": "4796453525",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire 4 et 8",
+    "Latitude": "-4.4324433",
+    "Longitude": "15.4308317",
+    "lat-long_key": "-4.4324433,15.4308317",
+    "OSM_ID": "4796455266",
+    "null": null
+  },
+  {
+    "Name": "Centre de rattrapage scolaire",
+    "Latitude": "-4.4268693",
+    "Longitude": "15.426217",
+    "lat-long_key": "-4.4268693,15.426217",
+    "OSM_ID": "4796456676",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ikuma",
+    "Latitude": "-4.42796",
+    "Longitude": "15.419183",
+    "lat-long_key": "-4.42796,15.419183",
+    "OSM_ID": "4796459622",
+    "null": null
+  },
+  {
+    "Name": "Ecole Msala",
+    "Latitude": "-4.427813",
+    "Longitude": "15.421405",
+    "lat-long_key": "-4.427813,15.421405",
+    "OSM_ID": "4796460241",
+    "null": null
+  },
+  {
+    "Name": "College Bel'Onyx",
+    "Latitude": "-4.425316",
+    "Longitude": "15.416928",
+    "lat-long_key": "-4.425316,15.416928",
+    "OSM_ID": "4796460669",
+    "null": null
+  },
+  {
+    "Name": "Ecole Vainqueur",
+    "Latitude": "-4.429073",
+    "Longitude": "15.420256",
+    "lat-long_key": "-4.429073,15.420256",
+    "OSM_ID": "4796461675",
+    "null": null
+  },
+  {
+    "Name": "College St-Francois",
+    "Latitude": "-4.425288",
+    "Longitude": "15.414771",
+    "lat-long_key": "-4.425288,15.414771",
+    "OSM_ID": "4796464229",
+    "null": null
+  },
+  {
+    "Name": "Ecole ITC Moukali",
+    "Latitude": "-4.4298934",
+    "Longitude": "15.4160219",
+    "lat-long_key": "-4.4298934,15.4160219",
+    "OSM_ID": "4796464274",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Primaire Rvd Mouzi",
+    "Latitude": "-4.4461629",
+    "Longitude": "15.4181414",
+    "lat-long_key": "-4.4461629,15.4181414",
+    "OSM_ID": "4796469395",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole P\u00e8re Damien",
+    "Latitude": "-4.4479751",
+    "Longitude": "15.4151206",
+    "lat-long_key": "-4.4479751,15.4151206",
+    "OSM_ID": "4796477962",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mamandanda",
+    "Latitude": "-4.4421041",
+    "Longitude": "15.4099886",
+    "lat-long_key": "-4.4421041,15.4099886",
+    "OSM_ID": "4796490834",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ngotto",
+    "Latitude": "-4.4399862",
+    "Longitude": "15.3983837",
+    "lat-long_key": "-4.4399862,15.3983837",
+    "OSM_ID": "4796494833",
+    "null": null
+  },
+  {
+    "Name": "Ecole Pere Rene",
+    "Latitude": "-4.434471",
+    "Longitude": "15.405534",
+    "lat-long_key": "-4.434471,15.405534",
+    "OSM_ID": "4796498844",
+    "null": null
+  },
+  {
+    "Name": "Ecole Montagneuse",
+    "Latitude": "-4.435776",
+    "Longitude": "15.398018",
+    "lat-long_key": "-4.435776,15.398018",
+    "OSM_ID": "4796505278",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Mika",
+    "Latitude": "-4.434475",
+    "Longitude": "15.396523",
+    "lat-long_key": "-4.434475,15.396523",
+    "OSM_ID": "4796508635",
+    "null": null
+  },
+  {
+    "Name": "College du 22 Mars",
+    "Latitude": "-4.4234375",
+    "Longitude": "15.3903125",
+    "lat-long_key": "-4.4234375,15.3903125",
+    "OSM_ID": "4796510225",
+    "null": null
+  },
+  {
+    "Name": "Ecole INGA",
+    "Latitude": "-4.4157612",
+    "Longitude": "15.3918937",
+    "lat-long_key": "-4.4157612,15.3918937",
+    "OSM_ID": "4796512016",
+    "null": null
+  },
+  {
+    "Name": "Elikya",
+    "Latitude": "-4.4059445",
+    "Longitude": "15.3744941",
+    "lat-long_key": "-4.4059445,15.3744941",
+    "OSM_ID": "4796516815",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Kinghoy",
+    "Latitude": "-4.4009243",
+    "Longitude": "15.3723954",
+    "lat-long_key": "-4.4009243,15.3723954",
+    "OSM_ID": "4796531106",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Masamba",
+    "Latitude": "-4.3986153",
+    "Longitude": "15.3747688",
+    "lat-long_key": "-4.3986153,15.3747688",
+    "OSM_ID": "4796862506",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Lumfu2",
+    "Latitude": "-4.399576",
+    "Longitude": "15.375951",
+    "lat-long_key": "-4.399576,15.375951",
+    "OSM_ID": "4796864345",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Q7 Njili",
+    "Latitude": "-4.40246",
+    "Longitude": "15.377496",
+    "lat-long_key": "-4.40246,15.377496",
+    "OSM_ID": "4796869071",
+    "null": null
+  },
+  {
+    "Name": "College de La Grace",
+    "Latitude": "-4.4018711",
+    "Longitude": "15.3883268",
+    "lat-long_key": "-4.4018711,15.3883268",
+    "OSM_ID": "4796906109",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Assani",
+    "Latitude": "-4.406221",
+    "Longitude": "15.393046",
+    "lat-long_key": "-4.406221,15.393046",
+    "OSM_ID": "4796906324",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire le Cameleon",
+    "Latitude": "-4.4202015",
+    "Longitude": "15.3906568",
+    "lat-long_key": "-4.4202015,15.3906568",
+    "OSM_ID": "4796907593",
+    "null": null
+  },
+  {
+    "Name": "College Notre Dame de Grace",
+    "Latitude": "-4.4262508",
+    "Longitude": "15.3932041",
+    "lat-long_key": "-4.4262508,15.3932041",
+    "OSM_ID": "4796907928",
+    "null": null
+  },
+  {
+    "Name": "Ecole Adventiste",
+    "Latitude": "-4.4290322",
+    "Longitude": "15.3955998",
+    "lat-long_key": "-4.4290322,15.3955998",
+    "OSM_ID": "4796911576",
+    "null": null
+  },
+  {
+    "Name": "Ecole de la Pentecote",
+    "Latitude": "-4.427845",
+    "Longitude": "15.400756",
+    "lat-long_key": "-4.427845,15.400756",
+    "OSM_ID": "4796914101",
+    "null": null
+  },
+  {
+    "Name": "Ecole Biyela EP5",
+    "Latitude": "-4.4279009",
+    "Longitude": "15.4058298",
+    "lat-long_key": "-4.4279009,15.4058298",
+    "OSM_ID": "4798226075",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ngwalabi",
+    "Latitude": "-4.429243",
+    "Longitude": "15.407191",
+    "lat-long_key": "-4.429243,15.407191",
+    "OSM_ID": "4798234623",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mamadou",
+    "Latitude": "-4.418533",
+    "Longitude": "15.414909",
+    "lat-long_key": "-4.418533,15.414909",
+    "OSM_ID": "4798241507",
+    "null": null
+  },
+  {
+    "Name": "Lycee St-Joseph",
+    "Latitude": "-4.4169234",
+    "Longitude": "15.4139382",
+    "lat-long_key": "-4.4169234,15.4139382",
+    "OSM_ID": "4798241705",
+    "null": null
+  },
+  {
+    "Name": "College Bel Elan",
+    "Latitude": "-4.4139916",
+    "Longitude": "15.4087765",
+    "lat-long_key": "-4.4139916,15.4087765",
+    "OSM_ID": "4798252988",
+    "null": null
+  },
+  {
+    "Name": "Ecole (en construction 2016)",
+    "Latitude": "-4.420432",
+    "Longitude": "15.411527",
+    "lat-long_key": "-4.420432,15.411527",
+    "OSM_ID": "4798257687",
+    "null": null
+  },
+  {
+    "Name": "Centre Scolaire Bomoko",
+    "Latitude": "-4.4217856",
+    "Longitude": "15.4111584",
+    "lat-long_key": "-4.4217856,15.4111584",
+    "OSM_ID": "4798266419",
+    "null": null
+  },
+  {
+    "Name": "Orphelinat Mahanaim",
+    "Latitude": "-4.424292",
+    "Longitude": "15.4099478",
+    "lat-long_key": "-4.424292,15.4099478",
+    "OSM_ID": "4798271420",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire 5",
+    "Latitude": "-4.424291",
+    "Longitude": "15.402154",
+    "lat-long_key": "-4.424291,15.402154",
+    "OSM_ID": "4798290295",
+    "null": null
+  },
+  {
+    "Name": "Institut Muyumbu",
+    "Latitude": "-4.4270683",
+    "Longitude": "15.4004593",
+    "lat-long_key": "-4.4270683,15.4004593",
+    "OSM_ID": "4798294548",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint-Joseph",
+    "Latitude": "-4.4245594",
+    "Longitude": "15.3969254",
+    "lat-long_key": "-4.4245594,15.3969254",
+    "OSM_ID": "4798306535",
+    "null": null
+  },
+  {
+    "Name": "Ecole Les Oliviers",
+    "Latitude": "-4.4187844",
+    "Longitude": "15.4021287",
+    "lat-long_key": "-4.4187844,15.4021287",
+    "OSM_ID": "4798326195",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Bolingani",
+    "Latitude": "-4.4209322",
+    "Longitude": "15.3968289",
+    "lat-long_key": "-4.4209322,15.3968289",
+    "OSM_ID": "4798328514",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mabiko",
+    "Latitude": "-4.4215965",
+    "Longitude": "15.4008964",
+    "lat-long_key": "-4.4215965,15.4008964",
+    "OSM_ID": "4798329841",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Les Oliviers",
+    "Latitude": "-4.4195564",
+    "Longitude": "15.3992948",
+    "lat-long_key": "-4.4195564,15.3992948",
+    "OSM_ID": "4798331953",
+    "null": null
+  },
+  {
+    "Name": "Ecole Tembe",
+    "Latitude": "-4.4151284",
+    "Longitude": "15.4035147",
+    "lat-long_key": "-4.4151284,15.4035147",
+    "OSM_ID": "4798338415",
+    "null": null
+  },
+  {
+    "Name": "Ecole Soleil",
+    "Latitude": "-4.4105854",
+    "Longitude": "15.3946438",
+    "lat-long_key": "-4.4105854,15.3946438",
+    "OSM_ID": "4798339411",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire",
+    "Latitude": "-4.411567",
+    "Longitude": "15.396355",
+    "lat-long_key": "-4.411567,15.396355",
+    "OSM_ID": "4798340552",
+    "null": null
+  },
+  {
+    "Name": "Ecole Samuel Masambakidi",
+    "Latitude": "-4.4144665",
+    "Longitude": "15.4000655",
+    "lat-long_key": "-4.4144665,15.4000655",
+    "OSM_ID": "4798342858",
+    "null": null
+  },
+  {
+    "Name": "College Oasis",
+    "Latitude": "-4.411871",
+    "Longitude": "15.408565",
+    "lat-long_key": "-4.411871,15.408565",
+    "OSM_ID": "4798347198",
+    "null": null
+  },
+  {
+    "Name": "Ecole Malako, EP3, St-marc",
+    "Latitude": "-4.408757",
+    "Longitude": "15.409432",
+    "lat-long_key": "-4.408757,15.409432",
+    "OSM_ID": "4798358410",
+    "null": null
+  },
+  {
+    "Name": "Ecole Infrak",
+    "Latitude": "-4.4089374",
+    "Longitude": "15.4057587",
+    "lat-long_key": "-4.4089374,15.4057587",
+    "OSM_ID": "4798361197",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ste-Rita",
+    "Latitude": "-4.408856",
+    "Longitude": "15.3996328",
+    "lat-long_key": "-4.408856,15.3996328",
+    "OSM_ID": "4798362647",
+    "null": null
+  },
+  {
+    "Name": "Lycee Mwinda",
+    "Latitude": "-4.4097948",
+    "Longitude": "15.3960943",
+    "lat-long_key": "-4.4097948,15.3960943",
+    "OSM_ID": "4798364292",
+    "null": null
+  },
+  {
+    "Name": "Institut Foi EP Yasa",
+    "Latitude": "-4.4098193",
+    "Longitude": "15.3957756",
+    "lat-long_key": "-4.4098193,15.3957756",
+    "OSM_ID": "4798365050",
+    "null": null
+  },
+  {
+    "Name": "College Kwayoungu",
+    "Latitude": "-4.4060773",
+    "Longitude": "15.3933608",
+    "lat-long_key": "-4.4060773,15.3933608",
+    "OSM_ID": "4798806583",
+    "null": null
+  },
+  {
+    "Name": "College Royal",
+    "Latitude": "-4.404215",
+    "Longitude": "15.409544",
+    "lat-long_key": "-4.404215,15.409544",
+    "OSM_ID": "4798830053",
+    "null": null
+  },
+  {
+    "Name": "EP 2 & 12 Kingasani",
+    "Latitude": "-4.4046104",
+    "Longitude": "15.4068138",
+    "lat-long_key": "-4.4046104,15.4068138",
+    "OSM_ID": "4798853980",
+    "null": null
+  },
+  {
+    "Name": "Institut Malako",
+    "Latitude": "-4.4047809",
+    "Longitude": "15.4063555",
+    "lat-long_key": "-4.4047809,15.4063555",
+    "OSM_ID": "4798858373",
+    "null": null
+  },
+  {
+    "Name": "College Saint-Paul",
+    "Latitude": "-4.4028554",
+    "Longitude": "15.4015176",
+    "lat-long_key": "-4.4028554,15.4015176",
+    "OSM_ID": "4798865577",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Mbelia",
+    "Latitude": "-4.4025219",
+    "Longitude": "15.3990803",
+    "lat-long_key": "-4.4025219,15.3990803",
+    "OSM_ID": "4801959617",
+    "null": null
+  },
+  {
+    "Name": "College St-Paul",
+    "Latitude": "-4.4020174",
+    "Longitude": "15.4023828",
+    "lat-long_key": "-4.4020174,15.4023828",
+    "OSM_ID": "4801960877",
+    "null": null
+  },
+  {
+    "Name": "Ecole St-Boniface",
+    "Latitude": "-4.4035012",
+    "Longitude": "15.3962983",
+    "lat-long_key": "-4.4035012,15.3962983",
+    "OSM_ID": "4801979402",
+    "null": null
+  },
+  {
+    "Name": "Ecole Dibue Dia Ditumba",
+    "Latitude": "-4.401013",
+    "Longitude": "15.395202",
+    "lat-long_key": "-4.401013,15.395202",
+    "OSM_ID": "4801987109",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mamassa",
+    "Latitude": "-4.400729",
+    "Longitude": "15.392681",
+    "lat-long_key": "-4.400729,15.392681",
+    "OSM_ID": "4802047404",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole portuguaise",
+    "Latitude": "-4.3087366",
+    "Longitude": "15.3178623",
+    "lat-long_key": "-4.3087366,15.3178623",
+    "OSM_ID": "4866013704",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire Tumba",
+    "Latitude": "-4.4099011",
+    "Longitude": "15.2911931",
+    "lat-long_key": "-4.4099011,15.2911931",
+    "OSM_ID": "4909413116",
+    "null": null
+  },
+  {
+    "Name": "Institut Cardinal Malula",
+    "Latitude": "-4.4123186",
+    "Longitude": "15.2903536",
+    "lat-long_key": "-4.4123186,15.2903536",
+    "OSM_ID": "4909413223",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint-Joseph",
+    "Latitude": "-4.3004859",
+    "Longitude": "15.3160161",
+    "lat-long_key": "-4.3004859,15.3160161",
+    "OSM_ID": "4945976043",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Mater Vitae",
+    "Latitude": "-4.4164963",
+    "Longitude": "15.2539549",
+    "lat-long_key": "-4.4164963,15.2539549",
+    "OSM_ID": "5045444721",
+    "null": null
+  },
+  {
+    "Name": "CEM",
+    "Latitude": "-4.432371",
+    "Longitude": "15.2786041",
+    "lat-long_key": "-4.432371,15.2786041",
+    "OSM_ID": "5077945882",
+    "null": null
+  },
+  {
+    "Name": "College Pierre Bouvet",
+    "Latitude": "-4.4414441",
+    "Longitude": "15.2597489",
+    "lat-long_key": "-4.4414441,15.2597489",
+    "OSM_ID": "5083164443",
+    "null": null
+  },
+  {
+    "Name": "C.S Eucalyptus",
+    "Latitude": "-4.4414468",
+    "Longitude": "15.2667014",
+    "lat-long_key": "-4.4414468,15.2667014",
+    "OSM_ID": "5083197715",
+    "null": null
+  },
+  {
+    "Name": "Betyna",
+    "Latitude": "-4.4412266",
+    "Longitude": "15.26454",
+    "lat-long_key": "-4.4412266,15.26454",
+    "OSM_ID": "5084830731",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mpieko",
+    "Latitude": "-4.3447082",
+    "Longitude": "15.2743345",
+    "lat-long_key": "-4.3447082,15.2743345",
+    "OSM_ID": "5109221813",
+    "null": null
+  },
+  {
+    "Name": "EP1 et 2 Bandal Saint Cassien",
+    "Latitude": "-4.3533007",
+    "Longitude": "15.2853084",
+    "lat-long_key": "-4.3533007,15.2853084",
+    "OSM_ID": "5163173199",
+    "null": null
+  },
+  {
+    "Name": "Institut Ebenga",
+    "Latitude": "-4.3911919",
+    "Longitude": "15.3217412",
+    "lat-long_key": "-4.3911919,15.3217412",
+    "OSM_ID": "5168100762",
+    "null": null
+  },
+  {
+    "Name": "Ecole CBCO",
+    "Latitude": "-4.3444428",
+    "Longitude": "15.2763632",
+    "lat-long_key": "-4.3444428,15.2763632",
+    "OSM_ID": "5176715275",
+    "null": null
+  },
+  {
+    "Name": "Acad\u00e9mie des Sciences et des Technologies",
+    "Latitude": "-4.3991291",
+    "Longitude": "15.2682924",
+    "lat-long_key": "-4.3991291,15.2682924",
+    "OSM_ID": "5178480944",
+    "null": null
+  },
+  {
+    "Name": "Ecole Madame de S\u00e9vign\u00e9 Secondaire",
+    "Latitude": "-4.3424186",
+    "Longitude": "15.2825918",
+    "lat-long_key": "-4.3424186,15.2825918",
+    "OSM_ID": "5182837553",
+    "null": null
+  },
+  {
+    "Name": "Ecole Bamoyo",
+    "Latitude": "-4.3327029",
+    "Longitude": "15.2515827",
+    "lat-long_key": "-4.3327029,15.2515827",
+    "OSM_ID": "5185129479",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kilimani",
+    "Latitude": "-4.334716",
+    "Longitude": "15.2546754",
+    "lat-long_key": "-4.334716,15.2546754",
+    "OSM_ID": "5185129480",
+    "null": null
+  },
+  {
+    "Name": "Ecole Technique",
+    "Latitude": "-4.3352431",
+    "Longitude": "15.2538846",
+    "lat-long_key": "-4.3352431,15.2538846",
+    "OSM_ID": "5185129481",
+    "null": null
+  },
+  {
+    "Name": "Ecole Loupio",
+    "Latitude": "-4.331204",
+    "Longitude": "15.2630028",
+    "lat-long_key": "-4.331204,15.2630028",
+    "OSM_ID": "5185129482",
+    "null": null
+  },
+  {
+    "Name": "Ecole Chez Mickey",
+    "Latitude": "-4.3315644",
+    "Longitude": "15.2625636",
+    "lat-long_key": "-4.3315644,15.2625636",
+    "OSM_ID": "5185129483",
+    "null": null
+  },
+  {
+    "Name": "Joviemly High School",
+    "Latitude": "-4.3325369",
+    "Longitude": "15.2643699",
+    "lat-long_key": "-4.3325369,15.2643699",
+    "OSM_ID": "5185129484",
+    "null": null
+  },
+  {
+    "Name": "Ecole Saint-Georges",
+    "Latitude": "-4.3381148",
+    "Longitude": "15.267321",
+    "lat-long_key": "-4.3381148,15.267321",
+    "OSM_ID": "5194424338",
+    "null": null
+  },
+  {
+    "Name": "Ecole Madame de S\u00e9vign\u00e9 Maternelle",
+    "Latitude": "-4.3421562",
+    "Longitude": "15.2808573",
+    "lat-long_key": "-4.3421562,15.2808573",
+    "OSM_ID": "5194466112",
+    "null": null
+  },
+  {
+    "Name": "Ecole Non-conventionnelle Le Vall\u00e9e",
+    "Latitude": "-4.3462634",
+    "Longitude": "15.2745047",
+    "lat-long_key": "-4.3462634,15.2745047",
+    "OSM_ID": "5219801925",
+    "null": null
+  },
+  {
+    "Name": "Ecole Bolingani",
+    "Latitude": "-4.3367659",
+    "Longitude": "15.2714103",
+    "lat-long_key": "-4.3367659,15.2714103",
+    "OSM_ID": "5219810499",
+    "null": null
+  },
+  {
+    "Name": "Ecole Catholique Sainte Famille",
+    "Latitude": "-4.3940265",
+    "Longitude": "15.3152686",
+    "lat-long_key": "-4.3940265,15.3152686",
+    "OSM_ID": "5241592807",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Tr\u00e9sors",
+    "Latitude": "-4.3973052",
+    "Longitude": "15.3165668",
+    "lat-long_key": "-4.3973052,15.3165668",
+    "OSM_ID": "5241592808",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Washington School",
+    "Latitude": "-4.3975459",
+    "Longitude": "15.3161806",
+    "lat-long_key": "-4.3975459,15.3161806",
+    "OSM_ID": "5241592809",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Sacr\u00e9 Coeur",
+    "Latitude": "-4.4013434",
+    "Longitude": "15.3165615",
+    "lat-long_key": "-4.4013434,15.3165615",
+    "OSM_ID": "5241592810",
+    "null": null
+  },
+  {
+    "Name": "EP1 & 2 ITAV Saint Esprit",
+    "Latitude": "-4.4081388",
+    "Longitude": "15.3164488",
+    "lat-long_key": "-4.4081388,15.3164488",
+    "OSM_ID": "5241592811",
+    "null": null
+  },
+  {
+    "Name": "I.T.M. Kikeva",
+    "Latitude": "-4.4093074",
+    "Longitude": "15.3164005",
+    "lat-long_key": "-4.4093074,15.3164005",
+    "OSM_ID": "5241592812",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge M\u00e9thode Daniel",
+    "Latitude": "-4.411035",
+    "Longitude": "15.3164113",
+    "lat-long_key": "-4.411035,15.3164113",
+    "OSM_ID": "5241592813",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Le Cadet du Mont Amba",
+    "Latitude": "-4.4123454",
+    "Longitude": "15.3158212",
+    "lat-long_key": "-4.4123454,15.3158212",
+    "OSM_ID": "5241592814",
+    "null": null
+  },
+  {
+    "Name": "Ecole Anuarite",
+    "Latitude": "-4.3923042",
+    "Longitude": "15.3231999",
+    "lat-long_key": "-4.3923042,15.3231999",
+    "OSM_ID": "5241628099",
+    "null": null
+  },
+  {
+    "Name": "Lyc\u00e9e Technique et scientifique de Limete",
+    "Latitude": "-4.3504123",
+    "Longitude": "15.3398699",
+    "lat-long_key": "-4.3504123,15.3398699",
+    "OSM_ID": "5263448468",
+    "null": null
+  },
+  {
+    "Name": "EP1 Kingabwa",
+    "Latitude": "-4.3643302",
+    "Longitude": "15.3574061",
+    "lat-long_key": "-4.3643302,15.3574061",
+    "OSM_ID": "5264013777",
+    "null": null
+  },
+  {
+    "Name": "EP1 Nsona Pangu",
+    "Latitude": "-4.393053",
+    "Longitude": "15.3759241",
+    "lat-long_key": "-4.393053,15.3759241",
+    "OSM_ID": "5264013787",
+    "null": null
+  },
+  {
+    "Name": "C.S. Petite Th\u00e9r\u00e8se",
+    "Latitude": "-4.3456624",
+    "Longitude": "15.3322631",
+    "lat-long_key": "-4.3456624,15.3322631",
+    "OSM_ID": "5266023718",
+    "null": null
+  },
+  {
+    "Name": "Ecole BERE Limete",
+    "Latitude": "-4.3730381",
+    "Longitude": "15.3475785",
+    "lat-long_key": "-4.3730381,15.3475785",
+    "OSM_ID": "5266864034",
+    "null": null
+  },
+  {
+    "Name": "Ecole Maternel Univers Scolaire",
+    "Latitude": "-4.3522336",
+    "Longitude": "15.2840611",
+    "lat-long_key": "-4.3522336,15.2840611",
+    "OSM_ID": "5266898482",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire Life Line",
+    "Latitude": "-4.3535602",
+    "Longitude": "15.2873629",
+    "lat-long_key": "-4.3535602,15.2873629",
+    "OSM_ID": "5266898486",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Eben Ezer",
+    "Latitude": "-4.3540121",
+    "Longitude": "15.2878618",
+    "lat-long_key": "-4.3540121,15.2878618",
+    "OSM_ID": "5266898490",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ange Raphael",
+    "Latitude": "-4.3513617",
+    "Longitude": "15.2805904",
+    "lat-long_key": "-4.3513617,15.2805904",
+    "OSM_ID": "5266898497",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ntodo",
+    "Latitude": "-4.3471187",
+    "Longitude": "15.2776107",
+    "lat-long_key": "-4.3471187,15.2776107",
+    "OSM_ID": "5266898498",
+    "null": null
+  },
+  {
+    "Name": "Village Bondeko",
+    "Latitude": "-4.3388745",
+    "Longitude": "15.2784473",
+    "lat-long_key": "-4.3388745,15.2784473",
+    "OSM_ID": "5268094493",
+    "null": null
+  },
+  {
+    "Name": "C.S. Beni 2",
+    "Latitude": "-4.3379625",
+    "Longitude": "15.2768218",
+    "lat-long_key": "-4.3379625,15.2768218",
+    "OSM_ID": "5268094495",
+    "null": null
+  },
+  {
+    "Name": "C.S. Mont des Oliviers",
+    "Latitude": "-4.3369622",
+    "Longitude": "15.2757758",
+    "lat-long_key": "-4.3369622,15.2757758",
+    "OSM_ID": "5268094504",
+    "null": null
+  },
+  {
+    "Name": "Madame de S\u00e9vign\u00e9- Maternel, Primaire",
+    "Latitude": "-4.3391901",
+    "Longitude": "15.2743247",
+    "lat-long_key": "-4.3391901,15.2743247",
+    "OSM_ID": "5268094515",
+    "null": null
+  },
+  {
+    "Name": "Ecole Le Bambin",
+    "Latitude": "-4.3423648",
+    "Longitude": "15.2734664",
+    "lat-long_key": "-4.3423648,15.2734664",
+    "OSM_ID": "5268094520",
+    "null": null
+  },
+  {
+    "Name": "C.S. Makanisi",
+    "Latitude": "-4.3407025",
+    "Longitude": "15.2740417",
+    "lat-long_key": "-4.3407025,15.2740417",
+    "OSM_ID": "5268094533",
+    "null": null
+  },
+  {
+    "Name": "C.S. Les Bambins",
+    "Latitude": "-4.3415009",
+    "Longitude": "15.2745607",
+    "lat-long_key": "-4.3415009,15.2745607",
+    "OSM_ID": "5268094535",
+    "null": null
+  },
+  {
+    "Name": "Lyc\u00e9e Les Arc-Anges",
+    "Latitude": "-4.3455207",
+    "Longitude": "15.2788845",
+    "lat-long_key": "-4.3455207,15.2788845",
+    "OSM_ID": "5268094537",
+    "null": null
+  },
+  {
+    "Name": "Lyc\u00e9e Technique Omisalisa",
+    "Latitude": "-4.3449162",
+    "Longitude": "15.279091",
+    "lat-long_key": "-4.3449162,15.279091",
+    "OSM_ID": "5268094538",
+    "null": null
+  },
+  {
+    "Name": "C.S. Saint Michel",
+    "Latitude": "-4.3446515",
+    "Longitude": "15.2791983",
+    "lat-long_key": "-4.3446515,15.2791983",
+    "OSM_ID": "5268094543",
+    "null": null
+  },
+  {
+    "Name": "Institut Bokolo",
+    "Latitude": "-4.343587",
+    "Longitude": "15.2808291",
+    "lat-long_key": "-4.343587,15.2808291",
+    "OSM_ID": "5268094545",
+    "null": null
+  },
+  {
+    "Name": "C.S. Marie Stella",
+    "Latitude": "-4.34302",
+    "Longitude": "15.2820924",
+    "lat-long_key": "-4.34302,15.2820924",
+    "OSM_ID": "5268094548",
+    "null": null
+  },
+  {
+    "Name": "Ecole Conventionel Adventiste",
+    "Latitude": "-4.3483351",
+    "Longitude": "15.2872272",
+    "lat-long_key": "-4.3483351,15.2872272",
+    "OSM_ID": "5268094578",
+    "null": null
+  },
+  {
+    "Name": "EP 1 et 2 Ango Ango",
+    "Latitude": "-4.3501903",
+    "Longitude": "15.2828649",
+    "lat-long_key": "-4.3501903,15.2828649",
+    "OSM_ID": "5268094591",
+    "null": null
+  },
+  {
+    "Name": "Ecole Beree Ngaliema",
+    "Latitude": "-4.3576734",
+    "Longitude": "15.2519229",
+    "lat-long_key": "-4.3576734,15.2519229",
+    "OSM_ID": "5268176447",
+    "null": null
+  },
+  {
+    "Name": "EP 3 et 4 Institut Makelele",
+    "Latitude": "-4.341533",
+    "Longitude": "15.2753413",
+    "lat-long_key": "-4.341533,15.2753413",
+    "OSM_ID": "5268176448",
+    "null": null
+  },
+  {
+    "Name": "ITI MAENDELEO",
+    "Latitude": "-4.4417018",
+    "Longitude": "15.2574746",
+    "lat-long_key": "-4.4417018,15.2574746",
+    "OSM_ID": "5273550367",
+    "null": null
+  },
+  {
+    "Name": "centre de formation emmhest",
+    "Latitude": "-4.4407117",
+    "Longitude": "15.257032",
+    "lat-long_key": "-4.4407117,15.257032",
+    "OSM_ID": "5273550368",
+    "null": null
+  },
+  {
+    "Name": "complexe scolaire ngemba",
+    "Latitude": "-4.4423148",
+    "Longitude": "15.2588573",
+    "lat-long_key": "-4.4423148,15.2588573",
+    "OSM_ID": "5273550370",
+    "null": null
+  },
+  {
+    "Name": "College Pierre Bouvet",
+    "Latitude": "-4.4418696",
+    "Longitude": "15.2592972",
+    "lat-long_key": "-4.4418696,15.2592972",
+    "OSM_ID": "5273550371",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Bienheureux Isidore Bakanja",
+    "Latitude": "-4.3508536",
+    "Longitude": "15.3366405",
+    "lat-long_key": "-4.3508536,15.3366405",
+    "OSM_ID": "5287473698",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Sainte Faustine",
+    "Latitude": "-4.3836968",
+    "Longitude": "15.315451",
+    "lat-long_key": "-4.3836968,15.315451",
+    "OSM_ID": "5287474926",
+    "null": null
+  },
+  {
+    "Name": "C.S. Le Chandelier",
+    "Latitude": "-4.424925",
+    "Longitude": "15.257526",
+    "lat-long_key": "-4.424925,15.257526",
+    "OSM_ID": "5295927108",
+    "null": null
+  },
+  {
+    "Name": "EPSP de Kinshasa",
+    "Latitude": "-4.4255721",
+    "Longitude": "15.2579606",
+    "lat-long_key": "-4.4255721,15.2579606",
+    "OSM_ID": "5295927109",
+    "null": null
+  },
+  {
+    "Name": "C.S. Jacques Vincent",
+    "Latitude": "-4.4283961",
+    "Longitude": "15.2580571",
+    "lat-long_key": "-4.4283961,15.2580571",
+    "OSM_ID": "5295927110",
+    "null": null
+  },
+  {
+    "Name": "C.S. Elisabeth International",
+    "Latitude": "-4.4335947",
+    "Longitude": "15.2779645",
+    "lat-long_key": "-4.4335947,15.2779645",
+    "OSM_ID": "5295927112",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Boyokani",
+    "Latitude": "-4.4128749",
+    "Longitude": "15.2874649",
+    "lat-long_key": "-4.4128749,15.2874649",
+    "OSM_ID": "5295927115",
+    "null": null
+  },
+  {
+    "Name": "C.S. Tilano Tyranus",
+    "Latitude": "-4.4041354",
+    "Longitude": "15.2943098",
+    "lat-long_key": "-4.4041354,15.2943098",
+    "OSM_ID": "5295927117",
+    "null": null
+  },
+  {
+    "Name": "G.S. Kalonda",
+    "Latitude": "-4.3991424",
+    "Longitude": "15.3016993",
+    "lat-long_key": "-4.3991424,15.3016993",
+    "OSM_ID": "5295927118",
+    "null": null
+  },
+  {
+    "Name": "C.S. Les P\u00e9lerins",
+    "Latitude": "-4.3977197",
+    "Longitude": "15.305205",
+    "lat-long_key": "-4.3977197,15.305205",
+    "OSM_ID": "5295927119",
+    "null": null
+  },
+  {
+    "Name": "Ecole Chr\u00e9tienne Rehoboth",
+    "Latitude": "-4.4147362",
+    "Longitude": "15.3036868",
+    "lat-long_key": "-4.4147362,15.3036868",
+    "OSM_ID": "5295927120",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Fr\u00e9re Alingba",
+    "Latitude": "-4.347449",
+    "Longitude": "15.2659053",
+    "lat-long_key": "-4.347449,15.2659053",
+    "OSM_ID": "5296008516",
+    "null": null
+  },
+  {
+    "Name": "Ecole Madame de S\u00e9vign\u00e9 Maternel, Primaire",
+    "Latitude": "-4.3488023",
+    "Longitude": "15.2642477",
+    "lat-long_key": "-4.3488023,15.2642477",
+    "OSM_ID": "5296008517",
+    "null": null
+  },
+  {
+    "Name": "C.S. La Sommite",
+    "Latitude": "-4.3545631",
+    "Longitude": "15.263266",
+    "lat-long_key": "-4.3545631,15.263266",
+    "OSM_ID": "5296008518",
+    "null": null
+  },
+  {
+    "Name": "Ecole Le Bambin",
+    "Latitude": "-4.3879611",
+    "Longitude": "15.2604228",
+    "lat-long_key": "-4.3879611,15.2604228",
+    "OSM_ID": "5296008828",
+    "null": null
+  },
+  {
+    "Name": "C.S. La Grace",
+    "Latitude": "-4.3925235",
+    "Longitude": "15.259887",
+    "lat-long_key": "-4.3925235,15.259887",
+    "OSM_ID": "5296008829",
+    "null": null
+  },
+  {
+    "Name": "Tome School",
+    "Latitude": "-4.3933205",
+    "Longitude": "15.2597469",
+    "lat-long_key": "-4.3933205,15.2597469",
+    "OSM_ID": "5296008830",
+    "null": null
+  },
+  {
+    "Name": "Ecole d'application P\u00e9dagogique",
+    "Latitude": "-4.399696",
+    "Longitude": "15.2579337",
+    "lat-long_key": "-4.399696,15.2579337",
+    "OSM_ID": "5296008831",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Samuel Levi",
+    "Latitude": "-4.4046007",
+    "Longitude": "15.2558309",
+    "lat-long_key": "-4.4046007,15.2558309",
+    "OSM_ID": "5296008832",
+    "null": null
+  },
+  {
+    "Name": "C.S. Kiungu",
+    "Latitude": "-4.410115",
+    "Longitude": "15.2576655",
+    "lat-long_key": "-4.410115,15.2576655",
+    "OSM_ID": "5296008834",
+    "null": null
+  },
+  {
+    "Name": "CS Eveil",
+    "Latitude": "-4.3508055",
+    "Longitude": "15.2709907",
+    "lat-long_key": "-4.3508055,15.2709907",
+    "OSM_ID": "5329685749",
+    "null": null
+  },
+  {
+    "Name": "CS La Couronne",
+    "Latitude": "-4.3581977",
+    "Longitude": "15.265114",
+    "lat-long_key": "-4.3581977,15.265114",
+    "OSM_ID": "5329686110",
+    "null": null
+  },
+  {
+    "Name": "Institut Batela",
+    "Latitude": "-4.3569166",
+    "Longitude": "15.267292",
+    "lat-long_key": "-4.3569166,15.267292",
+    "OSM_ID": "5329686116",
+    "null": null
+  },
+  {
+    "Name": "CS Bolamu",
+    "Latitude": "-4.3571734",
+    "Longitude": "15.2660072",
+    "lat-long_key": "-4.3571734,15.2660072",
+    "OSM_ID": "5329686117",
+    "null": null
+  },
+  {
+    "Name": "CS Nyota",
+    "Latitude": "-4.3560956",
+    "Longitude": "15.263384",
+    "lat-long_key": "-4.3560956,15.263384",
+    "OSM_ID": "5329686119",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kama",
+    "Latitude": "-4.3510783",
+    "Longitude": "15.2639928",
+    "lat-long_key": "-4.3510783,15.2639928",
+    "OSM_ID": "5329686124",
+    "null": null
+  },
+  {
+    "Name": "Ecole Les petits Lutins",
+    "Latitude": "-4.3413163",
+    "Longitude": "15.2661172",
+    "lat-long_key": "-4.3413163,15.2661172",
+    "OSM_ID": "5329686133",
+    "null": null
+  },
+  {
+    "Name": "C.S. Les Hortensias",
+    "Latitude": "-4.3438972",
+    "Longitude": "15.2666643",
+    "lat-long_key": "-4.3438972,15.2666643",
+    "OSM_ID": "5329686134",
+    "null": null
+  },
+  {
+    "Name": "Ecole Malula",
+    "Latitude": "-4.4121903",
+    "Longitude": "15.2903455",
+    "lat-long_key": "-4.4121903,15.2903455",
+    "OSM_ID": "5372939682",
+    "null": null
+  },
+  {
+    "Name": "Ecole Magango",
+    "Latitude": "-4.4100027",
+    "Longitude": "15.2918637",
+    "lat-long_key": "-4.4100027,15.2918637",
+    "OSM_ID": "5372939685",
+    "null": null
+  },
+  {
+    "Name": "ILS",
+    "Latitude": "-4.4028677",
+    "Longitude": "15.2922553",
+    "lat-long_key": "-4.4028677,15.2922553",
+    "OSM_ID": "5372939687",
+    "null": null
+  },
+  {
+    "Name": "C.S. Kiese",
+    "Latitude": "-4.352285",
+    "Longitude": "15.2853794",
+    "lat-long_key": "-4.352285,15.2853794",
+    "OSM_ID": "5407026099",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Maternelle Boboto",
+    "Latitude": "-4.3085395",
+    "Longitude": "15.2867889",
+    "lat-long_key": "-4.3085395,15.2867889",
+    "OSM_ID": "5410208647",
+    "null": null
+  },
+  {
+    "Name": "C.S. Manyanga",
+    "Latitude": "-4.3084271",
+    "Longitude": "15.2871966",
+    "lat-long_key": "-4.3084271,15.2871966",
+    "OSM_ID": "5410208648",
+    "null": null
+  },
+  {
+    "Name": "Univers scolaire",
+    "Latitude": "-4.3526337",
+    "Longitude": "15.2834166",
+    "lat-long_key": "-4.3526337,15.2834166",
+    "OSM_ID": "5416312771",
+    "null": null
+  },
+  {
+    "Name": "C.S. Baraka",
+    "Latitude": "-4.3532918",
+    "Longitude": "15.2835511",
+    "lat-long_key": "-4.3532918,15.2835511",
+    "OSM_ID": "5416315445",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mama Nkuakadi",
+    "Latitude": "-4.3843619",
+    "Longitude": "15.2595709",
+    "lat-long_key": "-4.3843619,15.2595709",
+    "OSM_ID": "5496855512",
+    "null": null
+  },
+  {
+    "Name": "Ecole Maternel",
+    "Latitude": "-4.3855435",
+    "Longitude": "15.2598327",
+    "lat-long_key": "-4.3855435,15.2598327",
+    "OSM_ID": "5496855513",
+    "null": null
+  },
+  {
+    "Name": "CS Saint Georges",
+    "Latitude": "-4.3397469",
+    "Longitude": "15.2656913",
+    "lat-long_key": "-4.3397469,15.2656913",
+    "OSM_ID": "5499221917",
+    "null": null
+  },
+  {
+    "Name": "Ecole Rev. Kim",
+    "Latitude": "-4.3325279",
+    "Longitude": "15.2629817",
+    "lat-long_key": "-4.3325279,15.2629817",
+    "OSM_ID": "5499221918",
+    "null": null
+  },
+  {
+    "Name": "GS Aurore",
+    "Latitude": "-4.331105",
+    "Longitude": "15.2634993",
+    "lat-long_key": "-4.331105,15.2634993",
+    "OSM_ID": "5499221920",
+    "null": null
+  },
+  {
+    "Name": "Ecole La Main Ouverte",
+    "Latitude": "-4.3407654",
+    "Longitude": "15.2990976",
+    "lat-long_key": "-4.3407654,15.2990976",
+    "OSM_ID": "5499321327",
+    "null": null
+  },
+  {
+    "Name": "Institut Charles Kisolokele",
+    "Latitude": "-4.3438999",
+    "Longitude": "15.297837",
+    "lat-long_key": "-4.3438999,15.297837",
+    "OSM_ID": "5499321332",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Mixte de Bandalungua",
+    "Latitude": "-4.3458978",
+    "Longitude": "15.2868506",
+    "lat-long_key": "-4.3458978,15.2868506",
+    "OSM_ID": "5499321338",
+    "null": null
+  },
+  {
+    "Name": "CS Clessidra",
+    "Latitude": "-4.3168682",
+    "Longitude": "15.2912924",
+    "lat-long_key": "-4.3168682,15.2912924",
+    "OSM_ID": "5499358550",
+    "null": null
+  },
+  {
+    "Name": "Ecole Eureka",
+    "Latitude": "-4.3173871",
+    "Longitude": "15.2899727",
+    "lat-long_key": "-4.3173871,15.2899727",
+    "OSM_ID": "5499358552",
+    "null": null
+  },
+  {
+    "Name": "Ecole Bilingue Les Petits Dauphins",
+    "Latitude": "-4.3179514",
+    "Longitude": "15.2872369",
+    "lat-long_key": "-4.3179514,15.2872369",
+    "OSM_ID": "5499358554",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire La Puisette Ngoika",
+    "Latitude": "-4.322862",
+    "Longitude": "15.2892861",
+    "lat-long_key": "-4.322862,15.2892861",
+    "OSM_ID": "5499427140",
+    "null": null
+  },
+  {
+    "Name": "Ecole Bambini\u00e8re",
+    "Latitude": "-4.3172306",
+    "Longitude": "15.2929687",
+    "lat-long_key": "-4.3172306,15.2929687",
+    "OSM_ID": "5500780938",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire ngafani",
+    "Latitude": "-4.4292218",
+    "Longitude": "15.2777972",
+    "lat-long_key": "-4.4292218,15.2777972",
+    "OSM_ID": "5608040180",
+    "null": null
+  },
+  {
+    "Name": "EP Mongafula",
+    "Latitude": "-4.4279041",
+    "Longitude": "15.283463",
+    "lat-long_key": "-4.4279041,15.283463",
+    "OSM_ID": "5691706806",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Thomas",
+    "Latitude": "-4.4004716",
+    "Longitude": "15.3481083",
+    "lat-long_key": "-4.4004716,15.3481083",
+    "OSM_ID": "5744539985",
+    "null": null
+  },
+  {
+    "Name": "Cs Mamam Niongo",
+    "Latitude": "-4.4218523",
+    "Longitude": "15.3387903",
+    "lat-long_key": "-4.4218523,15.3387903",
+    "OSM_ID": "5764275636",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mawete",
+    "Latitude": "-4.4070941",
+    "Longitude": "15.3357703",
+    "lat-long_key": "-4.4070941,15.3357703",
+    "OSM_ID": "5765364150",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mozard",
+    "Latitude": "-4.4065001",
+    "Longitude": "15.339265",
+    "lat-long_key": "-4.4065001,15.339265",
+    "OSM_ID": "5765386613",
+    "null": null
+  },
+  {
+    "Name": "Ecole Wasson",
+    "Latitude": "-4.404701",
+    "Longitude": "15.3382136",
+    "lat-long_key": "-4.404701,15.3382136",
+    "OSM_ID": "5765411104",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Mika",
+    "Latitude": "-4.4039301",
+    "Longitude": "15.338362",
+    "lat-long_key": "-4.4039301,15.338362",
+    "OSM_ID": "5765423529",
+    "null": null
+  },
+  {
+    "Name": "Ecole Maranata",
+    "Latitude": "-4.401786",
+    "Longitude": "15.3333051",
+    "lat-long_key": "-4.401786,15.3333051",
+    "OSM_ID": "5765430453",
+    "null": null
+  },
+  {
+    "Name": "Institut Mputu",
+    "Latitude": "-4.4202571",
+    "Longitude": "15.3536658",
+    "lat-long_key": "-4.4202571,15.3536658",
+    "OSM_ID": "5765609498",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4174853",
+    "Longitude": "15.3504042",
+    "lat-long_key": "-4.4174853,15.3504042",
+    "OSM_ID": "5765615476",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire BOBO",
+    "Latitude": "-4.4190738",
+    "Longitude": "15.3511083",
+    "lat-long_key": "-4.4190738,15.3511083",
+    "OSM_ID": "5765660350",
+    "null": null
+  },
+  {
+    "Name": "Institut de la collin",
+    "Latitude": "-4.4187591",
+    "Longitude": "15.3421388",
+    "lat-long_key": "-4.4187591,15.3421388",
+    "OSM_ID": "5765742428",
+    "null": null
+  },
+  {
+    "Name": "Ecole BOTOSI",
+    "Latitude": "-4.4259011",
+    "Longitude": "15.3442586",
+    "lat-long_key": "-4.4259011,15.3442586",
+    "OSM_ID": "5765814065",
+    "null": null
+  },
+  {
+    "Name": "Ecole mobokoli",
+    "Latitude": "-4.4173797",
+    "Longitude": "15.3407724",
+    "lat-long_key": "-4.4173797,15.3407724",
+    "OSM_ID": "5765821816",
+    "null": null
+  },
+  {
+    "Name": "CS Mundingu",
+    "Latitude": "-4.3994694",
+    "Longitude": "15.3524474",
+    "lat-long_key": "-4.3994694,15.3524474",
+    "OSM_ID": "5765843759",
+    "null": null
+  },
+  {
+    "Name": "Centre de formation Coll\u00e8ge AUXANO",
+    "Latitude": "-4.4035082",
+    "Longitude": "15.3418078",
+    "lat-long_key": "-4.4035082,15.3418078",
+    "OSM_ID": "5765843767",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.408917",
+    "Longitude": "15.3469482",
+    "lat-long_key": "-4.408917,15.3469482",
+    "OSM_ID": "5765882572",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire BAZOLA",
+    "Latitude": "-4.4048628",
+    "Longitude": "15.3402641",
+    "lat-long_key": "-4.4048628,15.3402641",
+    "OSM_ID": "5765886583",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kimbanguiste",
+    "Latitude": "-4.4227776",
+    "Longitude": "15.3217824",
+    "lat-long_key": "-4.4227776,15.3217824",
+    "OSM_ID": "5765892120",
+    "null": null
+  },
+  {
+    "Name": "Mayunda Tshumbu",
+    "Latitude": "-4.4058135",
+    "Longitude": "15.3498577",
+    "lat-long_key": "-4.4058135,15.3498577",
+    "OSM_ID": "5765953670",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4002349",
+    "Longitude": "15.3475812",
+    "lat-long_key": "-4.4002349,15.3475812",
+    "OSM_ID": "5765970916",
+    "null": null
+  },
+  {
+    "Name": "Ecole Maman PEMBA",
+    "Latitude": "-4.4099462",
+    "Longitude": "15.3547984",
+    "lat-long_key": "-4.4099462,15.3547984",
+    "OSM_ID": "5766078497",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Em\u00e9rite",
+    "Latitude": "-4.3872283",
+    "Longitude": "15.3571996",
+    "lat-long_key": "-4.3872283,15.3571996",
+    "OSM_ID": "5766095033",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Luminaire",
+    "Latitude": "-4.4059923",
+    "Longitude": "15.3533942",
+    "lat-long_key": "-4.4059923,15.3533942",
+    "OSM_ID": "5766107607",
+    "null": null
+  },
+  {
+    "Name": "Ecole primaire de la Paix",
+    "Latitude": "-4.4133536",
+    "Longitude": "15.3496841",
+    "lat-long_key": "-4.4133536,15.3496841",
+    "OSM_ID": "5766137015",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.412806",
+    "Longitude": "15.3537402",
+    "lat-long_key": "-4.412806,15.3537402",
+    "OSM_ID": "5766156359",
+    "null": null
+  },
+  {
+    "Name": "Secondaire",
+    "Latitude": "-4.4067632",
+    "Longitude": "15.3600783",
+    "lat-long_key": "-4.4067632,15.3600783",
+    "OSM_ID": "5766185504",
+    "null": null
+  },
+  {
+    "Name": "College la Moisson",
+    "Latitude": "-4.4159931",
+    "Longitude": "15.3294656",
+    "lat-long_key": "-4.4159931,15.3294656",
+    "OSM_ID": "5766311108",
+    "null": null
+  },
+  {
+    "Name": "Semence",
+    "Latitude": "-4.4159817",
+    "Longitude": "15.3290934",
+    "lat-long_key": "-4.4159817,15.3290934",
+    "OSM_ID": "5766315711",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4098984",
+    "Longitude": "15.3567772",
+    "lat-long_key": "-4.4098984,15.3567772",
+    "OSM_ID": "5767557823",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kingi",
+    "Latitude": "-4.4017499",
+    "Longitude": "15.352601",
+    "lat-long_key": "-4.4017499,15.352601",
+    "OSM_ID": "5767623164",
+    "null": null
+  },
+  {
+    "Name": "Etoile",
+    "Latitude": "-4.4269614",
+    "Longitude": "15.3243922",
+    "lat-long_key": "-4.4269614,15.3243922",
+    "OSM_ID": "5767654559",
+    "null": null
+  },
+  {
+    "Name": "Ecole",
+    "Latitude": "-4.4030295",
+    "Longitude": "15.3514288",
+    "lat-long_key": "-4.4030295,15.3514288",
+    "OSM_ID": "5767675605",
+    "null": null
+  },
+  {
+    "Name": "Tobongisa",
+    "Latitude": "-4.4263958",
+    "Longitude": "15.3256515",
+    "lat-long_key": "-4.4263958,15.3256515",
+    "OSM_ID": "5767692480",
+    "null": null
+  },
+  {
+    "Name": "Mabuidi",
+    "Latitude": "-4.4273157",
+    "Longitude": "15.3267699",
+    "lat-long_key": "-4.4273157,15.3267699",
+    "OSM_ID": "5767724582",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4126048",
+    "Longitude": "15.3571004",
+    "lat-long_key": "-4.4126048,15.3571004",
+    "OSM_ID": "5767817219",
+    "null": null
+  },
+  {
+    "Name": "College Missionnaire Kitaba",
+    "Latitude": "-4.4109073",
+    "Longitude": "15.3601802",
+    "lat-long_key": "-4.4109073,15.3601802",
+    "OSM_ID": "5767835598",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire la Grace Divine",
+    "Latitude": "-4.4262447",
+    "Longitude": "15.3249236",
+    "lat-long_key": "-4.4262447,15.3249236",
+    "OSM_ID": "5767844552",
+    "null": null
+  },
+  {
+    "Name": "CS/Institut Mpyncha",
+    "Latitude": "-4.3963264",
+    "Longitude": "15.3550706",
+    "lat-long_key": "-4.3963264,15.3550706",
+    "OSM_ID": "5768072708",
+    "null": null
+  },
+  {
+    "Name": "Ecole EMERCO",
+    "Latitude": "-4.3923323",
+    "Longitude": "15.3588572",
+    "lat-long_key": "-4.3923323,15.3588572",
+    "OSM_ID": "5768103357",
+    "null": null
+  },
+  {
+    "Name": "La foi",
+    "Latitude": "-4.3923704",
+    "Longitude": "15.3570923",
+    "lat-long_key": "-4.3923704,15.3570923",
+    "OSM_ID": "5768131526",
+    "null": null
+  },
+  {
+    "Name": "Kangudi",
+    "Latitude": "-4.3930423",
+    "Longitude": "15.3572137",
+    "lat-long_key": "-4.3930423,15.3572137",
+    "OSM_ID": "5768199852",
+    "null": null
+  },
+  {
+    "Name": "Institut MABWIDI",
+    "Latitude": "-4.4178664",
+    "Longitude": "15.3403164",
+    "lat-long_key": "-4.4178664,15.3403164",
+    "OSM_ID": "5768463698",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4222056",
+    "Longitude": "15.3356417",
+    "lat-long_key": "-4.4222056,15.3356417",
+    "OSM_ID": "5768525451",
+    "null": null
+  },
+  {
+    "Name": "SCS R\u00e9v NTOTO",
+    "Latitude": "-4.4030436",
+    "Longitude": "15.3562206",
+    "lat-long_key": "-4.4030436,15.3562206",
+    "OSM_ID": "5769867642",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4163247",
+    "Longitude": "15.3406933",
+    "lat-long_key": "-4.4163247,15.3406933",
+    "OSM_ID": "5788560251",
+    "null": null
+  },
+  {
+    "Name": "Ufuta",
+    "Latitude": "-4.38269",
+    "Longitude": "15.3778285",
+    "lat-long_key": "-4.38269,15.3778285",
+    "OSM_ID": "5922020562",
+    "null": null
+  },
+  {
+    "Name": "Imani",
+    "Latitude": "-4.3797508",
+    "Longitude": "15.3734833",
+    "lat-long_key": "-4.3797508,15.3734833",
+    "OSM_ID": "5922020563",
+    "null": null
+  },
+  {
+    "Name": "Kasa Mbanza",
+    "Latitude": "-4.3662571",
+    "Longitude": "15.3740571",
+    "lat-long_key": "-4.3662571,15.3740571",
+    "OSM_ID": "5922084587",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire LA REPENTANCE",
+    "Latitude": "-4.4199127",
+    "Longitude": "15.282503",
+    "lat-long_key": "-4.4199127,15.282503",
+    "OSM_ID": "6018210288",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Bon Berger",
+    "Latitude": "-4.3320157",
+    "Longitude": "15.3464466",
+    "lat-long_key": "-4.3320157,15.3464466",
+    "OSM_ID": "6039032208",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Primaire",
+    "Latitude": "-4.328405",
+    "Longitude": "15.3464996",
+    "lat-long_key": "-4.328405,15.3464996",
+    "OSM_ID": "6039131956",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire Tembele",
+    "Latitude": "-4.3330454",
+    "Longitude": "15.3461429",
+    "lat-long_key": "-4.3330454,15.3461429",
+    "OSM_ID": "6039151839",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Saint Denis Wa",
+    "Latitude": "-4.3331112",
+    "Longitude": "15.3473542",
+    "lat-long_key": "-4.3331112,15.3473542",
+    "OSM_ID": "6039196508",
+    "null": null
+  },
+  {
+    "Name": "Saint Raphael de Karmaria",
+    "Latitude": "-4.3335428",
+    "Longitude": "15.346562",
+    "lat-long_key": "-4.3335428,15.346562",
+    "OSM_ID": "6039240939",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Monano I",
+    "Latitude": "-4.3352131",
+    "Longitude": "15.3469375",
+    "lat-long_key": "-4.3352131,15.3469375",
+    "OSM_ID": "6041492247",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire Serena",
+    "Latitude": "-4.3352559",
+    "Longitude": "15.3387889",
+    "lat-long_key": "-4.3352559,15.3387889",
+    "OSM_ID": "6041516468",
+    "null": null
+  },
+  {
+    "Name": "Saint Joseph de Cluny",
+    "Latitude": "-4.3392248",
+    "Longitude": "15.3473746",
+    "lat-long_key": "-4.3392248,15.3473746",
+    "OSM_ID": "6043731754",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Kiwanuka",
+    "Latitude": "-4.3381821",
+    "Longitude": "15.3462524",
+    "lat-long_key": "-4.3381821,15.3462524",
+    "OSM_ID": "6043767829",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Francois",
+    "Latitude": "-4.3379599",
+    "Longitude": "15.3455133",
+    "lat-long_key": "-4.3379599,15.3455133",
+    "OSM_ID": "6043767831",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire Dinanga",
+    "Latitude": "-4.3382915",
+    "Longitude": "15.3498973",
+    "lat-long_key": "-4.3382915,15.3498973",
+    "OSM_ID": "6044078049",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Maman bien aim\u00e9",
+    "Latitude": "-4.3404151",
+    "Longitude": "15.3504833",
+    "lat-long_key": "-4.3404151,15.3504833",
+    "OSM_ID": "6044105693",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Gloria",
+    "Latitude": "-4.3283366",
+    "Longitude": "15.3465139",
+    "lat-long_key": "-4.3283366,15.3465139",
+    "OSM_ID": "6044159189",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire The Winner's",
+    "Latitude": "-4.339365",
+    "Longitude": "15.3463878",
+    "lat-long_key": "-4.339365,15.3463878",
+    "OSM_ID": "6044190350",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire La Gr\u00e2ce",
+    "Latitude": "-4.3365751",
+    "Longitude": "15.3485133",
+    "lat-long_key": "-4.3365751,15.3485133",
+    "OSM_ID": "6050630287",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Divine Charit\u00e9",
+    "Latitude": "-4.3446147",
+    "Longitude": "15.3546951",
+    "lat-long_key": "-4.3446147,15.3546951",
+    "OSM_ID": "6105710431",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.341418",
+    "Longitude": "15.3534687",
+    "lat-long_key": "-4.341418,15.3534687",
+    "OSM_ID": "6105748338",
+    "null": null
+  },
+  {
+    "Name": "Le Prodige Divin",
+    "Latitude": "-4.3373125",
+    "Longitude": "15.3486152",
+    "lat-long_key": "-4.3373125,15.3486152",
+    "OSM_ID": "6105989204",
+    "null": null
+  },
+  {
+    "Name": "Saint Kizito",
+    "Latitude": "-4.3424457",
+    "Longitude": "15.3509232",
+    "lat-long_key": "-4.3424457,15.3509232",
+    "OSM_ID": "6109085489",
+    "null": null
+  },
+  {
+    "Name": "Ecole maternelle Saint Kizito",
+    "Latitude": "-4.343932",
+    "Longitude": "15.3521128",
+    "lat-long_key": "-4.343932,15.3521128",
+    "OSM_ID": "6109093818",
+    "null": null
+  },
+  {
+    "Name": "Lycee Moderne le concept",
+    "Latitude": "-4.3437703",
+    "Longitude": "15.3516018",
+    "lat-long_key": "-4.3437703,15.3516018",
+    "OSM_ID": "6109118472",
+    "null": null
+  },
+  {
+    "Name": "C.S Pain de vie",
+    "Latitude": "-4.3502605",
+    "Longitude": "15.3573424",
+    "lat-long_key": "-4.3502605,15.3573424",
+    "OSM_ID": "6113120205",
+    "null": null
+  },
+  {
+    "Name": "Magnificate",
+    "Latitude": "-4.3434319",
+    "Longitude": "15.3478789",
+    "lat-long_key": "-4.3434319,15.3478789",
+    "OSM_ID": "6113207115",
+    "null": null
+  },
+  {
+    "Name": "College Royal",
+    "Latitude": "-4.3414126",
+    "Longitude": "15.3468463",
+    "lat-long_key": "-4.3414126,15.3468463",
+    "OSM_ID": "6115470311",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Saint Jean Pierre Nzungu",
+    "Latitude": "-4.3452659",
+    "Longitude": "15.3535397",
+    "lat-long_key": "-4.3452659,15.3535397",
+    "OSM_ID": "6115566229",
+    "null": null
+  },
+  {
+    "Name": "College P\u00e8re divin",
+    "Latitude": "-4.3464795",
+    "Longitude": "15.3520967",
+    "lat-long_key": "-4.3464795,15.3520967",
+    "OSM_ID": "6115728656",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire Cyprien Isungu",
+    "Latitude": "-4.3455735",
+    "Longitude": "15.3542277",
+    "lat-long_key": "-4.3455735,15.3542277",
+    "OSM_ID": "6115804064",
+    "null": null
+  },
+  {
+    "Name": "Polytechnique",
+    "Latitude": "-4.3453849",
+    "Longitude": "15.3539367",
+    "lat-long_key": "-4.3453849,15.3539367",
+    "OSM_ID": "6115804065",
+    "null": null
+  },
+  {
+    "Name": "Ecole Lala",
+    "Latitude": "-4.4353918",
+    "Longitude": "15.351162",
+    "lat-long_key": "-4.4353918,15.351162",
+    "OSM_ID": "6293490320",
+    "null": null
+  },
+  {
+    "Name": "CS Makilu",
+    "Latitude": "-4.3907638",
+    "Longitude": "15.3539515",
+    "lat-long_key": "-4.3907638,15.3539515",
+    "OSM_ID": "6293490339",
+    "null": null
+  },
+  {
+    "Name": "Ecole Saint Donat",
+    "Latitude": "-4.4262354",
+    "Longitude": "15.3546166",
+    "lat-long_key": "-4.4262354,15.3546166",
+    "OSM_ID": "6293490342",
+    "null": null
+  },
+  {
+    "Name": "Centre de ratrappage Salisabana",
+    "Latitude": "-4.4309419",
+    "Longitude": "15.3510547",
+    "lat-long_key": "-4.4309419,15.3510547",
+    "OSM_ID": "6293490351",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Samuzulu",
+    "Latitude": "-4.3930102",
+    "Longitude": "15.3574491",
+    "lat-long_key": "-4.3930102,15.3574491",
+    "OSM_ID": "6293491314",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Albert",
+    "Latitude": "-4.4030229",
+    "Longitude": "15.3427935",
+    "lat-long_key": "-4.4030229,15.3427935",
+    "OSM_ID": "6293491340",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Tr\u00e9sor Cach\u00e9",
+    "Latitude": "-4.4095695",
+    "Longitude": "15.3571916",
+    "lat-long_key": "-4.4095695,15.3571916",
+    "OSM_ID": "6293491357",
+    "null": null
+  },
+  {
+    "Name": "Ecole Saint Robert",
+    "Latitude": "-4.4288026",
+    "Longitude": "15.3550887",
+    "lat-long_key": "-4.4288026,15.3550887",
+    "OSM_ID": "6293491366",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Dihata",
+    "Latitude": "-4.4084142",
+    "Longitude": "15.3579855",
+    "lat-long_key": "-4.4084142,15.3579855",
+    "OSM_ID": "6293491367",
+    "null": null
+  },
+  {
+    "Name": "Coll\u0117ge Excellence du Savoir",
+    "Latitude": "-4.4089491",
+    "Longitude": "15.3333521",
+    "lat-long_key": "-4.4089491,15.3333521",
+    "OSM_ID": "6293492104",
+    "null": null
+  },
+  {
+    "Name": "CE Angelia",
+    "Latitude": "-4.3913415",
+    "Longitude": "15.3537369",
+    "lat-long_key": "-4.3913415,15.3537369",
+    "OSM_ID": "6293492138",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Akiva",
+    "Latitude": "-4.4031726",
+    "Longitude": "15.3368497",
+    "lat-long_key": "-4.4031726,15.3368497",
+    "OSM_ID": "6293492139",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire les Petits Voltaire",
+    "Latitude": "-4.4162146",
+    "Longitude": "15.3440495",
+    "lat-long_key": "-4.4162146,15.3440495",
+    "OSM_ID": "6293492140",
+    "null": null
+  },
+  {
+    "Name": "Ecole la prosp\u00e9rit\u00e9",
+    "Latitude": "-4.4320758",
+    "Longitude": "15.3480077",
+    "lat-long_key": "-4.4320758,15.3480077",
+    "OSM_ID": "6293492158",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire les Agneaux du Christ",
+    "Latitude": "-4.4043941",
+    "Longitude": "15.3495822",
+    "lat-long_key": "-4.4043941,15.3495822",
+    "OSM_ID": "6293493515",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Ma\u00eetre Noel",
+    "Latitude": "-4.4148224",
+    "Longitude": "15.3355542",
+    "lat-long_key": "-4.4148224,15.3355542",
+    "OSM_ID": "6293493531",
+    "null": null
+  },
+  {
+    "Name": "Ecole CELAM",
+    "Latitude": "-4.3689067",
+    "Longitude": "15.2851633",
+    "lat-long_key": "-4.3689067,15.2851633",
+    "OSM_ID": "6341179972",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Ku Ntwala",
+    "Latitude": "-4.4073292",
+    "Longitude": "15.2526913",
+    "lat-long_key": "-4.4073292,15.2526913",
+    "OSM_ID": "6414467085",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Sup\u00e9rieure de Management de Kinshasa",
+    "Latitude": "-4.3636255",
+    "Longitude": "15.2490127",
+    "lat-long_key": "-4.3636255,15.2490127",
+    "OSM_ID": "6415551388",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole La Fontaine",
+    "Latitude": "-4.4033062",
+    "Longitude": "15.2539881",
+    "lat-long_key": "-4.4033062,15.2539881",
+    "OSM_ID": "6415551391",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Saint Joseph de Cuneo",
+    "Latitude": "-4.40115",
+    "Longitude": "15.2960299",
+    "lat-long_key": "-4.40115,15.2960299",
+    "OSM_ID": "6419120290",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4150063",
+    "Longitude": "15.342105",
+    "lat-long_key": "-4.4150063,15.342105",
+    "OSM_ID": "6553321192",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Tobongisa",
+    "Latitude": "-4.4264707",
+    "Longitude": "15.3253269",
+    "lat-long_key": "-4.4264707,15.3253269",
+    "OSM_ID": "6557833166",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Mabuidi",
+    "Latitude": "-4.4267916",
+    "Longitude": "15.3272152",
+    "lat-long_key": "-4.4267916,15.3272152",
+    "OSM_ID": "6557933484",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire les Etoiles",
+    "Latitude": "-4.4265349",
+    "Longitude": "15.3241253",
+    "lat-long_key": "-4.4265349,15.3241253",
+    "OSM_ID": "6557981790",
+    "null": null
+  },
+  {
+    "Name": "Maman Aneke",
+    "Latitude": "-4.3981006",
+    "Longitude": "15.3756127",
+    "lat-long_key": "-4.3981006,15.3756127",
+    "OSM_ID": "6572473540",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Primaire 1 Mampuka (Arm\u00e9e du Salut)",
+    "Latitude": "-4.3979377",
+    "Longitude": "15.3769031",
+    "lat-long_key": "-4.3979377,15.3769031",
+    "OSM_ID": "6572804998",
+    "null": null
+  },
+  {
+    "Name": "Institut Yimbukulu",
+    "Latitude": "-4.397939",
+    "Longitude": "15.3768733",
+    "lat-long_key": "-4.397939,15.3768733",
+    "OSM_ID": "6572804999",
+    "null": null
+  },
+  {
+    "Name": "Institut Lubaki",
+    "Latitude": "-4.3995068",
+    "Longitude": "15.3743069",
+    "lat-long_key": "-4.3995068,15.3743069",
+    "OSM_ID": "6572861185",
+    "null": null
+  },
+  {
+    "Name": "Ecole Liziba",
+    "Latitude": "-4.4145695",
+    "Longitude": "15.3235114",
+    "lat-long_key": "-4.4145695,15.3235114",
+    "OSM_ID": "6574647623",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Moderne",
+    "Latitude": "-4.4157586",
+    "Longitude": "15.3641943",
+    "lat-long_key": "-4.4157586,15.3641943",
+    "OSM_ID": "6574677830",
+    "null": null
+  },
+  {
+    "Name": "ITC Likasi",
+    "Latitude": "-4.4147629",
+    "Longitude": "15.3693058",
+    "lat-long_key": "-4.4147629,15.3693058",
+    "OSM_ID": "6574771815",
+    "null": null
+  },
+  {
+    "Name": "CS Chretien Balongi",
+    "Latitude": "-4.4147154",
+    "Longitude": "15.3896183",
+    "lat-long_key": "-4.4147154,15.3896183",
+    "OSM_ID": "6574905479",
+    "null": null
+  },
+  {
+    "Name": "Bonsomi",
+    "Latitude": "-4.4139733",
+    "Longitude": "15.3784382",
+    "lat-long_key": "-4.4139733,15.3784382",
+    "OSM_ID": "6574944453",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire Obika",
+    "Latitude": "-4.4167365",
+    "Longitude": "15.3757954",
+    "lat-long_key": "-4.4167365,15.3757954",
+    "OSM_ID": "6574944473",
+    "null": null
+  },
+  {
+    "Name": "Lyc\u00e9e Technique Lukaya",
+    "Latitude": "-4.4140943",
+    "Longitude": "15.3766322",
+    "lat-long_key": "-4.4140943,15.3766322",
+    "OSM_ID": "6574944483",
+    "null": null
+  },
+  {
+    "Name": "Lavina School",
+    "Latitude": "-4.438558",
+    "Longitude": "15.3719759",
+    "lat-long_key": "-4.438558,15.3719759",
+    "OSM_ID": "6574947760",
+    "null": null
+  },
+  {
+    "Name": "Ecole Famille",
+    "Latitude": "-4.4400983",
+    "Longitude": "15.3689933",
+    "lat-long_key": "-4.4400983,15.3689933",
+    "OSM_ID": "6574947761",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge les Missionnaires",
+    "Latitude": "-4.4139768",
+    "Longitude": "15.3784344",
+    "lat-long_key": "-4.4139768,15.3784344",
+    "OSM_ID": "6575059069",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Bonsomi",
+    "Latitude": "-4.4139794",
+    "Longitude": "15.378433",
+    "lat-long_key": "-4.4139794,15.378433",
+    "OSM_ID": "6575059167",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge du Savoir",
+    "Latitude": "-4.4139753",
+    "Longitude": "15.3784347",
+    "lat-long_key": "-4.4139753,15.3784347",
+    "OSM_ID": "6575061513",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Catholique Saint martin",
+    "Latitude": "-4.4161254",
+    "Longitude": "15.3734887",
+    "lat-long_key": "-4.4161254,15.3734887",
+    "OSM_ID": "6575103353",
+    "null": null
+  },
+  {
+    "Name": "EP Talamaku",
+    "Latitude": "-4.4130698",
+    "Longitude": "15.3717811",
+    "lat-long_key": "-4.4130698,15.3717811",
+    "OSM_ID": "6579202844",
+    "null": null
+  },
+  {
+    "Name": "Ecole les Elites",
+    "Latitude": "-4.4131028",
+    "Longitude": "15.3717612",
+    "lat-long_key": "-4.4131028,15.3717612",
+    "OSM_ID": "6579202863",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire Obika",
+    "Latitude": "-4.4139874",
+    "Longitude": "15.3737059",
+    "lat-long_key": "-4.4139874,15.3737059",
+    "OSM_ID": "6579247336",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire Obika",
+    "Latitude": "-4.413966",
+    "Longitude": "15.3736362",
+    "lat-long_key": "-4.413966,15.3736362",
+    "OSM_ID": "6579330093",
+    "null": null
+  },
+  {
+    "Name": "CS Jonathan",
+    "Latitude": "-4.3980901",
+    "Longitude": "15.2641578",
+    "lat-long_key": "-4.3980901,15.2641578",
+    "OSM_ID": "6580665368",
+    "null": null
+  },
+  {
+    "Name": "EP Lutangu",
+    "Latitude": "-4.3561865",
+    "Longitude": "15.3626605",
+    "lat-long_key": "-4.3561865,15.3626605",
+    "OSM_ID": "6581404740",
+    "null": null
+  },
+  {
+    "Name": "E.P.5 Camp Kabila",
+    "Latitude": "-4.3887724",
+    "Longitude": "15.3380101",
+    "lat-long_key": "-4.3887724,15.3380101",
+    "OSM_ID": "6581477267",
+    "null": null
+  },
+  {
+    "Name": "Institut Lumumba",
+    "Latitude": "-4.3745331",
+    "Longitude": "15.3478602",
+    "lat-long_key": "-4.3745331,15.3478602",
+    "OSM_ID": "6581485353",
+    "null": null
+  },
+  {
+    "Name": "Lyc\u00e9e Victor Hugo",
+    "Latitude": "-4.4127614",
+    "Longitude": "15.3246989",
+    "lat-long_key": "-4.4127614,15.3246989",
+    "OSM_ID": "6581489628",
+    "null": null
+  },
+  {
+    "Name": "Beka",
+    "Latitude": "-4.3970314",
+    "Longitude": "15.3521079",
+    "lat-long_key": "-4.3970314,15.3521079",
+    "OSM_ID": "6581608784",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.4080405",
+    "Longitude": "15.3649606",
+    "lat-long_key": "-4.4080405,15.3649606",
+    "OSM_ID": "6581614939",
+    "null": null
+  },
+  {
+    "Name": "Compl\u00e8xe Scolaire Omala Yeka",
+    "Latitude": "-4.4085546",
+    "Longitude": "15.3682946",
+    "lat-long_key": "-4.4085546,15.3682946",
+    "OSM_ID": "6581614943",
+    "null": null
+  },
+  {
+    "Name": "Institit Lemfu 3",
+    "Latitude": "-4.4085573",
+    "Longitude": "15.3694828",
+    "lat-long_key": "-4.4085573,15.3694828",
+    "OSM_ID": "6581614944",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire Emmaus",
+    "Latitude": "-4.4087311",
+    "Longitude": "15.3706093",
+    "lat-long_key": "-4.4087311,15.3706093",
+    "OSM_ID": "6581614949",
+    "null": null
+  },
+  {
+    "Name": "Ecole Nzabel",
+    "Latitude": "-4.3969606",
+    "Longitude": "15.3798687",
+    "lat-long_key": "-4.3969606,15.3798687",
+    "OSM_ID": "6581732280",
+    "null": null
+  },
+  {
+    "Name": "UNESCO Bonsomi",
+    "Latitude": "-4.3994173",
+    "Longitude": "15.3735262",
+    "lat-long_key": "-4.3994173,15.3735262",
+    "OSM_ID": "6581790718",
+    "null": null
+  },
+  {
+    "Name": "Ecole Saint\u00e9 Bernadete",
+    "Latitude": "-4.4134995",
+    "Longitude": "15.3238286",
+    "lat-long_key": "-4.4134995,15.3238286",
+    "OSM_ID": "6581917720",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Doracles",
+    "Latitude": "-4.4114808",
+    "Longitude": "15.3209054",
+    "lat-long_key": "-4.4114808,15.3209054",
+    "OSM_ID": "6581917752",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3967563",
+    "Longitude": "15.3831477",
+    "lat-long_key": "-4.3967563,15.3831477",
+    "OSM_ID": "6581946023",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole les B\u00e9atitudes",
+    "Latitude": "-4.3902931",
+    "Longitude": "15.3588867",
+    "lat-long_key": "-4.3902931,15.3588867",
+    "OSM_ID": "6583776012",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Maitre Lukamba",
+    "Latitude": "-4.3808186",
+    "Longitude": "15.3815333",
+    "lat-long_key": "-4.3808186,15.3815333",
+    "OSM_ID": "6583935749",
+    "null": null
+  },
+  {
+    "Name": "Emanuel",
+    "Latitude": "-4.3780786",
+    "Longitude": "15.3865638",
+    "lat-long_key": "-4.3780786,15.3865638",
+    "OSM_ID": "6583935781",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Gervais",
+    "Latitude": "-4.3726092",
+    "Longitude": "15.3791659",
+    "lat-long_key": "-4.3726092,15.3791659",
+    "OSM_ID": "6583975585",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Notre Dame de la Sagesse",
+    "Latitude": "-4.378641",
+    "Longitude": "15.3796469",
+    "lat-long_key": "-4.378641,15.3796469",
+    "OSM_ID": "6583975621",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Jean Ap\u00f4tre",
+    "Latitude": "-4.3801881",
+    "Longitude": "15.3607727",
+    "lat-long_key": "-4.3801881,15.3607727",
+    "OSM_ID": "6584026391",
+    "null": null
+  },
+  {
+    "Name": "Institut Loboko",
+    "Latitude": "-4.3799523",
+    "Longitude": "15.3608866",
+    "lat-long_key": "-4.3799523,15.3608866",
+    "OSM_ID": "6584026400",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire la Maintenance",
+    "Latitude": "-4.3794782",
+    "Longitude": "15.3610417",
+    "lat-long_key": "-4.3794782,15.3610417",
+    "OSM_ID": "6584026403",
+    "null": null
+  },
+  {
+    "Name": "Ecole Arm\u00e9e du Salut",
+    "Latitude": "-4.3708504",
+    "Longitude": "15.373195",
+    "lat-long_key": "-4.3708504,15.373195",
+    "OSM_ID": "6584448787",
+    "null": null
+  },
+  {
+    "Name": "Ecole Republicain 2",
+    "Latitude": "-4.3658813",
+    "Longitude": "15.3697443",
+    "lat-long_key": "-4.3658813,15.3697443",
+    "OSM_ID": "6584448812",
+    "null": null
+  },
+  {
+    "Name": "Ecole la Fortune",
+    "Latitude": "-4.3704366",
+    "Longitude": "15.3745401",
+    "lat-long_key": "-4.3704366,15.3745401",
+    "OSM_ID": "6584448855",
+    "null": null
+  },
+  {
+    "Name": "Ecole Bilingue",
+    "Latitude": "-4.3744823",
+    "Longitude": "15.371182",
+    "lat-long_key": "-4.3744823,15.371182",
+    "OSM_ID": "6584448930",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Don Fr\u00e9d\u00e9ric",
+    "Latitude": "-4.3721504",
+    "Longitude": "15.37729",
+    "lat-long_key": "-4.3721504,15.37729",
+    "OSM_ID": "6584448934",
+    "null": null
+  },
+  {
+    "Name": "Ecole Amasaba",
+    "Latitude": "-4.4345609",
+    "Longitude": "15.37996",
+    "lat-long_key": "-4.4345609,15.37996",
+    "OSM_ID": "6586270791",
+    "null": null
+  },
+  {
+    "Name": "Centre de formation Mucolim",
+    "Latitude": "-4.4300648",
+    "Longitude": "15.3763747",
+    "lat-long_key": "-4.4300648,15.3763747",
+    "OSM_ID": "6586270795",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Maria Lukubama",
+    "Latitude": "-4.4236517",
+    "Longitude": "15.3840496",
+    "lat-long_key": "-4.4236517,15.3840496",
+    "OSM_ID": "6586270817",
+    "null": null
+  },
+  {
+    "Name": "Ecole Esengo",
+    "Latitude": "-4.4346621",
+    "Longitude": "15.3785241",
+    "lat-long_key": "-4.4346621,15.3785241",
+    "OSM_ID": "6586270819",
+    "null": null
+  },
+  {
+    "Name": "Neolamesa",
+    "Latitude": "-4.4215892",
+    "Longitude": "15.3229588",
+    "lat-long_key": "-4.4215892,15.3229588",
+    "OSM_ID": "6586820141",
+    "null": null
+  },
+  {
+    "Name": "Ecole Tundindi",
+    "Latitude": "-4.4250046",
+    "Longitude": "15.321009",
+    "lat-long_key": "-4.4250046,15.321009",
+    "OSM_ID": "6586820145",
+    "null": null
+  },
+  {
+    "Name": "Les Amis de DANIEL",
+    "Latitude": "-4.4278613",
+    "Longitude": "15.3353047",
+    "lat-long_key": "-4.4278613,15.3353047",
+    "OSM_ID": "6586941861",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Mixte La R\u00e9\u00e9ducation",
+    "Latitude": "-4.4196963",
+    "Longitude": "15.3855436",
+    "lat-long_key": "-4.4196963,15.3855436",
+    "OSM_ID": "6586967562",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Makuala",
+    "Latitude": "-4.4009717",
+    "Longitude": "15.3477998",
+    "lat-long_key": "-4.4009717,15.3477998",
+    "OSM_ID": "6588613214",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire CEGLO",
+    "Latitude": "-4.4055808",
+    "Longitude": "15.3481311",
+    "lat-long_key": "-4.4055808,15.3481311",
+    "OSM_ID": "6588624787",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire La Promesse",
+    "Latitude": "-4.4063443",
+    "Longitude": "15.3488231",
+    "lat-long_key": "-4.4063443,15.3488231",
+    "OSM_ID": "6588624788",
+    "null": null
+  },
+  {
+    "Name": "Sainte Marie Faustine",
+    "Latitude": "-4.3966803",
+    "Longitude": "15.3479836",
+    "lat-long_key": "-4.3966803,15.3479836",
+    "OSM_ID": "6588718345",
+    "null": null
+  },
+  {
+    "Name": "Ecole Primaire Nyeka",
+    "Latitude": "-4.4286929",
+    "Longitude": "15.3445329",
+    "lat-long_key": "-4.4286929,15.3445329",
+    "OSM_ID": "6628880286",
+    "null": null
+  },
+  {
+    "Name": "Institut de Kisenso",
+    "Latitude": "-4.4131129",
+    "Longitude": "15.3577387",
+    "lat-long_key": "-4.4131129,15.3577387",
+    "OSM_ID": "6631099925",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Diyavanga",
+    "Latitude": "-4.3746507",
+    "Longitude": "15.3741592",
+    "lat-long_key": "-4.3746507,15.3741592",
+    "OSM_ID": "6660651736",
+    "null": null
+  },
+  {
+    "Name": "C.S. Bukama",
+    "Latitude": "-4.3432273",
+    "Longitude": "15.2739465",
+    "lat-long_key": "-4.3432273,15.2739465",
+    "OSM_ID": "6853565957",
+    "null": null
+  },
+  {
+    "Name": "Institut Emile Zola",
+    "Latitude": "-4.4206253",
+    "Longitude": "15.3812747",
+    "lat-long_key": "-4.4206253,15.3812747",
+    "OSM_ID": "6915321149",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Bisikina",
+    "Latitude": "-4.4277824",
+    "Longitude": "15.3797462",
+    "lat-long_key": "-4.4277824,15.3797462",
+    "OSM_ID": "6915321180",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Kiaku",
+    "Latitude": "-4.4275778",
+    "Longitude": "15.3795489",
+    "lat-long_key": "-4.4275778,15.3795489",
+    "OSM_ID": "6915321181",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Le Rocher",
+    "Latitude": "-4.3926091",
+    "Longitude": "15.351921",
+    "lat-long_key": "-4.3926091,15.351921",
+    "OSM_ID": "6915707865",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Malandi II",
+    "Latitude": "-4.3931105",
+    "Longitude": "15.3529698",
+    "lat-long_key": "-4.3931105,15.3529698",
+    "OSM_ID": "6915707866",
+    "null": null
+  },
+  {
+    "Name": "Ecole Arm\u00e9e du Salut",
+    "Latitude": "-4.4091122",
+    "Longitude": "15.3769031",
+    "lat-long_key": "-4.4091122,15.3769031",
+    "OSM_ID": "6916073129",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kinzuana",
+    "Latitude": "-4.4127705",
+    "Longitude": "15.3824043",
+    "lat-long_key": "-4.4127705,15.3824043",
+    "OSM_ID": "6916073130",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kukiele",
+    "Latitude": "-4.4107876",
+    "Longitude": "15.3843302",
+    "lat-long_key": "-4.4107876,15.3843302",
+    "OSM_ID": "6916181940",
+    "null": null
+  },
+  {
+    "Name": "Ecole Mazongo",
+    "Latitude": "-4.4313805",
+    "Longitude": "15.3727135",
+    "lat-long_key": "-4.4313805,15.3727135",
+    "OSM_ID": "6924475769",
+    "null": null
+  },
+  {
+    "Name": "Institut Vuluka Primaire",
+    "Latitude": "-4.4395448",
+    "Longitude": "15.3774369",
+    "lat-long_key": "-4.4395448,15.3774369",
+    "OSM_ID": "6926847977",
+    "null": null
+  },
+  {
+    "Name": "EP. Kifuma",
+    "Latitude": "-4.4053388",
+    "Longitude": "15.3850168",
+    "lat-long_key": "-4.4053388,15.3850168",
+    "OSM_ID": "6930079029",
+    "null": null
+  },
+  {
+    "Name": "Sainte Agnes",
+    "Latitude": "-4.406454",
+    "Longitude": "15.3849927",
+    "lat-long_key": "-4.406454,15.3849927",
+    "OSM_ID": "6930079030",
+    "null": null
+  },
+  {
+    "Name": "Ecole Kibunzi",
+    "Latitude": "-4.4002041",
+    "Longitude": "15.3838849",
+    "lat-long_key": "-4.4002041,15.3838849",
+    "OSM_ID": "6930079031",
+    "null": null
+  },
+  {
+    "Name": "I.T.I Mpiko",
+    "Latitude": "-4.399212",
+    "Longitude": "15.3836623",
+    "lat-long_key": "-4.399212,15.3836623",
+    "OSM_ID": "6930079032",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole P\u00e8re Damien",
+    "Latitude": "-4.3703637",
+    "Longitude": "15.3691448",
+    "lat-long_key": "-4.3703637,15.3691448",
+    "OSM_ID": "6937620709",
+    "null": null
+  },
+  {
+    "Name": "C.S Outres neuves Academie",
+    "Latitude": "-4.3442302",
+    "Longitude": "15.2833986",
+    "lat-long_key": "-4.3442302,15.2833986",
+    "OSM_ID": "6939161814",
+    "null": null
+  },
+  {
+    "Name": "La conscience",
+    "Latitude": "-4.381317",
+    "Longitude": "15.372942",
+    "lat-long_key": "-4.381317,15.372942",
+    "OSM_ID": "7211573152",
+    "null": null
+  },
+  {
+    "Name": "Institut Buma",
+    "Latitude": "-4.4633738",
+    "Longitude": "15.4615724",
+    "lat-long_key": "-4.4633738,15.4615724",
+    "OSM_ID": "7802162242",
+    "null": null
+  },
+  {
+    "Name": "EP Buma",
+    "Latitude": "-4.463299",
+    "Longitude": "15.4614839",
+    "lat-long_key": "-4.463299,15.4614839",
+    "OSM_ID": "7802162243",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Lofudu",
+    "Latitude": "-4.3779543",
+    "Longitude": "15.3612129",
+    "lat-long_key": "-4.3779543,15.3612129",
+    "OSM_ID": "7817434015",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Ngami",
+    "Latitude": "-4.3751896",
+    "Longitude": "15.3601313",
+    "lat-long_key": "-4.3751896,15.3601313",
+    "OSM_ID": "7817434018",
+    "null": null
+  },
+  {
+    "Name": "Groupe scolaire eureka",
+    "Latitude": "-4.4469261",
+    "Longitude": "15.289051",
+    "lat-long_key": "-4.4469261,15.289051",
+    "OSM_ID": "7919603582",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Sainte Claire II",
+    "Latitude": "-4.3326482",
+    "Longitude": "15.2619705",
+    "lat-long_key": "-4.3326482,15.2619705",
+    "OSM_ID": "8048475105",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Chr\u00e9tien Jacques Andr\u00e9 Vernaud",
+    "Latitude": "-4.355751",
+    "Longitude": "15.3082325",
+    "lat-long_key": "-4.355751,15.3082325",
+    "OSM_ID": "8313433041",
+    "null": null
+  },
+  {
+    "Name": "Institut salazaku",
+    "Latitude": "-4.4086594",
+    "Longitude": "15.3429593",
+    "lat-long_key": "-4.4086594,15.3429593",
+    "OSM_ID": "8661844501",
+    "null": null
+  },
+  {
+    "Name": "Complexe scolaire arc en ciel r\u00e9v\u00e9lation",
+    "Latitude": "-4.4385105",
+    "Longitude": "15.2684375",
+    "lat-long_key": "-4.4385105,15.2684375",
+    "OSM_ID": "8709833617",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Alexia",
+    "Latitude": "-4.442509",
+    "Longitude": "15.2607665",
+    "lat-long_key": "-4.442509,15.2607665",
+    "OSM_ID": "8709842217",
+    "null": null
+  },
+  {
+    "Name": "Saint Charles et Maison Enrica",
+    "Latitude": "-4.3467954",
+    "Longitude": "15.3409357",
+    "lat-long_key": "-4.3467954,15.3409357",
+    "OSM_ID": "8932349013",
+    "null": null
+  },
+  {
+    "Name": "Arm\u00e9e du Salut",
+    "Latitude": "-4.4008397",
+    "Longitude": "15.2951877",
+    "lat-long_key": "-4.4008397,15.2951877",
+    "OSM_ID": "8936088324",
+    "null": null
+  },
+  {
+    "Name": "Ecole Vision",
+    "Latitude": "-4.3847825",
+    "Longitude": "15.2598068",
+    "lat-long_key": "-4.3847825,15.2598068",
+    "OSM_ID": "9084713394",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire La Somit\u00e9",
+    "Latitude": "-4.3580296",
+    "Longitude": "15.2520626",
+    "lat-long_key": "-4.3580296,15.2520626",
+    "OSM_ID": "9084713410",
+    "null": null
+  },
+  {
+    "Name": "English International School",
+    "Latitude": "-4.3079289",
+    "Longitude": "15.3173972",
+    "lat-long_key": "-4.3079289,15.3173972",
+    "OSM_ID": "9246824078",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire Siama",
+    "Latitude": "-4.3925596",
+    "Longitude": "15.3303869",
+    "lat-long_key": "-4.3925596,15.3303869",
+    "OSM_ID": "9657190727",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge GSG",
+    "Latitude": "-4.371477",
+    "Longitude": "15.3692263",
+    "lat-long_key": "-4.371477,15.3692263",
+    "OSM_ID": "9974916019",
+    "null": null
+  },
+  {
+    "Name": "Complexe Scolaire R\u00e9v\u00e9rend KIM",
+    "Latitude": "-4.3174329",
+    "Longitude": "15.2930784",
+    "lat-long_key": "-4.3174329,15.2930784",
+    "OSM_ID": "9976991400",
+    "null": null
+  },
+  {
+    "Name": "ecole GSCOM",
+    "Latitude": "-4.4134124",
+    "Longitude": "15.2904046",
+    "lat-long_key": "-4.4134124,15.2904046",
+    "OSM_ID": "9977000449",
+    "null": null
+  },
+  {
+    "Name": "\u00e9cole Cardinal malula",
+    "Latitude": "-4.4122812",
+    "Longitude": "15.2903026",
+    "lat-long_key": "-4.4122812,15.2903026",
+    "OSM_ID": "9977000452",
+    "null": null
+  },
+  {
+    "Name": "comlexe scolaire Tumba",
+    "Latitude": "-4.4099064",
+    "Longitude": "15.291177",
+    "lat-long_key": "-4.4099064,15.291177",
+    "OSM_ID": "9977000455",
+    "null": null
+  },
+  {
+    "Name": "CS LA TROMPETE",
+    "Latitude": "-4.3617574",
+    "Longitude": "15.3219286",
+    "lat-long_key": "-4.3617574,15.3219286",
+    "OSM_ID": "9977033872",
+    "null": null
+  },
+  {
+    "Name": "AGRICOLE",
+    "Latitude": "-4.3674539",
+    "Longitude": "15.3218561",
+    "lat-long_key": "-4.3674539,15.3218561",
+    "OSM_ID": "9977033876",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3460877",
+    "Longitude": "15.3055912",
+    "lat-long_key": "-4.3460877,15.3055912",
+    "OSM_ID": "9979906373",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3452559",
+    "Longitude": "15.3025764",
+    "lat-long_key": "-4.3452559,15.3025764",
+    "OSM_ID": "9979906374",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3454057",
+    "Longitude": "15.2992907",
+    "lat-long_key": "-4.3454057,15.2992907",
+    "OSM_ID": "9979906375",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3456892",
+    "Longitude": "15.3001812",
+    "lat-long_key": "-4.3456892,15.3001812",
+    "OSM_ID": "9979906376",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.345173",
+    "Longitude": "15.3006828",
+    "lat-long_key": "-4.345173,15.3006828",
+    "OSM_ID": "9979906377",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.344507",
+    "Longitude": "15.3005058",
+    "lat-long_key": "-4.344507,15.3005058",
+    "OSM_ID": "9979906378",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3447772",
+    "Longitude": "15.3016806",
+    "lat-long_key": "-4.3447772,15.3016806",
+    "OSM_ID": "9979906379",
+    "null": null
+  },
+  {
+    "Name": "CS. BWANYA",
+    "Latitude": "-4.3668896",
+    "Longitude": "15.3196594",
+    "lat-long_key": "-4.3668896,15.3196594",
+    "OSM_ID": "9979954308",
+    "null": null
+  },
+  {
+    "Name": "CS. MWINDA",
+    "Latitude": "-4.3674967",
+    "Longitude": "15.3208423",
+    "lat-long_key": "-4.3674967,15.3208423",
+    "OSM_ID": "9979954309",
+    "null": null
+  },
+  {
+    "Name": "EP. 10 NGABA",
+    "Latitude": "-4.3782692",
+    "Longitude": "15.3226018",
+    "lat-long_key": "-4.3782692,15.3226018",
+    "OSM_ID": "9979954310",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge La compassion de Dieu",
+    "Latitude": "-4.3772342",
+    "Longitude": "15.3247073",
+    "lat-long_key": "-4.3772342,15.3247073",
+    "OSM_ID": "9979954311",
+    "null": null
+  },
+  {
+    "Name": "CS. Charles MBUTAMUTU",
+    "Latitude": "-4.3737134",
+    "Longitude": "15.3205432",
+    "lat-long_key": "-4.3737134,15.3205432",
+    "OSM_ID": "9979954313",
+    "null": null
+  },
+  {
+    "Name": "CS. MWINDA",
+    "Latitude": "-4.3748486",
+    "Longitude": "15.3230551",
+    "lat-long_key": "-4.3748486,15.3230551",
+    "OSM_ID": "9979954314",
+    "null": null
+  },
+  {
+    "Name": "Ecole St Adrien",
+    "Latitude": "-4.3750024",
+    "Longitude": "15.3231409",
+    "lat-long_key": "-4.3750024,15.3231409",
+    "OSM_ID": "9979954315",
+    "null": null
+  },
+  {
+    "Name": "CS. MBUKU",
+    "Latitude": "-4.3759933",
+    "Longitude": "15.3237793",
+    "lat-long_key": "-4.3759933,15.3237793",
+    "OSM_ID": "9979954316",
+    "null": null
+  },
+  {
+    "Name": "Ecole De la paix",
+    "Latitude": "-4.3836607",
+    "Longitude": "15.3232509",
+    "lat-long_key": "-4.3836607,15.3232509",
+    "OSM_ID": "9979967317",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint CYPRIEN",
+    "Latitude": "-4.3814196",
+    "Longitude": "15.3224999",
+    "lat-long_key": "-4.3814196,15.3224999",
+    "OSM_ID": "9979967319",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Les amis de la r\u00e9ussite",
+    "Latitude": "-4.3807216",
+    "Longitude": "15.3199035",
+    "lat-long_key": "-4.3807216,15.3199035",
+    "OSM_ID": "9979967320",
+    "null": null
+  },
+  {
+    "Name": "CS. SEDIA",
+    "Latitude": "-4.380505",
+    "Longitude": "15.3205043",
+    "lat-long_key": "-4.380505,15.3205043",
+    "OSM_ID": "9979967321",
+    "null": null
+  },
+  {
+    "Name": "CS. TELE MUKWANGA",
+    "Latitude": "-4.3786356",
+    "Longitude": "15.3203742",
+    "lat-long_key": "-4.3786356,15.3203742",
+    "OSM_ID": "9979967322",
+    "null": null
+  },
+  {
+    "Name": "CS. SUBLIME",
+    "Latitude": "-4.378675",
+    "Longitude": "15.3197204",
+    "lat-long_key": "-4.378675,15.3197204",
+    "OSM_ID": "9979967323",
+    "null": null
+  },
+  {
+    "Name": "CS. Charles MBUTAMUTU",
+    "Latitude": "-4.3788107",
+    "Longitude": "15.32103",
+    "lat-long_key": "-4.3788107,15.32103",
+    "OSM_ID": "9979967324",
+    "null": null
+  },
+  {
+    "Name": "CS. SEDIA",
+    "Latitude": "-4.3796144",
+    "Longitude": "15.3218642",
+    "lat-long_key": "-4.3796144,15.3218642",
+    "OSM_ID": "9979967325",
+    "null": null
+  },
+  {
+    "Name": "CS. NZEY",
+    "Latitude": "-4.3789378",
+    "Longitude": "15.3232241",
+    "lat-long_key": "-4.3789378,15.3232241",
+    "OSM_ID": "9979967326",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge Saint Albert",
+    "Latitude": "-4.3778974",
+    "Longitude": "15.3187421",
+    "lat-long_key": "-4.3778974,15.3187421",
+    "OSM_ID": "9979967327",
+    "null": null
+  },
+  {
+    "Name": "Ecole Maman MAZA",
+    "Latitude": "-4.3771312",
+    "Longitude": "15.3187354",
+    "lat-long_key": "-4.3771312,15.3187354",
+    "OSM_ID": "9979967328",
+    "null": null
+  },
+  {
+    "Name": "Ecole NLEMVO",
+    "Latitude": "-4.3772342",
+    "Longitude": "15.3185114",
+    "lat-long_key": "-4.3772342,15.3185114",
+    "OSM_ID": "9979967329",
+    "null": null
+  },
+  {
+    "Name": "CS. Sainte-Marie",
+    "Latitude": "-4.3766004",
+    "Longitude": "15.3187944",
+    "lat-long_key": "-4.3766004,15.3187944",
+    "OSM_ID": "9979967330",
+    "null": null
+  },
+  {
+    "Name": "EP. 2 & 7 Saint ADRIEN",
+    "Latitude": "-4.3752605",
+    "Longitude": "15.3219822",
+    "lat-long_key": "-4.3752605,15.3219822",
+    "OSM_ID": "9979967331",
+    "null": null
+  },
+  {
+    "Name": "Ecole Ange Raphael",
+    "Latitude": "-4.3517023",
+    "Longitude": "15.2916847",
+    "lat-long_key": "-4.3517023,15.2916847",
+    "OSM_ID": "10277664882",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Officielle",
+    "Latitude": "-4.3612242",
+    "Longitude": "15.3038274",
+    "lat-long_key": "-4.3612242,15.3038274",
+    "OSM_ID": "10277676793",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Officielle",
+    "Latitude": "-4.3617648",
+    "Longitude": "15.3054572",
+    "lat-long_key": "-4.3617648,15.3054572",
+    "OSM_ID": "10277676794",
+    "null": null
+  },
+  {
+    "Name": "Institution Samuel Roller (ISR)",
+    "Latitude": "-4.4240352",
+    "Longitude": "15.249487",
+    "lat-long_key": "-4.4240352,15.249487",
+    "OSM_ID": "10942235848",
+    "null": null
+  },
+  {
+    "Name": "REKA",
+    "Latitude": "-4.3480963",
+    "Longitude": "15.2205168",
+    "lat-long_key": "-4.3480963,15.2205168",
+    "OSM_ID": "10982263605",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole mafuta",
+    "Latitude": "-4.3503014",
+    "Longitude": "15.2242284",
+    "lat-long_key": "-4.3503014,15.2242284",
+    "OSM_ID": "10982263606",
+    "null": null
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3825333",
+    "Longitude": "15.3925686",
+    "lat-long_key": "-4.3825333,15.3925686",
+    "OSM_ID": "11618951488",
+    "null": null
+  },
+  {
+    "Name": "Ste Th\u00e9r\u00e8se de l'enfant J\u00e9sus",
+    "Latitude": "-4.3483725",
+    "Longitude": "15.2314841",
+    "lat-long_key": "-4.3483725,15.2314841",
+    "OSM_ID": "11875090069",
+    "null": null
+  },
+  {
+    "Name": "COSMOL",
+    "Latitude": "-4.3471945",
+    "Longitude": "15.2309928",
+    "lat-long_key": "-4.3471945,15.2309928",
+    "OSM_ID": "11933756569",
+    "null": null
+  },
+  {
+    "Name": "Coll\u00e8ge St Cyprien",
+    "Latitude": "-4.3478266",
+    "Longitude": "15.2305721",
+    "lat-long_key": "-4.3478266,15.2305721",
+    "OSM_ID": "11933756570",
+    "null": null
+  },
+  {
+    "Name": "CS Kudia",
+    "Latitude": "-4.3518888",
+    "Longitude": "15.2200329",
+    "lat-long_key": "-4.3518888,15.2200329",
+    "OSM_ID": "11939978573",
+    "null": null
+  },
+  {
+    "Name": "\u00c9cole Dieu fait Gr\u00e2ce",
+    "Latitude": "-4.3493612",
+    "Longitude": "15.2238579",
+    "lat-long_key": "-4.3493612,15.2238579",
+    "OSM_ID": "11939978771",
+    "null": null
+  },
+  {
+    "Name": "CS MAFUTA",
+    "Latitude": "-4.3509204",
+    "Longitude": "15.2235576",
+    "lat-long_key": "-4.3509204,15.2235576",
+    "OSM_ID": "11939979769",
+    "null": null
+  },
+  {
+    "Name": "Sainte Monique",
+    "Latitude": "-4.3504969",
+    "Longitude": "15.2307166",
+    "lat-long_key": "-4.3504969,15.2307166",
+    "OSM_ID": "12193886601",
+    "null": null
+  },
+  {
+    "Name": "Groupe Scolaire BANZA",
+    "Latitude": "-4.3742859",
+    "Longitude": "15.2820814",
+    "lat-long_key": "-4.3742859,15.2820814",
+    "OSM_ID": "12534572926",
+    "null": null
+  },
+  {
+    "Name": "Jean Jacques Rousseau",
+    "Latitude": "-4.3496373",
+    "Longitude": "15.3112205",
+    "lat-long_key": "-4.3496373,15.3112205",
+    "OSM_ID": "13141574673",
+    "null": null
+  },
+  {
+    "Name": "Ecole madame lecandele",
+    "Latitude": "-4.35768",
+    "Longitude": "15.19741",
+    "lat-long_key": "-4.35768,15.19741",
+    "OSM_ID": "13208342814",
+    "null": null
+  },
+  {
+    "Name": "E.p yanda",
+    "Latitude": "-4.4210243",
+    "Longitude": "15.3657312",
+    "lat-long_key": "-4.4210243,15.3657312",
+    "OSM_ID": "13664438201",
+    "null": null
+  },
+  {
+    "Name": "Lyc\u00e9e Marie France",
+    "Latitude": "-4.401637",
+    "Longitude": "15.291206",
+    "lat-long_key": "-4.401637,15.291206",
+    "OSM_ID": "13686022001",
+    "null": null
+  }
+]

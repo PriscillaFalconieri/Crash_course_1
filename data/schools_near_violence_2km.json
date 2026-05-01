@@ -1,0 +1,92 @@
+[
+  {
+    "Name": "La Gr\u00e2ce",
+    "Latitude": "-4.3427621",
+    "Longitude": "15.317369",
+    "lat-long_key": "-4.3427621,15.317369",
+    "OSM_ID": "5291677394",
+    "null": null,
+    "distance_to_nearest_event": 1473.59
+  },
+  {
+    "Name": "\u00c9cole Monseigneur Moke",
+    "Latitude": "-4.34279",
+    "Longitude": "15.3153652",
+    "lat-long_key": "-4.34279,15.3153652",
+    "OSM_ID": "5292873862",
+    "null": null,
+    "distance_to_nearest_event": 1453.66
+  },
+  {
+    "Name": "G.S. Mama Zoya",
+    "Latitude": "-4.3387782",
+    "Longitude": "15.3068304",
+    "lat-long_key": "-4.3387782,15.3068304",
+    "OSM_ID": "5292873865",
+    "null": null,
+    "distance_to_nearest_event": 1354.46
+  },
+  {
+    "Name": "Institut Saint Jean Baptiste",
+    "Latitude": "-4.3224751",
+    "Longitude": "15.3051724",
+    "lat-long_key": "-4.3224751,15.3051724",
+    "OSM_ID": "6282653585",
+    "null": null,
+    "distance_to_nearest_event": 1355.25
+  },
+  {
+    "Name": "Complexe Scolaire KANDA",
+    "Latitude": "-4.3426955",
+    "Longitude": "15.3034218",
+    "lat-long_key": "-4.3426955,15.3034218",
+    "OSM_ID": "8442701017",
+    "null": null,
+    "distance_to_nearest_event": 1931.08
+  },
+  {
+    "Name": "EP 1&2 DJOLU",
+    "Latitude": "-4.3439133",
+    "Longitude": "15.3131684",
+    "lat-long_key": "-4.3439133,15.3131684",
+    "OSM_ID": "9977044011",
+    "null": null,
+    "distance_to_nearest_event": 1591.01
+  },
+  {
+    "Name": "Ecole Melisa",
+    "Latitude": "-4.3260447",
+    "Longitude": "15.2974185",
+    "lat-long_key": "-4.3260447,15.2974185",
+    "OSM_ID": "9979337835",
+    "null": null,
+    "distance_to_nearest_event": 1991.82
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3415838",
+    "Longitude": "15.3037217",
+    "lat-long_key": "-4.3415838,15.3037217",
+    "OSM_ID": "9979906368",
+    "null": null,
+    "distance_to_nearest_event": 1817.54
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3427231",
+    "Longitude": "15.3044513",
+    "lat-long_key": "-4.3427231,15.3044513",
+    "OSM_ID": "9979906369",
+    "null": null,
+    "distance_to_nearest_event": 1859.54
+  },
+  {
+    "Name": "Unnamed",
+    "Latitude": "-4.3454458",
+    "Longitude": "15.3082842",
+    "lat-long_key": "-4.3454458,15.3082842",
+    "OSM_ID": "9979906372",
+    "null": null,
+    "distance_to_nearest_event": 1900.37
+  }
+]
