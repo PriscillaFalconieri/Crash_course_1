@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Risk GeoViz - Kinshasa Analysis</title>
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+    <style>
+        :root {
+            --bg-main: #0f1419;
+            --bg-sidebar: #16202a;
+            --border: #2f3b47;
+            --accent: #f5a623; /* Amber */
+            --risk: #ef4444;   /* Red */
+            --safe: #3498db;   /* Blue */
+            --text-main: #e7e9ea;
+            --text-muted: #8b98a5;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-main); color: var(--text-main); height: 100vh; overflow: hidden; }
+
+        .app-container { display: flex; height: 100vh; }
+
+        /* Sidebar */
+        .sidebar {
+            width: 400px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1001;
+        }
+
+        .sidebar-header { margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .sidebar-header h1 { font-size: 1.4em; color: var(--accent); }
+
+        .card {
+            background: #1c2732;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .card h2 { font-size: 0.8em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; letter-spacing: 1px; }
+
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .stat-box { text-align: center; padding: 10px; background: var(--bg-main); border-radius: 8px; border: 1px solid var(--border); }
+        .stat-val { font-size: 1.5em; font-weight: bold; color: var(--accent); }
+        .stat-label { font-size: 0.7em; color: var(--text-muted); text-transform: uppercase; }
+
+        /* Dropzone */
+        .dropzone {
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+        .dropzone:hover { border-color: var(--accent); background: rgba(245, 166, 35, 0.05); color: var(--text-main); }
+
+        /* Map */
+        .map-container { flex: 1; position: relative; }
+        #map { width: 100%; height: 100%; background: var(--bg-main); }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            background: var(--bg-sidebar);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            z-index: 1000;
+            font-size: 0.8em;
+        }
+        .legend-item { display: flex; align-items: center; margin-bottom: 8px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; }
+
+        .btn {
+            background: var(--accent);
+            color: var(--bg-main);
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .home-link { color: var(--text-muted); text-decoration: none; font-size: 0.8em; margin-bottom: 20px; display: block; }
+        .home-link:hover { color: var(--text-main); }
+
+        #loadingOverlay {
+            position: absolute; top:0; left:0; width: 100%; height: 100%;
+            background: rgba(15, 20, 25, 0.8);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 2000; color: var(--accent); font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <aside class="sidebar">
+        <a href="index.html" class="home-link">← Back to Classic Map</a>
+        <div class="sidebar-header">
+            <h1>Risk Analyzer</h1>
+            <p style="font-size: 0.8em; color: var(--text-muted);">Proximity Analysis Workstation</p>
+        </div>
+
+        <div class="card">
+            <h2>School Data Ingestion</h2>
+            <div class="dropzone" id="dropzone">
+                <span style="font-size: 1.5em;">📂</span><br>
+                Drop New Schools CSV
+            </div>
+            <input type="file" id="fileInput" hidden accept=".csv">
+            <p class="explanation" style="font-size: 0.7em; margin-top: 10px; color: var(--text-muted);">
+                Analyzing against UCDP One-Sided Violence events (2025-2026).
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Real-Time Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-val" id="totalSchools">0</div>
+                    <div class="stat-label">Total Schools</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-val" id="atRiskCount" style="color: var(--risk);">0</div>
+                    <div class="stat-label">At-Risk (2km)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Analysis Summary</h2>
+            <p id="analysisSummary" style="font-size: 0.85em; line-height: 1.5; color: var(--text-muted);">
+                Load the default dataset or upload a CSV to begin analysis.
+            </p>
+            <button class="btn" onclick="loadDefaultData()">Load Kinshasa Defaults</button>
+        </div>
+    </aside>
+
+    <main class="map-container">
+        <div id="loadingOverlay" class="hidden">CALCULATING PROXIMITY...</div>
+        <div id="map"></div>
+        
+        <div class="legend">
+            <div class="legend-item"><span class="dot" style="background: var(--accent);"></span> Violence Event (UCDP)</div>
+            <div class="legend-item"><span class="dot" style="background: var(--risk);"></span> At-Risk School (< 2km)</div>
+            <div class="legend-item"><span class="dot" style="background: var(--safe);"></span> Safe School (> 2km)</div>
+        </div>
+    </main>
+</div>
+
+<script>
+    let map, schoolsLayer, violenceLayer;
+    let violenceEvents = [];
+
+    // Haversine formula for distance
+    function getDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371e3; // meters
+        const φ1 = lat1 * Math.PI/180;
+        const φ2 = lat2 * Math.PI/180;
+        const Δφ = (lat2-lat1) * Math.PI/180;
+        const Δλ = (lon2-lon1) * Math.PI/180;
+        const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+                  Math.cos(φ1) * Math.cos(φ1) *
+                  Math.sin(Δλ/2) * Math.sin(Δλ/2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return R * c;
+    }
+
+    function init() {
+        map = L.map('map').setView([-4.35, 15.3], 12);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; CARTO',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        schoolsLayer = L.layerGroup().addTo(map);
+        violenceLayer = L.layerGroup().addTo(map);
+
+        // UI Listeners
+        const dz = document.getElementById('dropzone');
+        dz.onclick = () => document.getElementById('fileInput').click();
+        dz.ondragover = (e) => { e.preventDefault(); };
+        dz.ondrop = (e) => {
+            e.preventDefault();
+            processFile(e.dataTransfer.files[0]);
+        };
+        document.getElementById('fileInput').onchange = (e) => processFile(e.target.files[0]);
+
+        loadViolenceData();
+    }
+
+    async function loadViolenceData() {
+        const res = await fetch('data/kinshasa_one_sided_violence_2025_2026.geojson');
+        const geojson = await res.json();
+        
+        geojson.features.forEach(f => {
+            const coords = f.geometry.coordinates;
+            violenceEvents.push({ lat: coords[1], lon: coords[0], props: f.properties });
+            
+            L.circleMarker([coords[1], coords[0]], {
+                radius: 10,
+                fillColor: '#f5a623',
+                color: '#fff',
+                weight: 1,
+                fillOpacity: 0.8
+            }).bindPopup(`<b>Violence Event</b><br>${f.properties.source_headline}`).addTo(violenceLayer);
+        });
+    }
+
+    async function loadDefaultData() {
+        const res = await fetch('data/kinshasa_schools_cleaned.json');
+        const schools = await res.json();
+        runAnalysis(schools);
+    }
+
+    function processFile(file) {
+        Papa.parse(file, {
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true,
+            complete: (results) => runAnalysis(results.data)
+        });
+    }
+
+    function runAnalysis(schools) {
+        document.getElementById('loadingOverlay').classList.remove('hidden');
+        
+        setTimeout(() => {
+            schoolsLayer.clearLayers();
+            let atRiskCount = 0;
+            let validSchools = 0;
+
+            schools.forEach(school => {
+                const sLat = parseFloat(school.Latitude || school.lat);
+                const sLon = parseFloat(school.Longitude || school.lon);
+                
+                if (isNaN(sLat) || isNaN(sLon)) return;
+                validSchools++;
+
+                let minDistance = Infinity;
+                violenceEvents.forEach(e => {
+                    const d = getDistance(sLat, sLon, e.lat, e.lon);
+                    if (d < minDistance) minDistance = d;
+                });
+
+                const isAtRisk = minDistance <= 2000;
+                if (isAtRisk) atRiskCount++;
+
+                L.circleMarker([sLat, sLon], {
+                    radius: 4,
+                    fillColor: isAtRisk ? '#ef4444' : '#3498db',
+                    color: isAtRisk ? '#ef4444' : '#3498db',
+                    weight: 1,
+                    fillOpacity: 0.8
+                }).bindPopup(`
+                    <b>${school.Name || 'Unnamed School'}</b><br>
+                    Status: ${isAtRisk ? '<span style="color:red">AT RISK</span>' : 'Safe'}<br>
+                    Distance: ${minDistance === Infinity ? 'N/A' : Math.round(minDistance) + 'm'}
+                `).addTo(schoolsLayer);
+            });
+
+            // Update UI
+            document.getElementById('totalSchools').textContent = validSchools;
+            document.getElementById('atRiskCount').textContent = atRiskCount;
+            document.getElementById('analysisSummary').innerHTML = `
+                Analysis complete for <b>${validSchools}</b> schools.<br>
+                <b>${atRiskCount}</b> schools are within the 2km risk perimeter.
+            `;
+            document.getElementById('loadingOverlay').classList.add('hidden');
+        }, 100);
+    }
+
+    init();
+</script>
+
+</body>
+</html>
