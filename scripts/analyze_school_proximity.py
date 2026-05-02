@@ -54,10 +54,10 @@ def analyze_proximity(schools_path, ged_path):
             far_schools.append(school)
 
     # Save outputs
-    with open('data/schools_near_violence_2km.json', 'w') as f:
+    with open('data/schools-near-violence-2km.json', 'w') as f:
         json.dump(near_schools, f, indent=2)
     
-    with open('data/schools_far_from_violence_2km.json', 'w') as f:
+    with open('data/schools-far-from-violence-2km.json', 'w') as f:
         json.dump(far_schools, f, indent=2)
 
     print(f"Analysis Complete (2km Threshold):")
@@ -65,4 +65,4 @@ def analyze_proximity(schools_path, ged_path):
     print(f"- Schools further than 1km: {len(far_schools)}")
 
 if __name__ == "__main__":
-    analyze_proximity('data/kinshasa_schools_cleaned.json', 'data/GEDevent_v26_0_3 (1).xlsx')
+    analyze_proximity('data/kinshasa-schools-cleaned.json', 'data/ged-event-v26-0-3.xlsx')

@@ -23,5 +23,5 @@ def convert_xlsx_to_csv(input_file, output_file):
 
 if __name__ == '__main__':
     input_xlsx = 'data/democratic-republic-of-congo_hrp_civilian_targeting_events_and_fatalities_by_month-year_as-of-2.xlsx'
-    output_csv = 'data/rdc_civilian_incidents.csv'
+    output_csv = 'data/rdc-civilian-incidents.csv'
     convert_xlsx_to_csv(input_xlsx, output_csv)

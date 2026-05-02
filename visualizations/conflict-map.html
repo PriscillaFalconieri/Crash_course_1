@@ -69,7 +69,7 @@
     // Load UCDP One-sided Violence Data
     async function loadUcdpData() {
         try {
-            const response = await fetch('data/kinshasa_one_sided_violence_2025_2026.geojson');
+            const response = await fetch('../data/kinshasa-one-sided-violence-2025-2026.geojson');
             const data = await response.json();
 
             L.geoJSON(data, {
@@ -105,14 +105,14 @@
     async function loadSchools() {
         // Load At-Risk Schools (Red)
         try {
-            const res = await fetch('data/schools_near_violence_2km.json');
+            const res = await fetch('../data/schools-near-violence-2km.json');
             const schools = await res.json();
             schools.forEach(school => addSchoolMarker(school, "#e74c3c", atRiskLayer, true));
         } catch (e) { console.error('Error loading at-risk schools:', e); }
 
         // Load Normal Schools (Blue)
         try {
-            const res = await fetch('data/schools_far_from_violence_2km.json');
+            const res = await fetch('../data/schools-far-from-violence-2km.json');
             const schools = await res.json();
             schools.forEach(school => addSchoolMarker(school, "#2980b9", normalLayer, false));
         } catch (e) { console.error('Error loading normal schools:', e); }

@@ -102,7 +102,7 @@
 
 <div class="app-container">
     <aside class="sidebar">
-        <a href="index.html" class="home-btn">← Back to Home</a>
+        <a href="../index.html" class="home-btn">← Back to Home</a>
         <div class="sidebar-header">
             <h1>GeoViz Dashboard</h1>
             <p style="font-size: 0.8em; color: var(--text-muted);">Interactive Conflict Analysis Tool</p>
@@ -194,7 +194,7 @@
     }
 
     async function loadInternalData() {
-        const response = await fetch('data/rdc_civilian_incidents_from_2015.csv');
+        const response = await fetch('../data/rdc-civilian-incidents-from-2015.csv');
         const text = await response.text();
         Papa.parse(text, {
             header: true,
