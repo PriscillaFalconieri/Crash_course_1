@@ -127,6 +127,28 @@
         </div>
 
         <div class="card">
+            <h2>Analysis Summary</h2>
+            <div id="analysisSummary" style="font-size: 0.85em; line-height: 1.5; color: var(--text-muted);">
+                Load the default dataset or upload a CSV to begin analysis.
+            </div>
+            <button class="btn" onclick="loadDefaultData()">Load Kinshasa Defaults</button>
+        </div>
+
+        <div class="card">
+            <h2>Real-Time Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-val" id="totalSchools">0</div>
+                    <div class="stat-label">Total Schools</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-val" id="atRiskCount" style="color: var(--risk);">0</div>
+                    <div class="stat-label">At-Risk (2km)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
             <h2>School Data Ingestion</h2>
             <div class="dropzone" id="dropzone">
                 <span style="font-size: 1.5em;">📂</span><br>
@@ -145,28 +167,6 @@
             <p class="explanation" style="font-size: 0.7em; margin-top: 10px; color: var(--text-muted);">
                 Analyzing against UCDP One-Sided Violence events (2025-2026) by default.
             </p>
-        </div>
-
-        <div class="card">
-            <h2>Real-Time Statistics</h2>
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <div class="stat-val" id="totalSchools">0</div>
-                    <div class="stat-label">Total Schools</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-val" id="atRiskCount" style="color: var(--risk);">0</div>
-                    <div class="stat-label">At-Risk (2km)</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Analysis Summary</h2>
-            <div id="analysisSummary" style="font-size: 0.85em; line-height: 1.5; color: var(--text-muted);">
-                Load the default dataset or upload a CSV to begin analysis.
-            </div>
-            <button class="btn" onclick="loadDefaultData()">Load Kinshasa Defaults</button>
         </div>
     </aside>
 
