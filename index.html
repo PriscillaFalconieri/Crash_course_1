@@ -3,141 +3,408 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRC Conflict & School Risk Analysis</title>
+    <title>School Risk GeoViz - Kinshasa Analysis</title>
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     <style>
         :root {
-            --primary: #2c3e50;
-            --accent: #e74c3c;
-            --bg: #f8f9fa;
-            --text: #333;
-            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --bg-main: #0f1419;
+            --bg-sidebar: #16202a;
+            --border: #2f3b47;
+            --accent: #f5a623; /* Amber */
+            --risk: #ef4444;   /* Red */
+            --safe: #3498db;   /* Blue */
+            --text-main: #e7e9ea;
+            --text-muted: #8b98a5;
         }
 
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg-main); color: var(--text-main); height: 100vh; overflow: hidden; }
 
-        /* Navigation */
-        nav { background: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .nav-logo { font-weight: bold; color: var(--primary); font-size: 1.2rem; }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--accent); }
+        .app-container { display: flex; height: 100vh; }
 
-        /* Hero Section */
-        header { background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; }
-        header h1 { font-size: 2.8rem; margin: 0; max-width: 800px; margin: auto; }
-        header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 20px auto 0; }
-
-        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
-
-        /* Tool Cards */
-        .section-title { text-align: center; margin-bottom: 30px; margin-top: 60px; color: var(--primary); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 12px; padding: 30px; box-shadow: var(--shadow); transition: transform 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-5px); border-bottom: 4px solid var(--accent); }
-        .card h3 { color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        .card p { color: #666; font-size: 0.9rem; flex-grow: 1; }
-        .btn-card { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.8rem; margin-top: 20px; align-self: flex-start; }
-
-        /* Data Section */
-        .data-section { background: white; border-radius: 12px; padding: 40px; box-shadow: var(--shadow); margin-top: 60px; }
-        .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
-        .data-table th { text-align: left; background: #f4f7f6; padding: 15px; color: var(--primary); border-bottom: 2px solid #ddd; }
-        .data-table td { padding: 15px; border-bottom: 1px solid #eee; }
-        
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            nav { flex-direction: column; gap: 15px; }
+        /* Sidebar */
+        .sidebar {
+            width: 400px;
+            background: var(--bg-sidebar);
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1001;
         }
+
+        .sidebar-header { margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .sidebar-header h1 { font-size: 1.4em; color: var(--accent); }
+
+        .card {
+            background: #1c2732;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .card h2 { font-size: 0.8em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; letter-spacing: 1px; }
+
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .stat-box { text-align: center; padding: 10px; background: var(--bg-main); border-radius: 8px; border: 1px solid var(--border); }
+        .stat-val { font-size: 1.5em; font-weight: bold; color: var(--accent); }
+        .stat-label { font-size: 0.7em; color: var(--text-muted); text-transform: uppercase; }
+
+        /* Dropzone */
+        .dropzone {
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+        .dropzone:hover { border-color: var(--accent); background: rgba(245, 166, 35, 0.05); color: var(--text-main); }
+
+        /* Map */
+        .map-container { flex: 1; position: relative; }
+        #map { width: 100%; height: 100%; background: var(--bg-main); }
+
+        /* Legend */
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            background: var(--bg-sidebar);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            z-index: 1000;
+            font-size: 0.8em;
+        }
+        .legend-item { display: flex; align-items: center; margin-bottom: 8px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; }
+
+        .btn {
+            background: var(--accent);
+            color: var(--bg-main);
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .home-link { color: var(--text-muted); text-decoration: none; font-size: 0.8em; margin-bottom: 20px; display: block; }
+        .home-link:hover { color: var(--text-main); }
+
+        #loadingOverlay {
+            position: absolute; top:0; left:0; width: 100%; height: 100%;
+            background: rgba(15, 20, 25, 0.9);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            z-index: 2000; color: var(--accent); font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        #loadingOverlay.hidden { display: none; pointer-events: none; }
+        .progress-sub { font-size: 0.8em; color: var(--text-muted); margin-top: 10px; font-weight: normal; }
+        .force-close { margin-top: 20px; font-size: 0.7em; color: var(--text-muted); cursor: pointer; text-decoration: underline; }
     </style>
 </head>
 <body>
 
-<nav>
-    <div class="nav-logo">DRC Analysis Project</div>
-    <div class="nav-links">
-        <a href="visualizations/conflict-map.html">Interactive Map</a>
-        <a href="visualizations/kinshasa-dashboard.html">Data Dashboard</a>
-        <a href="visualizations/school-risk-analyzer.html">Risk Analyzer</a>
-    </div>
-</nav>
+<div class="app-container">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1>School Risk Analyzer</h1>
+            <p style="font-size: 0.8em; color: var(--text-muted);">Independent Proximity Analysis Tool</p>
+        </div>
 
-<header>
-    <h1>Conflict Dynamics & Educational Resilience</h1>
-    <p>Mapping civilian targeting and school vulnerability in Kinshasa, Democratic Republic of Congo.</p>
-</header>
+        <div class="card">
+            <h2>Analysis Summary</h2>
+            <div id="analysisSummary" style="font-size: 0.85em; line-height: 1.5; color: var(--text-muted);">
+                Load the default dataset or upload a CSV to begin analysis.
+            </div>
+            <button class="btn" onclick="loadDefaultData()">Load Kinshasa Defaults</button>
+        </div>
 
-<div class="container">
-    <div class="grid">
-        <!-- Interactive Map -->
-        <a href="visualizations/conflict-map.html" class="card">
-            <h3>📍 Interactive Map</h3>
-            <p>A geographical overview of conflict incidents and school locations. Visualizes the proximity of violence to educational centers across the DRC.</p>
-            <span class="btn-card">Open Map</span>
-        </a>
+        <div class="card">
+            <h2>Real-Time Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-val" id="totalSchools">0</div>
+                    <div class="stat-label">Total Schools</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-val" id="atRiskCount" style="color: var(--risk);">0</div>
+                    <div class="stat-label">At-Risk (2km)</div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Data Dashboard -->
-        <a href="visualizations/kinshasa-dashboard.html" class="card">
-            <h3>📊 Analysis Dashboard</h3>
-            <p>A statistical breakdown of violence over time. Featuring monthly bubble charts, incident trends, and fatality comparisons from 2016 to 2026.</p>
-            <span class="btn-card">View Charts</span>
-        </a>
+        <div class="card">
+            <h2>School Data Ingestion</h2>
+            <div class="dropzone" id="dropzone">
+                <span style="font-size: 1.5em;">📂</span><br>
+                Drop New Schools CSV
+            </div>
+            <input type="file" id="fileInput" hidden accept=".csv">
+        </div>
 
-        <!-- Risk Analyzer -->
-        <a href="visualizations/school-risk-analyzer.html" class="card">
-            <h3>🔍 School Risk Analyzer</h3>
-            <p>A high-tech proximity tool. Upload new school datasets to instantly calculate which institutions fall within high-risk conflict zones (2km radius).</p>
-            <span class="btn-card">Analyze Risk</span>
-        </a>
-    </div>
+        <div class="card">
+            <h2>Violence Data Ingestion</h2>
+            <div class="dropzone" id="violenceDropzone">
+                <span style="font-size: 1.5em;">💥</span><br>
+                Drop New Events CSV
+            </div>
+            <input type="file" id="violenceFileInput" hidden accept=".csv">
+            <p class="explanation" style="font-size: 0.7em; margin-top: 10px; color: var(--text-muted);">
+                Analyzing against UCDP One-Sided Violence events (2025-2026) by default.
+            </p>
+        </div>
+    </aside>
 
-    <section class="data-section">
-        <h2 class="section-title" style="margin-top: 0;">Project Data Sources</h2>
-        <p style="text-align: center; color: #666; font-size: 0.9rem;">This project utilizes open-source conflict and infrastructure data provided by international research organizations.</p>
+    <main class="map-container">
+        <div id="loadingOverlay" class="hidden">
+            <div>CALCULATING PROXIMITY...</div>
+            <div id="progressText" class="progress-sub">Initializing...</div>
+            <div id="forceClose" class="force-close hidden" onclick="hideOverlay()">Click here if it stays stuck</div>
+        </div>
+        <div id="map"></div>
         
-        <table class="data-table">
-            <thead>
-                <tr>
-                    <th>Dataset Name</th>
-                    <th>Source</th>
-                    <th>Format</th>
-                    <th>Retrieved</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>UCDP Candidate Events (2025-2026)</strong></td>
-                    <td>Uppsala Conflict Data Program</td>
-                    <td>CSV / GeoJSON</td>
-                    <td>May 1, 2026</td>
-                </tr>
-                <tr>
-                    <td><strong>ACLED Civilian Incidents (2015-2026)</strong></td>
-                    <td>ACLED via HDX</td>
-                    <td>CSV</td>
-                    <td>April 2026</td>
-                </tr>
-                <tr>
-                    <td><strong>Kinshasa Schools Dataset</strong></td>
-                    <td>OpenStreetMap / HDX</td>
-                    <td>JSON</td>
-                    <td>April 2026</td>
-                </tr>
-                <tr>
-                    <td><strong>DRC Admin Boundaries</strong></td>
-                    <td>OCHA / HDX</td>
-                    <td>GeoJSON</td>
-                    <td>April 2026</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <footer>
-        &copy; 2026 DRC Conflict Analysis Project. All data licensed under Creative Commons by respective owners.
-    </footer>
+        <div class="legend">
+            <div class="legend-item"><span class="dot" style="background: var(--accent);"></span> Violence Event</div>
+            <div class="legend-item"><span class="dot" style="background: var(--risk);"></span> At-Risk School (&lt; 2km)</div>
+            <div class="legend-item"><span class="dot" style="background: var(--safe);"></span> Safe School (&gt; 2km)</div>
+        </div>
+    </main>
 </div>
+
+<script>
+    let map, schoolsLayer, violenceLayer;
+    let violenceEvents = [];
+    let currentSchoolsData = null; // Keep track for re-analysis
+
+    function hideOverlay() {
+        document.getElementById('loadingOverlay').classList.add('hidden');
+    }
+
+    // Haversine formula for distance
+    function getDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371e3; // meters
+        const φ1 = lat1 * Math.PI/180;
+        const φ2 = lat2 * Math.PI/180;
+        const Δφ = (lat2-lat1) * Math.PI/180;
+        const Δλ = (lon2-lon1) * Math.PI/180;
+        const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+                  Math.cos(φ1) * Math.cos(φ1) *
+                  Math.sin(Δλ/2) * Math.sin(Δλ/2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return R * c;
+    }
+
+    function init() {
+        map = L.map('map').setView([-4.35, 15.3], 12);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; CARTO',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        schoolsLayer = L.layerGroup().addTo(map);
+        violenceLayer = L.layerGroup().addTo(map);
+
+        // School Upload Listeners
+        const dz = document.getElementById('dropzone');
+        dz.onclick = () => document.getElementById('fileInput').click();
+        dz.ondragover = (e) => { e.preventDefault(); };
+        dz.ondrop = (e) => {
+            e.preventDefault();
+            processFile(e.dataTransfer.files[0], 'school');
+        };
+        document.getElementById('fileInput').onchange = (e) => processFile(e.target.files[0], 'school');
+
+        // Violence Upload Listeners
+        const vdz = document.getElementById('violenceDropzone');
+        vdz.onclick = () => document.getElementById('violenceFileInput').click();
+        vdz.ondragover = (e) => { e.preventDefault(); };
+        vdz.ondrop = (e) => {
+            e.preventDefault();
+            processFile(e.dataTransfer.files[0], 'violence');
+        };
+        document.getElementById('violenceFileInput').onchange = (e) => processFile(e.target.files[0], 'violence');
+
+        loadViolenceData();
+    }
+
+    async function loadViolenceData() {
+        try {
+            const res = await fetch('data/kinshasa-one-sided-violence-2025-2026.geojson');
+            if (!res.ok) throw new Error('Violence data not found');
+            const geojson = await res.json();
+            
+            const events = geojson.features.map(f => ({
+                lat: f.geometry.coordinates[1],
+                lon: f.geometry.coordinates[0],
+                title: f.properties.source_headline || 'UCDP Event'
+            }));
+            
+            updateViolenceLayer(events);
+            console.log(`Loaded ${violenceEvents.length} default violence events.`);
+        } catch (e) {
+            console.error('Error loading violence data:', e);
+            document.getElementById('analysisSummary').innerHTML = '<span style="color:red">Error: Could not load default violence data.</span>';
+        }
+    }
+
+    function updateViolenceLayer(events) {
+        violenceLayer.clearLayers();
+        violenceEvents = events;
+        
+        events.forEach(e => {
+            L.circleMarker([e.lat, e.lon], {
+                radius: 10,
+                fillColor: '#f5a623',
+                color: '#fff',
+                weight: 1,
+                fillOpacity: 0.8
+            }).bindPopup(`<b>Violence Event</b><br>${e.title}`).addTo(violenceLayer);
+        });
+
+        // Re-run analysis if schools are already on map
+        if (currentSchoolsData) {
+            runAnalysis(currentSchoolsData);
+        }
+    }
+
+    async function loadDefaultData() {
+        try {
+            const res = await fetch('data/kinshasa-schools-cleaned.json');
+            if (!res.ok) throw new Error('School data not found');
+            const schools = await res.json();
+            runAnalysis(schools);
+        } catch (e) {
+            console.error('Error loading school data:', e);
+            alert('Could not load the default school dataset.');
+        }
+    }
+
+    function processFile(file, type) {
+        if (!file) return;
+        Papa.parse(file, {
+            header: true,
+            dynamicTyping: true,
+            skipEmptyLines: true,
+            complete: (results) => {
+                if (type === 'school') {
+                    runAnalysis(results.data);
+                } else {
+                    const events = results.data.map(item => {
+                        const lat = parseFloat(item.Latitude || item.lat || item.latitude);
+                        const lon = parseFloat(item.Longitude || item.lon || item.longitude);
+                        if (isNaN(lat) || isNaN(lon)) return null;
+                        return {
+                            lat: lat,
+                            lon: lon,
+                            title: item.source_headline || item.event_type || item.Name || 'Custom Event'
+                        };
+                    }).filter(e => e !== null);
+                    
+                    if (events.length === 0) {
+                        alert("No valid location data found in violence CSV. Ensure it has Latitude/Longitude columns.");
+                        return;
+                    }
+                    updateViolenceLayer(events);
+                }
+            },
+            error: (err) => alert('Error parsing CSV: ' + err)
+        });
+    }
+
+    function runAnalysis(schools) {
+        if (!schools || !Array.isArray(schools)) {
+            alert('Invalid data format. Expected an array of schools.');
+            return;
+        }
+        
+        currentSchoolsData = schools; // Store for future re-runs
+
+        const overlay = document.getElementById('loadingOverlay');
+        const progress = document.getElementById('progressText');
+        const forceClose = document.getElementById('forceClose');
+        
+        overlay.classList.remove('hidden');
+        forceClose.classList.add('hidden');
+        progress.textContent = "Analyzing proximity for " + schools.length + " schools...";
+
+        // Show force close after 3 seconds
+        const timer = setTimeout(() => forceClose.classList.remove('hidden'), 3000);
+        
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                try {
+                    schoolsLayer.clearLayers();
+                    let atRiskCount = 0;
+                    let validSchools = 0;
+
+                    schools.forEach((school) => {
+                        const sLat = parseFloat(school.Latitude || school.lat || school.latitude);
+                        const sLon = parseFloat(school.Longitude || school.lon || school.longitude);
+                        
+                        if (isNaN(sLat) || isNaN(sLon)) return;
+                        validSchools++;
+
+                        let minDistance = Infinity;
+                        violenceEvents.forEach(e => {
+                            const d = getDistance(sLat, sLon, e.lat, e.lon);
+                            if (d < minDistance) minDistance = d;
+                        });
+
+                        const isAtRisk = minDistance <= 2000;
+                        if (isAtRisk) atRiskCount++;
+
+                        L.circleMarker([sLat, sLon], {
+                            radius: 7,
+                            fillColor: isAtRisk ? '#ef4444' : '#3498db',
+                            color: isAtRisk ? '#ef4444' : '#3498db',
+                            weight: 1,
+                            fillOpacity: 0.8
+                        }).bindPopup(`
+                            <b>${school.Name || school.name || 'Unnamed School'}</b><br>
+                            Status: ${isAtRisk ? '<span style="color:red">AT RISK</span>' : 'Safe'}<br>
+                            Distance to nearest event: ${minDistance === Infinity ? 'No events found' : Math.round(minDistance) + 'm'}
+                        `).addTo(schoolsLayer);
+                    });
+
+                    // Update UI
+                    document.getElementById('totalSchools').textContent = validSchools;
+                    document.getElementById('atRiskCount').textContent = atRiskCount;
+                    document.getElementById('analysisSummary').innerHTML = `
+                        Analysis complete for <b>${validSchools}</b> schools.<br>
+                        <b>${atRiskCount}</b> schools are within 2km of the loaded violence events.
+                    `;
+                } catch (error) {
+                    console.error('Analysis error:', error);
+                    alert('An error occurred during proximity analysis.');
+                } finally {
+                    clearTimeout(timer);
+                    hideOverlay();
+                }
+            }, 50);
+        });
+    }
+
+    init();
+</script>
+
+    init();
+</script>
 
 </body>
 </html>
