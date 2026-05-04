@@ -134,8 +134,17 @@
                 Drop New Schools CSV
             </div>
             <input type="file" id="fileInput" hidden accept=".csv">
+        </div>
+
+        <div class="card">
+            <h2>Violence Data Ingestion</h2>
+            <div class="dropzone" id="violenceDropzone">
+                <span style="font-size: 1.5em;">💥</span><br>
+                Drop New Events CSV
+            </div>
+            <input type="file" id="violenceFileInput" hidden accept=".csv">
             <p class="explanation" style="font-size: 0.7em; margin-top: 10px; color: var(--text-muted);">
-                Analyzing against UCDP One-Sided Violence events (2025-2026).
+                Analyzing against UCDP One-Sided Violence events (2025-2026) by default.
             </p>
         </div>
 
@@ -171,7 +180,7 @@
         <div id="map"></div>
         
         <div class="legend">
-            <div class="legend-item"><span class="dot" style="background: var(--accent);"></span> Violence Event (UCDP)</div>
+            <div class="legend-item"><span class="dot" style="background: var(--accent);"></span> Violence Event</div>
             <div class="legend-item"><span class="dot" style="background: var(--risk);"></span> At-Risk School (&lt; 2km)</div>
             <div class="legend-item"><span class="dot" style="background: var(--safe);"></span> Safe School (&gt; 2km)</div>
         </div>
@@ -181,6 +190,7 @@
 <script>
     let map, schoolsLayer, violenceLayer;
     let violenceEvents = [];
+    let currentSchoolsData = null; // Keep track for re-analysis
 
     function hideOverlay() {
         document.getElementById('loadingOverlay').classList.add('hidden');
@@ -211,15 +221,25 @@
         schoolsLayer = L.layerGroup().addTo(map);
         violenceLayer = L.layerGroup().addTo(map);
 
-        // UI Listeners
+        // School Upload Listeners
         const dz = document.getElementById('dropzone');
         dz.onclick = () => document.getElementById('fileInput').click();
         dz.ondragover = (e) => { e.preventDefault(); };
         dz.ondrop = (e) => {
             e.preventDefault();
-            processFile(e.dataTransfer.files[0]);
+            processFile(e.dataTransfer.files[0], 'school');
         };
-        document.getElementById('fileInput').onchange = (e) => processFile(e.target.files[0]);
+        document.getElementById('fileInput').onchange = (e) => processFile(e.target.files[0], 'school');
+
+        // Violence Upload Listeners
+        const vdz = document.getElementById('violenceDropzone');
+        vdz.onclick = () => document.getElementById('violenceFileInput').click();
+        vdz.ondragover = (e) => { e.preventDefault(); };
+        vdz.ondrop = (e) => {
+            e.preventDefault();
+            processFile(e.dataTransfer.files[0], 'violence');
+        };
+        document.getElementById('violenceFileInput').onchange = (e) => processFile(e.target.files[0], 'violence');
 
         loadViolenceData();
     }
@@ -230,22 +250,37 @@
             if (!res.ok) throw new Error('Violence data not found');
             const geojson = await res.json();
             
-            geojson.features.forEach(f => {
-                const coords = f.geometry.coordinates;
-                violenceEvents.push({ lat: coords[1], lon: coords[0], props: f.properties });
-                
-                L.circleMarker([coords[1], coords[0]], {
-                    radius: 10,
-                    fillColor: '#f5a623',
-                    color: '#fff',
-                    weight: 1,
-                    fillOpacity: 0.8
-                }).bindPopup(`<b>Violence Event</b><br>${f.properties.source_headline}`).addTo(violenceLayer);
-            });
-            console.log(`Loaded ${violenceEvents.length} violence events.`);
+            const events = geojson.features.map(f => ({
+                lat: f.geometry.coordinates[1],
+                lon: f.geometry.coordinates[0],
+                title: f.properties.source_headline || 'UCDP Event'
+            }));
+            
+            updateViolenceLayer(events);
+            console.log(`Loaded ${violenceEvents.length} default violence events.`);
         } catch (e) {
             console.error('Error loading violence data:', e);
-            document.getElementById('analysisSummary').innerHTML = '<span style="color:red">Error: Could not load violence data.</span>';
+            document.getElementById('analysisSummary').innerHTML = '<span style="color:red">Error: Could not load default violence data.</span>';
+        }
+    }
+
+    function updateViolenceLayer(events) {
+        violenceLayer.clearLayers();
+        violenceEvents = events;
+        
+        events.forEach(e => {
+            L.circleMarker([e.lat, e.lon], {
+                radius: 10,
+                fillColor: '#f5a623',
+                color: '#fff',
+                weight: 1,
+                fillOpacity: 0.8
+            }).bindPopup(`<b>Violence Event</b><br>${e.title}`).addTo(violenceLayer);
+        });
+
+        // Re-run analysis if schools are already on map
+        if (currentSchoolsData) {
+            runAnalysis(currentSchoolsData);
         }
     }
 
@@ -261,13 +296,34 @@
         }
     }
 
-    function processFile(file) {
+    function processFile(file, type) {
         if (!file) return;
         Papa.parse(file, {
             header: true,
             dynamicTyping: true,
             skipEmptyLines: true,
-            complete: (results) => runAnalysis(results.data),
+            complete: (results) => {
+                if (type === 'school') {
+                    runAnalysis(results.data);
+                } else {
+                    const events = results.data.map(item => {
+                        const lat = parseFloat(item.Latitude || item.lat || item.latitude);
+                        const lon = parseFloat(item.Longitude || item.lon || item.longitude);
+                        if (isNaN(lat) || isNaN(lon)) return null;
+                        return {
+                            lat: lat,
+                            lon: lon,
+                            title: item.source_headline || item.event_type || item.Name || 'Custom Event'
+                        };
+                    }).filter(e => e !== null);
+                    
+                    if (events.length === 0) {
+                        alert("No valid location data found in violence CSV. Ensure it has Latitude/Longitude columns.");
+                        return;
+                    }
+                    updateViolenceLayer(events);
+                }
+            },
             error: (err) => alert('Error parsing CSV: ' + err)
         });
     }
@@ -277,6 +333,8 @@
             alert('Invalid data format. Expected an array of schools.');
             return;
         }
+        
+        currentSchoolsData = schools; // Store for future re-runs
 
         const overlay = document.getElementById('loadingOverlay');
         const progress = document.getElementById('progressText');
@@ -284,12 +342,11 @@
         
         overlay.classList.remove('hidden');
         forceClose.classList.add('hidden');
-        progress.textContent = "Beginning analysis of " + schools.length + " schools...";
+        progress.textContent = "Analyzing proximity for " + schools.length + " schools...";
 
         // Show force close after 3 seconds
         const timer = setTimeout(() => forceClose.classList.remove('hidden'), 3000);
         
-        // Use requestAnimationFrame to ensure the overlay shows before the main thread blocks
         requestAnimationFrame(() => {
             setTimeout(() => {
                 try {
@@ -297,7 +354,7 @@
                     let atRiskCount = 0;
                     let validSchools = 0;
 
-                    schools.forEach((school, index) => {
+                    schools.forEach((school) => {
                         const sLat = parseFloat(school.Latitude || school.lat || school.latitude);
                         const sLon = parseFloat(school.Longitude || school.lon || school.longitude);
                         
@@ -322,7 +379,7 @@
                         }).bindPopup(`
                             <b>${school.Name || school.name || 'Unnamed School'}</b><br>
                             Status: ${isAtRisk ? '<span style="color:red">AT RISK</span>' : 'Safe'}<br>
-                            Distance: ${minDistance === Infinity ? 'No events found' : Math.round(minDistance) + 'm'}
+                            Distance to nearest event: ${minDistance === Infinity ? 'No events found' : Math.round(minDistance) + 'm'}
                         `).addTo(schoolsLayer);
                     });
 
@@ -331,7 +388,7 @@
                     document.getElementById('atRiskCount').textContent = atRiskCount;
                     document.getElementById('analysisSummary').innerHTML = `
                         Analysis complete for <b>${validSchools}</b> schools.<br>
-                        <b>${atRiskCount}</b> schools are within the 2km risk perimeter.
+                        <b>${atRiskCount}</b> schools are within 2km of the loaded violence events.
                     `;
                 } catch (error) {
                     console.error('Analysis error:', error);
@@ -343,6 +400,9 @@
             }, 50);
         });
     }
+
+    init();
+</script>
 
     init();
 </script>
