@@ -241,7 +241,9 @@
         };
         document.getElementById('violenceFileInput').onchange = (e) => processFile(e.target.files[0], 'violence');
 
+        // Automatically load both datasets on startup
         loadViolenceData();
+        loadDefaultData();
     }
 
     async function loadViolenceData() {
