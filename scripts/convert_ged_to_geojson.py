@@ -52,4 +52,4 @@ def convert_to_geojson(excel_path, output_path):
     print(f"GeoJSON saved to {output_path}")
 
 if __name__ == "__main__":
-    convert_to_geojson('data/ged-event-v26-0-3.xlsx', 'data/kinshasa-one-sided-violence-2025-2026.geojson')
+    convert_to_geojson('data/raw/ged-event-v26-0-3.xlsx', 'data/conflict/Kinshasa/kinshasa-one-sided-violence-2025-2026.geojson')

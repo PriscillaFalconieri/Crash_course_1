@@ -1,5 +1,5 @@
 // This script reads the CSV data and builds the charts
-const csvUrl = 'data/floodarchive_cleaned.csv';
+const csvUrl = 'data/environment/Global/flood-archive-cleaned.csv';
 
 // Load and parse the CSV file
 Papa.parse(csvUrl, {

@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 // 1. Load Italy Floods GeoJSON
-fetch('data/italy_floods.geojson')
+fetch('data/environment/Italy/italy-floods.geojson')
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {
@@ -39,7 +39,7 @@ fetch('data/italy_floods.geojson')
     .catch(err => console.error('Error loading Italy floods:', err));
 
 // 2. Load Italy Hospitals GeoJSON
-fetch('data/italy_hospitals.geojson')
+fetch('data/environment/Italy/italy-hospitals.geojson')
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {

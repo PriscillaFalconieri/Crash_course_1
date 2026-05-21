@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 }).addTo(map);
 
 // Load the Global GeoJSON data from the data/ directory
-fetch('data/flood_events.geojson')
+fetch('data/environment/Global/flood-events.geojson')
     .then(response => response.json())
     .then(data => {
         L.geoJSON(data, {

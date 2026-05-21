@@ -245,7 +245,7 @@
 
     async function loadViolenceData() {
         try {
-            const res = await fetch('../data/kinshasa-one-sided-violence-2025-2026.geojson');
+            const res = await fetch('../data/conflict/Kinshasa/kinshasa-one-sided-violence-2025-2026.geojson');
             if (!res.ok) throw new Error('Violence data not found');
             const geojson = await res.json();
             
@@ -285,7 +285,7 @@
 
     async function loadDefaultData() {
         try {
-            const res = await fetch('../data/kinshasa-schools-cleaned.json');
+            const res = await fetch('../data/schools/Kinshasa/kinshasa-schools-cleaned.json');
             if (!res.ok) throw new Error('School data not found');
             const schools = await res.json();
             runAnalysis(schools);
