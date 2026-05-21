@@ -272,7 +272,7 @@
         
         events.forEach(e => {
             L.circleMarker([e.lat, e.lon], {
-                radius: 10,
+                radius: 15,
                 fillColor: '#f5a623',
                 color: '#fff',
                 weight: 1,
@@ -373,7 +373,7 @@
                         if (isAtRisk) atRiskCount++;
 
                         L.circleMarker([sLat, sLon], {
-                            radius: 7,
+                            radius: 12,
                             fillColor: isAtRisk ? '#ef4444' : '#3498db',
                             color: isAtRisk ? '#ef4444' : '#3498db',
                             weight: 1,
