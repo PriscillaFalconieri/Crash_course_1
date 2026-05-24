@@ -22,6 +22,6 @@ def convert_xlsx_to_csv(input_file, output_file):
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    input_xlsx = 'data/raw/democratic-republic-of-congo_hrp_civilian_targeting_events_and_fatalities_by_month-year_as-of-2.xlsx'
-    output_csv = 'data/raw/rdc-civilian-incidents.csv'
+    input_xlsx = 'data/raw/Kinshasa/democratic-republic-of-congo_hrp_civilian_targeting_events_and_fatalities_by_month-year_as-of-2.xlsx'
+    output_csv = 'data/raw/Kinshasa/rdc-civilian-incidents.csv'
     convert_xlsx_to_csv(input_xlsx, output_csv)

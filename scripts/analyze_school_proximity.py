@@ -65,4 +65,4 @@ def analyze_proximity(schools_path, ged_path):
     print(f"- Schools further than 1km: {len(far_schools)}")
 
 if __name__ == "__main__":
-    analyze_proximity('data/schools/Kinshasa/kinshasa-schools-cleaned.json', 'data/raw/ged-event-v26-0-3.xlsx')
+    analyze_proximity('data/schools/Kinshasa/kinshasa-schools-cleaned.json', 'data/raw/Kinshasa/ged-event-v26-0-3.xlsx')
